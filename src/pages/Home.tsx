@@ -14,6 +14,7 @@ import heroImg from "@/assets/hero-cabin.jpg";
 import interiorImg from "@/assets/cabin-interior.jpg";
 import securityImg from "@/assets/security-cabin.jpg";
 import accommodationImg from "@/assets/accommodation.jpg";
+import projectDubaiFisherman from "@/assets/project-dubai-fisherman-accommodation.jpg";
 import factoryImg from "@/assets/factory.jpg";
 import villaImg from "@/assets/villa.jpg";
 import rtaDayImg from "@/assets/sharjah-rta-cabin-day.jpg";
@@ -158,7 +159,7 @@ const industries = [
 const projects = [
   { title: "Sharjah RTA Smart Modular Station", loc: "Sharjah", time: "25 days", img: rtaNightImg },
   { title: "Sharjah University Modular Buildings", loc: "Sharjah", time: "30 days", img: galleryModularBuildingWhite },
-  { title: "Dubai Custom Fisherman Accommodation", loc: "Dubai", time: "40 days", img: accommodationImg },
+  { title: "Dubai Custom Fisherman Accommodation", loc: "Dubai", time: "40 days", img: projectDubaiFisherman },
   { title: "Toll Gate at Sharjah", loc: "Sharjah", time: "18 days", img: galleryMountainTollGate },
   { title: "Dubai Authority Customized Cabins", loc: "Dubai", time: "20 days", img: featuredSecurityDwtc },
 ];
