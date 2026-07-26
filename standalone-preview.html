@@ -335,6 +335,13 @@
       </a>
     );
 
+    const securityCabinReferences = [
+      { id: "trailer", title: "Mobile Trailer Security Booth", desc: "Towable cabin with integrated generator platform & safety rail", img: "./src/assets/security-ref-trailer.jpg" },
+      { id: "night-dark", title: "Executive Curved Night Gatehouse", desc: "Rounded metallic finish with 360° panoramic dark glazing", img: "./src/assets/security-ref-night-dark.jpg" },
+      { id: "silver-curved", title: "Silver Chrome Louvered Guard Cabin", desc: "Polished stainless steel banding with horizontal architectural louvers", img: "./src/assets/security-ref-silver-curved.jpg" },
+      { id: "dwtc-ibis", title: "DWTC Luxury Entrance Gatehouse", desc: "High-security corporate checkpoint booth with government crest", img: "./src/assets/security-ref-dwtc-ibis.jpg" },
+    ];
+
     // Home Page
     const HomePage = ({ setPage }) => {
       const products = [
@@ -1092,6 +1099,9 @@
     const ContactPage = ({ setPage }) => {
       const [sent, setSent] = useState(false);
       const [quoteData, setQuoteData] = useState(null);
+      const [projectType, setProjectType] = useState("Security Cabins");
+      const [selectedRefModel, setSelectedRefModel] = useState(null);
+      const [lightboxImg, setLightboxImg] = useState(null);
 
       const handleSubmit = (e) => {
         e.preventDefault();
