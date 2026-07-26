@@ -31,7 +31,7 @@ export const SiteHeader = () => {
       {/* Top contact bar */}
       <div className="hidden md:block bg-secondary text-secondary-foreground text-xs">
         <div className="container mx-auto px-6 py-2 flex justify-between items-center">
-          <span className="opacity-80">Sharjah, UAE · ⭐ 4.7/5 (33+ reviews)</span>
+          <span className="opacity-80">Dubai, UAE · ⭐ 4.7/5 (33+ reviews)</span>
           <div className="flex gap-6 opacity-90">
             <a href="tel:+971551000148" className="hover:text-accent transition-smooth">+971 55 100 0148</a>
             <a href="mailto:jishnumanoj4567@gmail.com" className="hover:text-accent transition-smooth">jishnumanoj4567@gmail.com</a>

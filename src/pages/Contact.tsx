@@ -114,7 +114,7 @@ export default function Contact() {
             <div className="p-6 rounded-3xl bg-card shadow-card border border-border/50">
               <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center mb-3"><MapPin className="w-5 h-5 text-primary-foreground" /></div>
               <div className="font-display font-bold mb-1">Head Office</div>
-              <p className="text-sm text-muted-foreground">Wadi Al Halo, Industrial Area 17, Sharjah, UAE</p>
+              <p className="text-sm text-muted-foreground">Industrial Area, Dubai, United Arab Emirates</p>
             </div>
             <div className="p-6 rounded-3xl bg-card shadow-card border border-border/50">
               <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center mb-3"><Phone className="w-5 h-5 text-primary-foreground" /></div>

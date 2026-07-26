@@ -142,7 +142,7 @@ const projects = [
 const processSteps = [
   { n: "01", title: "Requirement Analysis", desc: "We map your site, workflow and compliance needs." },
   { n: "02", title: "Design", desc: "CAD drawings, 3D renders and material selection." },
-  { n: "03", title: "Manufacturing", desc: "Precision steel fabrication in our Sharjah facility." },
+  { n: "03", title: "Manufacturing", desc: "Precision steel fabrication in our Dubai facility." },
   { n: "04", title: "Quality Inspection", desc: "Multi-point QC across structure, finish and systems." },
   { n: "05", title: "Delivery", desc: "Coordinated logistics across every emirate." },
   { n: "06", title: "Installation", desc: "On-site crane placement, hookup and handover." },
@@ -569,37 +569,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 3 */}
-            <div
-              className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-              onClick={() => setLightbox({ src: galleryMountainTollGate, alt: "Mountain Entry Toll Gate Canopy", label: "Mountain Checkpoint Canopy", category: "Infrastructure" })}
-            >
-              <img src={galleryMountainTollGate} alt="Mountain Entry Toll Gate Canopy" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 p-5">
-                <span className="text-xs font-semibold text-accent uppercase tracking-widest">Infrastructure</span>
-                <p className="text-white font-display font-bold text-base">Mountain Checkpoint Canopy</p>
-              </div>
-              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                <Maximize2 className="w-4 h-4 text-white" />
-              </div>
-            </div>
 
-            {/* 4 */}
-            <div
-              className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-              onClick={() => setLightbox({ src: galleryModularBuildingWhite, alt: "Arabic Architecture Modular Complex", label: "2-Story Modular Complex", category: "Modular Building" })}
-            >
-              <img src={galleryModularBuildingWhite} alt="Arabic Architecture Modular Complex" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 p-5">
-                <span className="text-xs font-semibold text-accent uppercase tracking-widest">Modular Building</span>
-                <p className="text-white font-display font-bold text-base">2-Story Modular Complex</p>
-              </div>
-              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                <Maximize2 className="w-4 h-4 text-white" />
-              </div>
-            </div>
 
             {/* 7 */}
             <div
@@ -841,7 +811,7 @@ export default function Home() {
               <SectionLabel>Visit Us</SectionLabel>
               <h3 className="font-display font-bold text-3xl mb-6">First Cabin<br />General Trading LLC</h3>
               <div className="space-y-4 text-primary-foreground/90">
-                <div className="flex gap-3"><MapPin className="w-5 h-5 shrink-0 mt-1 text-accent" /><div>Wadi Al Halo, Industrial Area 17<br />Sharjah, United Arab Emirates</div></div>
+                <div className="flex gap-3"><MapPin className="w-5 h-5 shrink-0 mt-1 text-accent" /><div>Industrial Area<br />Dubai, United Arab Emirates</div></div>
                 <div className="flex gap-3"><Phone className="w-5 h-5 shrink-0 mt-1 text-accent" /><a href="tel:+971551000148" className="hover:text-accent">+971 55 100 0148</a></div>
                 <div className="flex gap-3"><Star className="w-5 h-5 shrink-0 mt-1 text-accent fill-accent" /><span>4.7 / 5 · 33+ Google reviews</span></div>
               </div>
