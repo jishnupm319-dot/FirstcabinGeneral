@@ -138,13 +138,6 @@ const projects = [
   { title: "Dubai Authority Customized Cabins", loc: "Dubai", time: "20 days", img: featuredSecurityDwtc },
 ];
 
-const testimonials = [
-  { name: "Ahmed Al Mansoori", role: "Project Manager, Al Futtaim Construction", text: "The cabin was delivered on time, fully assembled, and ready to use. Well ventilated, heatproof, and spacious.", initial: "AM" },
-  { name: "Sarah Johnson", role: "Site Engineer, ARABTEC", text: "Excellent company to work with. Durable cabins, modern designs, and exactly what we needed for our labour camp.", initial: "SJ" },
-  { name: "Mohammed Rashid", role: "Facilities Director, ADNOC", text: "Professional team and excellent product quality. The units survived two dust storms without a scratch.", initial: "MR" },
-  { name: "Priya Menon", role: "Procurement, Emaar", text: "From quote to installation in under three weeks. Their attention to insulation detail is unmatched in the UAE.", initial: "PM" },
-  { name: "James Fitzgerald", role: "Ops Lead, Petrofac", text: "We've ordered 40+ units over two years. Consistent quality, transparent pricing, and dependable service.", initial: "JF" },
-];
 
 const processSteps = [
   { n: "01", title: "Requirement Analysis", desc: "We map your site, workflow and compliance needs." },
@@ -770,35 +763,6 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* TESTIMONIALS */}
-      <Section id="testimonials">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <SectionLabel>Customer Testimonials</SectionLabel>
-            <h2 className="font-display font-bold text-4xl md:text-5xl">What our clients say</h2>
-          </div>
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((t) => (
-              <motion.div key={t.name} variants={fadeUp} className="p-8 rounded-3xl glass shadow-card hover:shadow-elegant transition-smooth relative">
-                <Quote className="w-10 h-10 text-primary/20 absolute top-6 right-6" />
-                <div className="flex text-accent mb-4">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
-                </div>
-                <p className="text-foreground leading-relaxed mb-6">"{t.text}"</p>
-                <div className="flex items-center gap-3 pt-4 border-t border-border/50">
-                  <div className="w-12 h-12 rounded-full gradient-primary flex items-center justify-center text-primary-foreground font-bold">
-                    {t.initial}
-                  </div>
-                  <div>
-                    <div className="font-semibold text-sm">{t.name}</div>
-                    <div className="text-xs text-muted-foreground">{t.role}</div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </Section>
 
       {/* CERTIFICATIONS */}
       <Section id="certifications" className="bg-secondary text-secondary-foreground">
