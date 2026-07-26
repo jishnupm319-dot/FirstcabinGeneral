@@ -164,7 +164,7 @@ export default function Contact() {
                   <label className="block text-sm font-medium mb-2">Project Type</label>
                   <select name="projectType" className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-smooth">
                     <option value="">Select…</option>
-                    {["Security Cabin", "Office Construction", "Labour Accommodation", "Modular Building", "Prefab Villa", "Custom Project"].map(x => <option key={x}>{x}</option>)}
+                    {["Security Cabins", "Customized Cabins", "Bus Stations", "Container Office", "Toll Gates", "Fabricated Buildings", "Labour Accommodation"].map(x => <option key={x}>{x}</option>)}
                   </select>
                 </div>
                 <div>

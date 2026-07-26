@@ -4,7 +4,7 @@ import {
   Shield, Home as HomeIcon, Briefcase, Users, Building2, Warehouse, Box, GraduationCap,
   Stethoscope, Wrench, Truck, Hammer, Settings, Zap, Wind, Star, CheckCircle2, MapPin,
   ArrowRight, Download, Phone, Play, Award, Clock, Factory, HardHat, Snowflake, DollarSign,
-  ChevronDown, Quote, Maximize2, X,
+  ChevronDown, Quote, Maximize2, X, Bus, Ticket,
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -92,16 +92,13 @@ const Counter = ({ end, suffix = "" }: { end: number; suffix?: string }) => {
 };
 
 const products = [
-  { icon: Shield, name: "Security Cabins", desc: "Compact guard booths built for heavy-duty security in extreme UAE climates.", img: rtaNightImg },
-  { icon: Briefcase, name: "Office Construction", desc: "Turnkey site offices with insulation, HVAC and modern interiors.", img: interiorImg },
-  { icon: Building2, name: "Site Offices", desc: "Multi-room project offices for engineers, PMs and meetings.", img: heroImg },
-  { icon: Users, name: "Labour Accommodation", desc: "Compliant workforce housing with bunks, kitchens and washrooms.", img: accommodationImg },
-  { icon: Warehouse, name: "Modular Buildings", desc: "Expandable multi-unit complexes engineered on your footprint.", img: factoryImg },
-  { icon: Box, name: "Storage Containers", desc: "Weather-sealed containers, converted or delivered as-is.", img: heroImg },
-  { icon: Stethoscope, name: "Portable Clinics", desc: "Medical-grade fit-outs with sinks, HVAC and clean surfaces.", img: interiorImg },
-  { icon: HomeIcon, name: "Prefabricated Villas", desc: "Luxury modular homes with terraces, kitchens and full baths.", img: villaImg },
-  { icon: Settings, name: "Custom Cabins", desc: "Any size, layout or finish — engineered around your project.", img: rtaSideImg },
-  { icon: Warehouse, name: "Container Offices", desc: "20ft / 40ft container conversions with premium interiors.", img: factoryImg },
+  { icon: Shield, name: "Security Cabins", desc: "Compact guard booths built for heavy-duty security in extreme UAE climates.", img: featuredSecurityDwtc },
+  { icon: Settings, name: "Customized Cabins", desc: "Any size, layout or finish — custom engineered around your exact project specifications.", img: rtaSideImg },
+  { icon: Bus, name: "Bus Stations", desc: "Modern smart bus shelters and passenger transit stations with climate control.", img: galleryBusShelter },
+  { icon: Warehouse, name: "Container Office", desc: "20ft & 40ft converted container offices with premium insulated interiors.", img: galleryContainerOffice2Story },
+  { icon: Ticket, name: "Toll Gates", desc: "Custom entry toll gates and highway checkpoint canopy structures.", img: galleryMountainTollGate },
+  { icon: Building2, name: "Fabricated Buildings", desc: "Multi-story prefabricated complexes engineered to exact floor plans.", img: galleryModularBuildingWhite },
+  { icon: Users, name: "Labour Accommodation", desc: "Fully compliant workforce housing with bunks, dining halls, kitchens and washrooms.", img: accommodationImg },
 ];
 
 const features = [

@@ -338,16 +338,13 @@
     // Home Page
     const HomePage = ({ setPage }) => {
       const products = [
-        { icon: "shield", name: "Security Cabins", desc: "Compact guard booths built for heavy-duty security in extreme UAE climates.", img: "./src/assets/sharjah-rta-cabin-night.jpg" },
-        { icon: "briefcase", name: "Office Construction", desc: "Turnkey site offices with insulation, HVAC and modern interiors.", img: "./src/assets/cabin-interior.jpg" },
-        { icon: "building-2", name: "Site Offices", desc: "Multi-room project offices for engineers, PMs and meetings.", img: "./src/assets/hero-cabin.jpg" },
-        { icon: "users", name: "Labour Accommodation", desc: "Compliant workforce housing with bunks, kitchens and washrooms.", img: "./src/assets/accommodation.jpg" },
-        { icon: "warehouse", name: "Modular Buildings", desc: "Expandable multi-unit complexes engineered on your footprint.", img: "./src/assets/factory.jpg" },
-        { icon: "box", name: "Storage Containers", desc: "Weather-sealed containers, converted or delivered as-is.", img: "./src/assets/hero-cabin.jpg" },
-        { icon: "stethoscope", name: "Portable Clinics", desc: "Medical-grade fit-outs with sinks, HVAC and clean surfaces.", img: "./src/assets/cabin-interior.jpg" },
-        { icon: "home", name: "Prefabricated Villas", desc: "Luxury modular homes with terraces, kitchens and full baths.", img: "./src/assets/villa.jpg" },
-        { icon: "settings", name: "Custom Cabins", desc: "Any size, layout or finish — engineered around your project.", img: "./src/assets/sharjah-rta-cabin-side.jpg" },
-        { icon: "warehouse", name: "Container Offices", desc: "20ft / 40ft container conversions with premium interiors.", img: "./src/assets/factory.jpg" },
+        { icon: "shield", name: "Security Cabins", desc: "Compact guard booths built for heavy-duty security in extreme UAE climates.", img: "./src/assets/featured-security-dwtc.jpg" },
+        { icon: "settings", name: "Customized Cabins", desc: "Any size, layout or finish — custom engineered around your exact project specifications.", img: "./src/assets/sharjah-rta-cabin-side.jpg" },
+        { icon: "bus", name: "Bus Stations", desc: "Modern smart bus shelters and passenger transit stations with climate control.", img: "./src/assets/gallery-bus-shelter.jpg" },
+        { icon: "warehouse", name: "Container Office", desc: "20ft & 40ft converted container offices with premium insulated interiors.", img: "./src/assets/gallery-container-office-2story.jpg" },
+        { icon: "ticket", name: "Toll Gates", desc: "Custom entry toll gates and highway checkpoint canopy structures.", img: "./src/assets/gallery-mountain-toll-gate.jpg" },
+        { icon: "building-2", name: "Fabricated Buildings", desc: "Multi-story prefabricated complexes engineered to exact floor plans.", img: "./src/assets/gallery-modular-building-white.jpg" },
+        { icon: "users", name: "Labour Accommodation", desc: "Fully compliant workforce housing with bunks, dining halls, kitchens and washrooms.", img: "./src/assets/accommodation.jpg" },
       ];
 
       const features = [
@@ -1180,7 +1177,7 @@
                       <label className="block text-sm font-medium mb-2">Project Type</label>
                       <select className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-smooth">
                         <option value="">Select…</option>
-                        {["Security Cabin", "Office Construction", "Labour Accommodation", "Modular Building", "Prefab Villa", "Custom Project"].map(x => <option key={x}>{x}</option>)}
+                        {["Security Cabins", "Customized Cabins", "Bus Stations", "Container Office", "Toll Gates", "Fabricated Buildings", "Labour Accommodation"].map(x => <option key={x}>{x}</option>)}
                       </select>
                     </div>
                     <div>
