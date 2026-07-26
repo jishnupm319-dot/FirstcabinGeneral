@@ -4,7 +4,7 @@ import {
   Shield, Home as HomeIcon, Briefcase, Users, Building2, Warehouse, Box, GraduationCap,
   Stethoscope, Wrench, Truck, Hammer, Settings, Zap, Wind, Star, CheckCircle2, MapPin,
   ArrowRight, Download, Phone, Play, Award, Clock, Factory, HardHat, Snowflake, DollarSign,
-  ChevronDown, Quote, Maximize2, X, Bus, Ticket,
+  ChevronDown, Quote, Maximize2, X, Bus, Ticket, Send,
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -41,6 +41,18 @@ import galleryFgbBankCabin from "@/assets/gallery-fgb-bank-cabin.jpg";
 import galleryBeigeOvalCabin from "@/assets/gallery-beige-oval-cabin.jpg";
 import galleryGreenVipBooth from "@/assets/gallery-green-vip-booth.jpg";
 import galleryDarkwoodCabin from "@/assets/gallery-darkwood-cabin.jpg";
+
+import secRefTrailer from "@/assets/security-ref-trailer.jpg";
+import secRefNightDark from "@/assets/security-ref-night-dark.jpg";
+import secRefSilverCurved from "@/assets/security-ref-silver-curved.jpg";
+import secRefDwtcIbis from "@/assets/security-ref-dwtc-ibis.jpg";
+
+const securityCabinReferences = [
+  { id: "trailer", title: "Mobile Trailer Security Booth", desc: "Towable cabin with integrated generator platform & safety rail", img: secRefTrailer },
+  { id: "night-dark", title: "Executive Curved Night Gatehouse", desc: "Rounded metallic finish with 360° panoramic dark glazing", img: secRefNightDark },
+  { id: "silver-curved", title: "Silver Chrome Louvered Guard Cabin", desc: "Polished stainless steel banding with horizontal architectural louvers", img: secRefSilverCurved },
+  { id: "dwtc-ibis", title: "DWTC Luxury Entrance Gatehouse", desc: "High-security corporate checkpoint booth with government crest", img: secRefDwtcIbis },
+];
 
 import clientKuwaitGovt from "@/assets/client-kuwait-govt.jpg";
 import clientDubaiCustoms from "@/assets/client-dubai-customs.jpg";
@@ -166,12 +178,21 @@ const faqs = [
 
 export default function Home() {
   const [lightbox, setLightbox] = useState<{ src: string; alt: string; label: string; category: string } | null>(null);
+  const [quoteProduct, setQuoteProduct] = useState<string | null>(null);
+  const [selectedRefModel, setSelectedRefModel] = useState<string | null>(null);
+  const [quoteSent, setQuoteSent] = useState(false);
+  const [quoteLoading, setQuoteLoading] = useState(false);
+  const [refLightboxImg, setRefLightboxImg] = useState<{ src: string; title: string } | null>(null);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setLightbox(null);
+      if (e.key === "Escape") {
+        setLightbox(null);
+        setQuoteProduct(null);
+        setRefLightboxImg(null);
+      }
     };
-    if (lightbox) {
+    if (lightbox || quoteProduct || refLightboxImg) {
       document.body.style.overflow = "hidden";
       window.addEventListener("keydown", handleKeyDown);
     } else {
@@ -181,7 +202,7 @@ export default function Home() {
       document.body.style.overflow = "auto";
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [lightbox]);
+  }, [lightbox, quoteProduct, refLightboxImg]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -307,7 +328,7 @@ export default function Home() {
                   <h3 className="font-display font-bold text-xl mb-2">{p.name}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">{p.desc}</p>
                   <div className="flex gap-2">
-                    <a href="/contact" className="flex-1 text-center py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:shadow-glow transition-smooth">Get Quote</a>
+                    <button onClick={() => { setQuoteProduct(p.name); setSelectedRefModel(null); setQuoteSent(false); }} className="flex-1 text-center py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:shadow-glow transition-smooth">Get Quote</button>
                     <button className="px-4 py-2.5 rounded-full border border-border text-sm font-medium hover:border-primary hover:text-primary transition-smooth inline-flex items-center gap-1">
                       <Download className="w-4 h-4" />
                     </button>
@@ -937,6 +958,184 @@ export default function Home() {
               </span>
               <p className="text-white font-display font-bold text-xl">{lightbox.label}</p>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* QUOTE REQUEST MODAL WITH SECURITY CABIN REFERENCE GALLERY */}
+      {quoteProduct && (
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto" onClick={() => setQuoteProduct(null)}>
+          <div
+            className={`relative bg-card rounded-3xl p-6 md:p-8 shadow-2xl border border-border/50 w-full max-h-[90vh] overflow-y-auto animate-scaleUp ${
+              quoteProduct === "Security Cabins" ? "max-w-5xl" : "max-w-xl"
+            }`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setQuoteProduct(null)}
+              className="absolute top-5 right-5 p-2 rounded-full hover:bg-muted text-muted-foreground hover:text-foreground transition-smooth"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            {quoteSent ? (
+              <div className="text-center py-12 space-y-4">
+                <div className="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle2 className="w-10 h-10 text-primary" />
+                </div>
+                <h3 className="font-display font-bold text-3xl text-foreground">Quote sent successfully</h3>
+                <p className="text-muted-foreground max-w-md mx-auto text-sm">
+                  Thank you! Our engineering team will review your requirements for {quoteProduct} and reach out within 24 hours.
+                </p>
+                <div className="pt-4">
+                  <button
+                    onClick={() => setQuoteProduct(null)}
+                    className="px-6 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold hover:shadow-glow transition-smooth"
+                  >
+                    Done
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div>
+                <div className="mb-6">
+                  <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-widest mb-2">Quote Request</span>
+                  <h2 className="font-display font-bold text-2xl md:text-3xl text-foreground">Request Quote for {quoteProduct}</h2>
+                </div>
+
+                <div className={quoteProduct === "Security Cabins" ? "grid lg:grid-cols-2 gap-8 items-start" : "block"}>
+                  {/* FORM */}
+                  <form
+                    onSubmit={async (e) => {
+                      e.preventDefault();
+                      setQuoteLoading(true);
+                      const fd = new FormData(e.currentTarget);
+                      let msg = (fd.get("message") as string) || "";
+                      if (quoteProduct === "Security Cabins" && selectedRefModel) {
+                        msg = `[Reference Model: ${selectedRefModel}]\n` + msg;
+                      }
+
+                      try {
+                        await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+                          method: "POST",
+                          headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify({
+                            service_id: "service_ixle0hv",
+                            template_id: "template_gdpmz1s",
+                            user_id: "HGjLQzBmXRvt6OzWU",
+                            template_params: {
+                              from_name: fd.get("name"),
+                              from_email: fd.get("email"),
+                              phone: fd.get("phone"),
+                              company: fd.get("company") || "N/A",
+                              project_type: quoteProduct,
+                              message: msg,
+                            },
+                          }),
+                        });
+                        setQuoteSent(true);
+                      } catch (err) {
+                        console.error(err);
+                        setQuoteSent(true);
+                      } finally {
+                        setQuoteLoading(false);
+                      }
+                    }}
+                    className="space-y-4"
+                  >
+                    <div>
+                      <label className="block text-xs font-semibold uppercase tracking-wider mb-1.5 text-muted-foreground">Full Name *</label>
+                      <input type="text" name="name" required placeholder="John Doe" className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary text-sm" />
+                    </div>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-xs font-semibold uppercase tracking-wider mb-1.5 text-muted-foreground">Phone *</label>
+                        <input type="tel" name="phone" required placeholder="+971 …" className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary text-sm" />
+                      </div>
+                      <div>
+                        <label className="block text-xs font-semibold uppercase tracking-wider mb-1.5 text-muted-foreground">Email *</label>
+                        <input type="email" name="email" required placeholder="you@company.com" className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary text-sm" />
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold uppercase tracking-wider mb-1.5 text-muted-foreground">Company Name</label>
+                      <input type="text" name="company" placeholder="Your company" className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary text-sm" />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold uppercase tracking-wider mb-1.5 text-muted-foreground">Project Requirements *</label>
+                      <textarea name="message" required rows={3} placeholder="Dimensions, glazing tint, HVAC, insulation..." className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary text-sm resize-none" />
+                    </div>
+                    <button type="submit" disabled={quoteLoading} className="w-full py-4 rounded-full gradient-primary text-primary-foreground font-semibold shadow-elegant hover:shadow-glow transition-smooth disabled:opacity-50 flex items-center justify-center gap-2">
+                      <Send className="w-4 h-4" /> {quoteLoading ? "Sending…" : "Submit Quote Request"}
+                    </button>
+                  </form>
+
+                  {/* SECURITY CABIN CUSTOMER REFERENCE IMAGES PANEL (ONLY FOR SECURITY CABINS) */}
+                  {quoteProduct === "Security Cabins" && (
+                    <div className="p-5 rounded-2xl bg-muted/40 border border-primary/20 space-y-4">
+                      <div className="flex items-center gap-2">
+                        <Shield className="w-5 h-5 text-primary shrink-0" />
+                        <h3 className="font-display font-bold text-base text-foreground">Reference Models (Customer Reference Only)</h3>
+                      </div>
+                      <p className="text-xs text-muted-foreground leading-relaxed">
+                        Below are reference designs for Security Cabins. Click any model image to attach it to your quote request:
+                      </p>
+                      <div className="grid grid-cols-2 gap-3">
+                        {securityCabinReferences.map((ref) => (
+                          <div
+                            key={ref.id}
+                            onClick={() => {
+                              setSelectedRefModel(ref.title);
+                            }}
+                            className={`group relative rounded-xl overflow-hidden border-2 cursor-pointer transition-smooth bg-card shadow-sm ${
+                              selectedRefModel === ref.title ? "border-primary ring-2 ring-primary/20" : "border-border/60 hover:border-primary/50"
+                            }`}
+                          >
+                            <div className="h-32 relative overflow-hidden">
+                              <img src={ref.img} alt={ref.title} className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-500" />
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
+                              <button
+                                type="button"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setRefLightboxImg({ src: ref.img, title: ref.title });
+                                }}
+                                className="absolute top-2 right-2 p-1.5 rounded-full bg-black/60 text-white hover:bg-primary transition-smooth"
+                                title="Full Screen Preview"
+                              >
+                                <Maximize2 className="w-3.5 h-3.5" />
+                              </button>
+                              {selectedRefModel === ref.title && (
+                                <span className="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-primary text-[10px] text-primary-foreground font-bold flex items-center gap-1">
+                                  <CheckCircle2 className="w-3 h-3" /> Selected
+                                </span>
+                              )}
+                            </div>
+                            <div className="p-2.5">
+                              <div className="font-display font-semibold text-xs text-foreground line-clamp-1">{ref.title}</div>
+                              <div className="text-[10px] text-muted-foreground line-clamp-1 mt-0.5">{ref.desc}</div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* REFERENCE LIGHTBOX */}
+      {refLightboxImg && (
+        <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur flex items-center justify-center p-4" onClick={() => setRefLightboxImg(null)}>
+          <div className="relative max-w-4xl w-full bg-card rounded-3xl p-4 overflow-hidden border border-border/50" onClick={(e) => e.stopPropagation()}>
+            <div className="flex justify-between items-center mb-3 px-2">
+              <h3 className="font-display font-bold text-lg text-foreground">{refLightboxImg.title}</h3>
+              <button onClick={() => setRefLightboxImg(null)} className="p-2 rounded-full hover:bg-muted transition-smooth"><X className="w-5 h-5" /></button>
+            </div>
+            <img src={refLightboxImg.src} alt={refLightboxImg.title} className="w-full max-h-[75vh] object-contain rounded-2xl" />
           </div>
         </div>
       )}

@@ -1,11 +1,23 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, MessageCircle, MapPin, Mail, Clock, Send, CheckCircle2 } from "lucide-react";
+import { Phone, MessageCircle, MapPin, Mail, Send, CheckCircle2, Shield, Maximize2, X } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { toast } from "sonner";
 import { z } from "zod";
+
+import secRefTrailer from "@/assets/security-ref-trailer.jpg";
+import secRefNightDark from "@/assets/security-ref-night-dark.jpg";
+import secRefSilverCurved from "@/assets/security-ref-silver-curved.jpg";
+import secRefDwtcIbis from "@/assets/security-ref-dwtc-ibis.jpg";
+
+const securityCabinReferences = [
+  { id: "trailer", title: "Mobile Trailer Security Booth", desc: "Towable cabin with integrated generator platform & safety rail", img: secRefTrailer },
+  { id: "night-dark", title: "Executive Curved Night Gatehouse", desc: "Rounded metallic finish with 360° panoramic dark glazing & ambient light", img: secRefNightDark },
+  { id: "silver-curved", title: "Silver Chrome Louvered Guard Cabin", desc: "Polished stainless steel banding with horizontal architectural louvers", img: secRefSilverCurved },
+  { id: "dwtc-ibis", title: "DWTC Luxury Entrance Gatehouse", desc: "High-security corporate checkpoint booth with illuminated government crest", img: secRefDwtcIbis },
+];
 
 const schema = z.object({
   name: z.string().trim().min(2).max(100),
@@ -19,19 +31,26 @@ const schema = z.object({
 export default function Contact() {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [quoteData, setQuoteData] = useState<{ name: string; phone: string; email: string; projectType: string; message: string; mailtoUrl: string; waUrl: string } | null>(null);
+  const [projectTypeState, setProjectTypeState] = useState<string>("Security Cabins");
+  const [selectedRefModel, setSelectedRefModel] = useState<string | null>(null);
+  const [lightboxImg, setLightboxImg] = useState<{ src: string; title: string } | null>(null);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
     const fd = new FormData(form);
+    let rawMsg = (fd.get("message") as string) || "";
+    if (projectTypeState === "Security Cabins" && selectedRefModel) {
+      rawMsg = `[Reference Model: ${selectedRefModel}]\n` + rawMsg;
+    }
+
     const parsed = schema.safeParse({
       name: fd.get("name"),
       company: fd.get("company") ?? "",
       phone: fd.get("phone"),
       email: fd.get("email"),
-      projectType: fd.get("projectType") ?? "",
-      message: fd.get("message"),
+      projectType: projectTypeState,
+      message: rawMsg,
     });
 
     if (!parsed.success) {
@@ -39,61 +58,39 @@ export default function Contact() {
       return;
     }
 
-    const { name, company, phone, email, projectType, message } = parsed.data;
-
-    const formattedMessage =
-      `Hello First Cabin,\n\nI would like to request a quote:\n` +
-      `• Name: ${name}\n` +
-      `• Company: ${company || "N/A"}\n` +
-      `• Phone: ${phone}\n` +
-      `• Email: ${email}\n` +
-      `• Project Type: ${projectType || "General Enquiry"}\n\n` +
-      `• Details: ${message}`;
-
-    const subject = encodeURIComponent(`New Quote Request - ${name}`);
-    const mailtoUrl = `mailto:jishnumanoj4567@gmail.com?subject=${subject}&body=${encodeURIComponent(formattedMessage)}`;
-    const waUrl = `https://wa.me/971551000148?text=${encodeURIComponent(formattedMessage)}`;
-
-    setQuoteData({ name, phone, email, projectType: projectType || "", message, mailtoUrl, waUrl });
     setLoading(true);
 
-    // Send via EmailJS API directly to jishnumanoj4567@gmail.com
-    const EMAILJS_SERVICE_ID = "service_ixle0hv";
-    const EMAILJS_TEMPLATE_ID = "template_gdpmz1s";
-    const EMAILJS_PUBLIC_KEY = "HGjLQzBmXRvt6OzWU";
-
     try {
-      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      await fetch("https://api.emailjs.com/api/v1.0/email/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          service_id: EMAILJS_SERVICE_ID,
-          template_id: EMAILJS_TEMPLATE_ID,
-          user_id: EMAILJS_PUBLIC_KEY,
+          service_id: "service_ixle0hv",
+          template_id: "template_gdpmz1s",
+          user_id: "HGjLQzBmXRvt6OzWU",
           template_params: {
-            from_name: name,
-            from_email: email,
-            phone: phone,
-            company: company || "N/A",
-            project_type: projectType || "General",
-            message: message,
+            from_name: parsed.data.name,
+            from_email: parsed.data.email,
+            phone: parsed.data.phone,
+            company: parsed.data.company || "N/A",
+            project_type: parsed.data.projectType || "Security Cabins",
+            message: parsed.data.message,
           },
         }),
       });
 
-      if (response.ok) {
-        toast.success("Quote sent directly to jishnumanoj4567@gmail.com!");
-      }
+      setSent(true);
+      toast.success("Quote sent successfully!");
     } catch (err) {
-      console.error("EmailJS send failed", err);
+      console.error(err);
+      toast.error("Network error. Please try again.");
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
-    setSent(true);
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-foreground flex flex-col font-sans">
       <SiteHeader />
       <FloatingCTA />
 
@@ -162,18 +159,74 @@ export default function Contact() {
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2">Project Type</label>
-                  <select name="projectType" className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-smooth">
-                    <option value="">Select…</option>
-                    {["Security Cabins", "Customized Cabins", "Bus Stations", "Container Office", "Toll Gates", "Fabricated Buildings", "Labour Accommodation"].map(x => <option key={x}>{x}</option>)}
+                  <select
+                    name="projectType"
+                    value={projectTypeState}
+                    onChange={(e) => setProjectTypeState(e.target.value)}
+                    className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-smooth font-medium"
+                  >
+                    {["Security Cabins", "Customized Cabins", "Bus Stations", "Container Office", "Toll Gates", "Fabricated Buildings", "Labour Accommodation"].map(x => <option key={x} value={x}>{x}</option>)}
                   </select>
                 </div>
+
+                {/* SECURITY CABIN CUSTOMER REFERENCE IMAGES PANEL */}
+                {projectTypeState === "Security Cabins" && (
+                  <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} className="p-4 rounded-2xl bg-muted/50 border border-primary/20 space-y-3">
+                    <div className="flex items-center gap-2">
+                      <Shield className="w-4 h-4 text-primary shrink-0" />
+                      <span className="font-display font-bold text-sm text-foreground">Security Cabin Reference Models (Customer Reference Only)</span>
+                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      Click any model image to attach it to your quote request:
+                    </p>
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                      {securityCabinReferences.map((ref) => (
+                        <div
+                          key={ref.id}
+                          onClick={() => {
+                            setSelectedRefModel(ref.title);
+                            toast.info(`Selected "${ref.title}" as your reference.`);
+                          }}
+                          className={`group relative rounded-xl overflow-hidden border-2 cursor-pointer transition-smooth bg-card shadow-sm ${
+                            selectedRefModel === ref.title ? "border-primary ring-2 ring-primary/20" : "border-border/60 hover:border-primary/50"
+                          }`}
+                        >
+                          <div className="h-28 relative overflow-hidden">
+                            <img src={ref.img} alt={ref.title} className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-500" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setLightboxImg({ src: ref.img, title: ref.title });
+                              }}
+                              className="absolute top-1.5 right-1.5 p-1 rounded-full bg-black/60 text-white hover:bg-primary transition-smooth"
+                              title="Full Screen Preview"
+                            >
+                              <Maximize2 className="w-3 h-3" />
+                            </button>
+                            {selectedRefModel === ref.title && (
+                              <span className="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded-md bg-primary text-[9px] text-primary-foreground font-bold">
+                                Selected
+                              </span>
+                            )}
+                          </div>
+                          <div className="p-2">
+                            <div className="font-display font-semibold text-[11px] text-foreground leading-tight line-clamp-1">{ref.title}</div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+
                 <div>
                   <label className="block text-sm font-medium mb-2">Message *</label>
-                  <textarea name="message" required rows={5} maxLength={1500} placeholder="Tell us about your project…" className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-smooth resize-none" />
+                  <textarea name="message" required rows={4} maxLength={1500} placeholder="Tell us about your project requirements…" className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-smooth resize-none" />
                 </div>
                 <div className="flex flex-wrap gap-3">
-                  <button type="submit" className="flex-1 min-w-[180px] inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full gradient-primary text-primary-foreground font-semibold shadow-elegant hover:shadow-glow transition-smooth">
-                    <Send className="w-4 h-4" /> Request Quote
+                  <button type="submit" disabled={loading} className="flex-1 min-w-[180px] inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full gradient-primary text-primary-foreground font-semibold shadow-elegant hover:shadow-glow transition-smooth disabled:opacity-50">
+                    <Send className="w-4 h-4" /> {loading ? "Sending…" : "Request Quote"}
                   </button>
                   <a href="tel:+971551000148" className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-secondary text-secondary-foreground font-semibold hover:opacity-90 transition-smooth">
                     <Phone className="w-4 h-4" /> Call
@@ -188,6 +241,19 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* Lightbox Modal */}
+      {lightboxImg && (
+        <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur flex items-center justify-center p-4" onClick={() => setLightboxImg(null)}>
+          <div className="relative max-w-4xl w-full bg-card rounded-3xl p-4 overflow-hidden border border-border/50" onClick={(e) => e.stopPropagation()}>
+            <div className="flex justify-between items-center mb-3 px-2">
+              <h3 className="font-display font-bold text-lg text-foreground">{lightboxImg.title}</h3>
+              <button onClick={() => setLightboxImg(null)} className="p-2 rounded-full hover:bg-muted transition-smooth"><X className="w-5 h-5" /></button>
+            </div>
+            <img src={lightboxImg.src} alt={lightboxImg.title} className="w-full max-h-[75vh] object-contain rounded-2xl" />
+          </div>
+        </div>
+      )}
+
       <SiteFooter />
     </div>
   );
@@ -198,11 +264,10 @@ function Field({ label, name, type = "text", placeholder, required }: { label: s
     <div>
       <label className="block text-sm font-medium mb-2">{label}</label>
       <input
-        name={name}
         type={type}
-        required={required}
-        maxLength={255}
+        name={name}
         placeholder={placeholder}
+        required={required}
         className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-smooth"
       />
     </div>
