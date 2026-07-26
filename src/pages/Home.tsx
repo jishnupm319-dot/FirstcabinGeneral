@@ -230,7 +230,7 @@ export default function Home() {
           <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-4xl">
             <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark mb-6">
               <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              <span className="text-xs text-white uppercase tracking-widest font-medium">Sharjah, UAE</span>
+              <span className="text-xs text-white uppercase tracking-widest font-medium">Dubai, UAE</span>
             </motion.div>
             <motion.h1 variants={fadeUp} className="font-display font-bold text-white text-5xl md:text-7xl lg:text-8xl leading-[1.05] mb-6">
               Premium Portable Cabins <span className="text-accent">Built for Every Business</span>
@@ -281,7 +281,7 @@ export default function Home() {
                 A trusted portable building manufacturer <span className="text-gradient">serving the UAE.</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                First Cabin General Trading LLC is a Sharjah-based manufacturer engineering premium prefab cabins, modular buildings and custom portable solutions for industrial, commercial and residential clients across the Emirates.
+                First Cabin General Trading LLC is a Dubai-based manufacturer engineering premium prefab cabins, modular buildings and custom portable solutions for industrial, commercial and residential clients across the Emirates.
               </p>
               <ul className="space-y-3 mb-8">
                 {["High Quality Materials", "Customized Solutions", "Fast Delivery", "Professional Installation"].map(x => (
@@ -916,7 +916,7 @@ export default function Home() {
             <div className="rounded-3xl overflow-hidden shadow-elegant h-[500px]">
               <iframe
                 title="First Cabin location"
-                src="https://maps.google.com/maps?q=Wadi+Al+Halo+Industrial+Area+17+Sharjah&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=Industrial+Area+Dubai+United+Arab+Emirates&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 className="w-full h-full border-0"
                 loading="lazy"
               />
