@@ -395,7 +395,7 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <SectionLabel>Industries We Serve</SectionLabel>
-            <h2 className="font-display font-bold text-4xl md:text-5xl">From oil fields to classrooms</h2>
+            <h2 className="font-display font-bold text-4xl md:text-5xl">From construction to healthcare</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {industries.map((i, idx) => (
