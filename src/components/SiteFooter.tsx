@@ -34,7 +34,7 @@ export const SiteFooter = () => {
           <div>
             <h4 className="font-display font-bold mb-5 text-accent">Products</h4>
             <ul className="space-y-2.5 text-sm opacity-80">
-              {["Security Cabins", "Portable Offices", "Labour Accommodation", "Modular Buildings", "Prefab Villas", "Storage Containers"].map(x => (
+              {["Security Cabins", "Office Construction", "Labour Accommodation", "Modular Buildings", "Prefab Villas", "Storage Containers"].map(x => (
                 <li key={x}><a href="#products" className="hover:text-accent transition-smooth">{x}</a></li>
               ))}
             </ul>

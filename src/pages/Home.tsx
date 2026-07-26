@@ -93,13 +93,11 @@ const Counter = ({ end, suffix = "" }: { end: number; suffix?: string }) => {
 
 const products = [
   { icon: Shield, name: "Security Cabins", desc: "Compact guard booths built for heavy-duty security in extreme UAE climates.", img: rtaNightImg },
-  { icon: Briefcase, name: "Portable Offices", desc: "Turnkey site offices with insulation, HVAC and modern interiors.", img: interiorImg },
+  { icon: Briefcase, name: "Office Construction", desc: "Turnkey site offices with insulation, HVAC and modern interiors.", img: interiorImg },
   { icon: Building2, name: "Site Offices", desc: "Multi-room project offices for engineers, PMs and meetings.", img: heroImg },
   { icon: Users, name: "Labour Accommodation", desc: "Compliant workforce housing with bunks, kitchens and washrooms.", img: accommodationImg },
   { icon: Warehouse, name: "Modular Buildings", desc: "Expandable multi-unit complexes engineered on your footprint.", img: factoryImg },
-  { icon: HomeIcon, name: "Guard Rooms", desc: "Bulletproof-ready gatehouses with panoramic glazing options.", img: rtaDayImg },
   { icon: Box, name: "Storage Containers", desc: "Weather-sealed containers, converted or delivered as-is.", img: heroImg },
-  { icon: GraduationCap, name: "Portable Classrooms", desc: "Bright, insulated learning spaces installed within days.", img: interiorImg },
   { icon: Stethoscope, name: "Portable Clinics", desc: "Medical-grade fit-outs with sinks, HVAC and clean surfaces.", img: interiorImg },
   { icon: HomeIcon, name: "Prefabricated Villas", desc: "Luxury modular homes with terraces, kitchens and full baths.", img: villaImg },
   { icon: Settings, name: "Custom Cabins", desc: "Any size, layout or finish — engineered around your project.", img: rtaSideImg },
