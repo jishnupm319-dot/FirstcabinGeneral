@@ -36,6 +36,11 @@ import galleryMountainTollGate from "@/assets/gallery-mountain-toll-gate.jpg";
 import galleryGoldCabinsTrio from "@/assets/gallery-gold-cabins-trio.jpg";
 import galleryContainerOffice2Story from "@/assets/gallery-container-office-2story.jpg";
 import galleryModularSiteConstruction from "@/assets/gallery-modular-site-construction.jpg";
+import galleryDpworldBlueBooths from "@/assets/gallery-dpworld-blue-booth.jpg";
+import galleryFgbBankCabin from "@/assets/gallery-fgb-bank-cabin.jpg";
+import galleryBeigeOvalCabin from "@/assets/gallery-beige-oval-cabin.jpg";
+import galleryGreenVipBooth from "@/assets/gallery-green-vip-booth.jpg";
+import galleryDarkwoodCabin from "@/assets/gallery-darkwood-cabin.jpg";
 
 import clientKuwaitGovt from "@/assets/client-kuwait-govt.jpg";
 import clientDubaiCustoms from "@/assets/client-dubai-customs.jpg";
@@ -661,6 +666,86 @@ export default function Home() {
               <div className="absolute bottom-0 left-0 p-5">
                 <span className="text-xs font-semibold text-accent uppercase tracking-widest">Modular Building</span>
                 <p className="text-white font-display font-bold text-base">Modular Site Installation</p>
+              </div>
+              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
+                <Maximize2 className="w-4 h-4 text-white" />
+              </div>
+            </div>
+
+            {/* 13 - DP World */}
+            <div
+              className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
+              onClick={() => setLightbox({ src: galleryDpworldBlueBooths, alt: "DP World Blue Security Booth", label: "DP World Security Booth", category: "DP World Checkpoint" })}
+            >
+              <img src={galleryDpworldBlueBooths} alt="DP World Blue Security Booth" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 p-5">
+                <span className="text-xs font-semibold text-accent uppercase tracking-widest">DP World Checkpoint</span>
+                <p className="text-white font-display font-bold text-base">DP World Security Booth</p>
+              </div>
+              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
+                <Maximize2 className="w-4 h-4 text-white" />
+              </div>
+            </div>
+
+            {/* 14 - FGB Bank */}
+            <div
+              className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
+              onClick={() => setLightbox({ src: galleryFgbBankCabin, alt: "FGB Bank Curved Guard Booth", label: "FGB Bank Guard Booth", category: "Banking Checkpoint" })}
+            >
+              <img src={galleryFgbBankCabin} alt="FGB Bank Curved Guard Booth" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 p-5">
+                <span className="text-xs font-semibold text-accent uppercase tracking-widest">Banking Checkpoint</span>
+                <p className="text-white font-display font-bold text-base">FGB Bank Guard Booth</p>
+              </div>
+              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
+                <Maximize2 className="w-4 h-4 text-white" />
+              </div>
+            </div>
+
+            {/* 15 - Beige Oval Cabin */}
+            <div
+              className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
+              onClick={() => setLightbox({ src: galleryBeigeOvalCabin, alt: "Beige Oval Executive Cabin", label: "Beige Oval Executive Cabin", category: "Executive Booth" })}
+            >
+              <img src={galleryBeigeOvalCabin} alt="Beige Oval Executive Cabin" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 p-5">
+                <span className="text-xs font-semibold text-accent uppercase tracking-widest">Executive Booth</span>
+                <p className="text-white font-display font-bold text-base">Beige Oval Executive Cabin</p>
+              </div>
+              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
+                <Maximize2 className="w-4 h-4 text-white" />
+              </div>
+            </div>
+
+            {/* 16 - Green VIP Gatehouse */}
+            <div
+              className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
+              onClick={() => setLightbox({ src: galleryGreenVipBooth, alt: "Green Metallic VIP Gatehouse", label: "Green Metallic VIP Gatehouse", category: "VIP Access Gate" })}
+            >
+              <img src={galleryGreenVipBooth} alt="Green Metallic VIP Gatehouse" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 p-5">
+                <span className="text-xs font-semibold text-accent uppercase tracking-widest">VIP Access Gate</span>
+                <p className="text-white font-display font-bold text-base">Green Metallic VIP Gatehouse</p>
+              </div>
+              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
+                <Maximize2 className="w-4 h-4 text-white" />
+              </div>
+            </div>
+
+            {/* 17 - Dark Wood Luxury Cabin */}
+            <div
+              className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
+              onClick={() => setLightbox({ src: galleryDarkwoodCabin, alt: "Dark Wood & Chrome Luxury Cabin", label: "Dark Wood & Chrome Luxury Cabin", category: "Luxury Fit-Out" })}
+            >
+              <img src={galleryDarkwoodCabin} alt="Dark Wood & Chrome Luxury Cabin" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 p-5">
+                <span className="text-xs font-semibold text-accent uppercase tracking-widest">Luxury Fit-Out</span>
+                <p className="text-white font-display font-bold text-base">Dark Wood Luxury Cabin</p>
               </div>
               <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
                 <Maximize2 className="w-4 h-4 text-white" />
