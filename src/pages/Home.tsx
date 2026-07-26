@@ -132,13 +132,10 @@ const industries = [
 
 const projects = [
   { title: "Sharjah RTA Smart Modular Station", loc: "Sharjah", time: "25 days", img: rtaNightImg },
-  { title: "Etihad Rail Site Offices", loc: "Abu Dhabi", time: "45 days", img: heroImg },
-  { title: "Al Ain Labour Camp – 800 pax", loc: "Al Ain", time: "60 days", img: accommodationImg },
-  { title: "DP World Security Booths", loc: "Jebel Ali", time: "14 days", img: rtaDayImg },
-  { title: "Sharjah Portable School", loc: "Sharjah", time: "30 days", img: interiorImg },
-  { title: "RTA Government Service Booth", loc: "Sharjah", time: "18 days", img: rtaSideImg },
-  { title: "Emirates Hospital Cabins", loc: "Dubai", time: "21 days", img: interiorImg },
-  { title: "Luxury Modular Villas", loc: "Ras Al Khaimah", time: "90 days", img: villaImg },
+  { title: "Sharjah University Modular Buildings", loc: "Sharjah", time: "30 days", img: galleryModularBuildingWhite },
+  { title: "Dubai Custom Fisherman Accommodation", loc: "Dubai", time: "40 days", img: accommodationImg },
+  { title: "Toll Gate at Sharjah", loc: "Sharjah", time: "18 days", img: galleryMountainTollGate },
+  { title: "Dubai Authority Customized Cabins", loc: "Dubai", time: "20 days", img: featuredSecurityDwtc },
 ];
 
 const testimonials = [
