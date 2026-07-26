@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Shield, Home as HomeIcon, Briefcase, Users, Building2, Warehouse, Box, GraduationCap,
   Stethoscope, Wrench, Truck, Hammer, Settings, Zap, Wind, Star, CheckCircle2, MapPin,
@@ -240,9 +241,9 @@ export default function Home() {
               Manufacturing high-quality portable cabins, modular buildings, security cabins, site offices, accommodation units and customized prefab solutions across the UAE.
             </motion.p>
             <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
-              <a href="/contact" className="group inline-flex items-center gap-2 px-8 py-4 rounded-full gradient-accent text-accent-foreground font-semibold shadow-glow hover:scale-105 transition-smooth">
+              <Link to="/contact" className="group inline-flex items-center gap-2 px-8 py-4 rounded-full gradient-accent text-accent-foreground font-semibold shadow-glow hover:scale-105 transition-smooth">
                 Get Free Quote <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-smooth" />
-              </a>
+              </Link>
               <a href="#products" className="inline-flex items-center gap-2 px-8 py-4 rounded-full glass text-foreground font-semibold hover:bg-white transition-smooth">
                 Explore Products
               </a>
@@ -292,9 +293,9 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-full gradient-primary text-primary-foreground font-semibold shadow-elegant hover:shadow-glow transition-smooth">
+              <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-full gradient-primary text-primary-foreground font-semibold shadow-elegant hover:shadow-glow transition-smooth">
                 Talk to Our Team <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="relative">
@@ -902,9 +903,9 @@ export default function Home() {
               <a href="tel:+971551000148" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-accent text-accent-foreground font-semibold shadow-glow hover:scale-105 transition-smooth">
                 <Phone className="w-4 h-4" /> Call Now
               </a>
-              <a href="/contact" className="inline-flex items-center gap-2 px-8 py-4 rounded-full glass text-foreground font-semibold hover:bg-white transition-smooth">
+              <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 rounded-full glass text-foreground font-semibold hover:bg-white transition-smooth">
                 Request Quote <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -930,9 +931,9 @@ export default function Home() {
                 <div className="flex gap-3"><Phone className="w-5 h-5 shrink-0 mt-1 text-accent" /><a href="tel:+971551000148" className="hover:text-accent">+971 55 100 0148</a></div>
                 <div className="flex gap-3"><Star className="w-5 h-5 shrink-0 mt-1 text-accent fill-accent" /><span>4.7 / 5 · 33+ Google reviews</span></div>
               </div>
-              <a href="/contact" className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-accent text-accent-foreground font-semibold w-fit shadow-glow hover:scale-105 transition-smooth">
+              <Link to="/contact" className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-accent text-accent-foreground font-semibold w-fit shadow-glow hover:scale-105 transition-smooth">
                 Send Enquiry <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
