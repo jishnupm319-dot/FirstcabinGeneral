@@ -46,12 +46,20 @@ import secRefTrailer from "@/assets/security-ref-trailer.jpg";
 import secRefNightDark from "@/assets/security-ref-night-dark.jpg";
 import secRefSilverCurved from "@/assets/security-ref-silver-curved.jpg";
 import secRefDwtcIbis from "@/assets/security-ref-dwtc-ibis.jpg";
+import secRefBeigeOval from "@/assets/security-ref-beige-oval.jpg";
+import secRefGoldCurved from "@/assets/security-ref-gold-curved.jpg";
+import secRefBeigeRoadside from "@/assets/security-ref-beige-roadside.jpg";
+import secRefDarkwoodSheraton from "@/assets/security-ref-darkwood-sheraton.jpg";
 
 const securityCabinReferences = [
   { id: "trailer", title: "Mobile Trailer Security Booth", desc: "Towable cabin with integrated generator platform & safety rail", img: secRefTrailer },
   { id: "night-dark", title: "Executive Curved Night Gatehouse", desc: "Rounded metallic finish with 360° panoramic dark glazing", img: secRefNightDark },
   { id: "silver-curved", title: "Silver Chrome Louvered Guard Cabin", desc: "Polished stainless steel banding with horizontal architectural louvers", img: secRefSilverCurved },
   { id: "dwtc-ibis", title: "DWTC Luxury Entrance Gatehouse", desc: "High-security corporate checkpoint booth with government crest", img: secRefDwtcIbis },
+  { id: "beige-oval", title: "Beige Oval Architectural Guard Booth", desc: "Smooth curved cream finish with polished stainless louvers", img: secRefBeigeOval },
+  { id: "gold-curved", title: "Gold Metallic Rounded Gatehouse", desc: "Luxurious gold anodized panels with curved glass bay", img: secRefGoldCurved },
+  { id: "beige-roadside", title: "Beige Curved Oval Gate Cabin", desc: "Sleek oval roadside security unit with multi-band chrome", img: secRefBeigeRoadside },
+  { id: "darkwood-sheraton", title: "Dark Wood Luxury Executive Booth", desc: "Rich timber-grain exterior with chrome accents & tinted panoramic glass", img: secRefDarkwoodSheraton },
 ];
 
 import clientKuwaitGovt from "@/assets/client-kuwait-govt.jpg";
