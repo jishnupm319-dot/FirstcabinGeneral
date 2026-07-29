@@ -244,9 +244,16 @@ export default function Home() {
               <Link to="/contact" className="group inline-flex items-center gap-2 px-8 py-4 rounded-full gradient-accent text-accent-foreground font-semibold shadow-glow hover:scale-105 transition-smooth">
                 Get Free Quote <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-smooth" />
               </Link>
-              <a href="#products" className="inline-flex items-center gap-2 px-8 py-4 rounded-full glass text-foreground font-semibold hover:bg-white transition-smooth">
+              <button
+                type="button"
+                onClick={() => {
+                  const el = document.getElementById("products");
+                  if (el) el.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full glass text-foreground font-semibold hover:bg-white transition-smooth cursor-pointer"
+              >
                 Explore Products
-              </a>
+              </button>
               <a href="tel:+971551000148" className="inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 border-white/40 text-white font-semibold hover:bg-white/10 transition-smooth">
                 <Phone className="w-4 h-4" /> Call Direct
               </a>
