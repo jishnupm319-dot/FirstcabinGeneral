@@ -230,7 +230,7 @@ export default function Contact() {
 
                 <div>
                   <label className="block text-sm font-medium mb-2">Message *</label>
-                  <textarea name="message" required rows={4} maxLength={1500} placeholder="Tell us about your project requirements…" className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-smooth resize-none" />
+                  <textarea name="message" required rows={4} maxLength={1500} placeholder="Specify Colour, Length, Width & Project Details..." className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-smooth resize-none" />
                 </div>
                 <div className="flex flex-wrap gap-3">
                   <button type="submit" disabled={loading} className="flex-1 min-w-[180px] inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full gradient-primary text-primary-foreground font-semibold shadow-elegant hover:shadow-glow transition-smooth disabled:opacity-50">
