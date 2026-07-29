@@ -1,25 +1,26 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import logoImg from "@/assets/logo.png";
 
 const NAV = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Products", href: "#products" },
-  { label: "Industries", href: "#industries" },
-  { label: "Projects", href: "#projects" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Our Customers", href: "#customers" },
-  { label: "FAQs", href: "#faqs" },
+  { label: "Home", id: "home" },
+  { label: "About", id: "about" },
+  { label: "Products", id: "products" },
+  { label: "Industries", id: "industries" },
+  { label: "Projects", id: "projects" },
+  { label: "Gallery", id: "gallery" },
+  { label: "Our Customers", id: "customers" },
+  { label: "FAQs", id: "faqs" },
 ];
 
 export const SiteHeader = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
@@ -27,11 +28,29 @@ export const SiteHeader = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const getNavHref = (href: string) => {
+  const handleNavClick = (e: React.MouseEvent, targetId: string) => {
+    e.preventDefault();
+    setOpen(false);
+
     if (location.pathname !== "/") {
-      return `/${href}`;
+      navigate("/");
+      setTimeout(() => {
+        if (targetId === "home") {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        } else {
+          const elem = document.getElementById(targetId);
+          if (elem) elem.scrollIntoView({ behavior: "smooth" });
+          else window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      }, 150);
+    } else {
+      if (targetId === "home") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        const elem = document.getElementById(targetId);
+        if (elem) elem.scrollIntoView({ behavior: "smooth" });
+      }
     }
-    return href;
   };
 
   return (
@@ -68,9 +87,10 @@ export const SiteHeader = () => {
           <nav className="hidden lg:flex items-center gap-1">
             {NAV.map((n) => (
               <a
-                key={n.href}
-                href={getNavHref(n.href)}
-                className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-smooth relative group"
+                key={n.id}
+                href={`#${n.id}`}
+                onClick={(e) => handleNavClick(e, n.id)}
+                className="px-3 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-smooth relative group cursor-pointer"
               >
                 {n.label}
                 <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 origin-left transition-transform" />
@@ -117,10 +137,10 @@ export const SiteHeader = () => {
               <div className="container mx-auto px-6 py-4 flex flex-col gap-1">
                 {NAV.map((n) => (
                   <a
-                    key={n.href}
-                    href={getNavHref(n.href)}
-                    onClick={() => setOpen(false)}
-                    className="py-3 px-2 text-foreground hover:text-primary border-b border-border/50"
+                    key={n.id}
+                    href={`#${n.id}`}
+                    onClick={(e) => handleNavClick(e, n.id)}
+                    className="py-3 px-2 text-foreground hover:text-primary border-b border-border/50 cursor-pointer"
                   >
                     {n.label}
                   </a>
