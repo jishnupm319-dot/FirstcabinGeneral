@@ -1080,7 +1080,7 @@ export default function Home() {
                     </div>
                     <div>
                       <label className="block text-xs font-semibold uppercase tracking-wider mb-1.5 text-muted-foreground">Project Requirements *</label>
-                      <textarea name="message" required rows={3} placeholder="Specify Colour, Length, Width & Project Details..." className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary text-sm resize-none" />
+                      <textarea name="message" required rows={3} placeholder="Dimensions, glazing tint, HVAC, insulation..." className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary text-sm resize-none" />
                     </div>
                     <button type="submit" disabled={quoteLoading} className="w-full py-4 rounded-full gradient-primary text-primary-foreground font-semibold shadow-elegant hover:shadow-glow transition-smooth disabled:opacity-50 flex items-center justify-center gap-2">
                       <Send className="w-4 h-4" /> {quoteLoading ? "Sending…" : "Submit Quote Request"}
