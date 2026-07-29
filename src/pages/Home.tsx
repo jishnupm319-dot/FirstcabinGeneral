@@ -247,8 +247,8 @@ export default function Home() {
               <a href="#products" className="inline-flex items-center gap-2 px-8 py-4 rounded-full glass text-foreground font-semibold hover:bg-white transition-smooth">
                 Explore Products
               </a>
-              <a href="#" className="inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 border-white/40 text-white font-semibold hover:bg-white/10 transition-smooth">
-                <Play className="w-4 h-4" /> Watch Company Video
+              <a href="tel:+971551000148" className="inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 border-white/40 text-white font-semibold hover:bg-white/10 transition-smooth">
+                <Phone className="w-4 h-4" /> Call Direct
               </a>
             </motion.div>
 
