@@ -36,21 +36,6 @@ const schema = z.object({
   message: z.string().trim().min(5).max(1500),
 });
 
-async function convertImgToBase64(url: string): Promise<string> {
-  try {
-    const res = await fetch(url);
-    const blob = await res.blob();
-    return new Promise((resolve) => {
-      const reader = new FileReader();
-      reader.onloadend = () => resolve((reader.result as string) || "");
-      reader.onerror = () => resolve("");
-      reader.readAsDataURL(blob);
-    });
-  } catch (err) {
-    return "";
-  }
-}
-
 export default function Contact() {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -82,49 +67,40 @@ export default function Contact() {
 
     const refObj = securityCabinReferences.find(r => r.title === selectedRefModel);
     const isRefSelected = projectTypeState === "Security Cabins" && !!selectedRefModel && !!refObj;
-    
-    let base64Image = "";
-    if (isRefSelected && refObj) {
-      base64Image = await convertImgToBase64(refObj.img);
-    }
+    const refImageUrl = isRefSelected && refObj ? refObj.rawUrl : "";
 
     try {
-      const payload: any = {
-        service_id: "service_ixle0hv",
-        template_id: "template_gdpmz1s",
-        user_id: "HGjLQzBmXRvt6OzWU",
-        template_params: {
-          from_name: parsed.data.name,
-          from_email: parsed.data.email,
-          phone: parsed.data.phone,
-          company: parsed.data.company || "N/A",
-          project_type: parsed.data.projectType || "Security Cabins",
-          message: parsed.data.message,
-          selected_model: isRefSelected ? selectedRefModel : "",
-          reference_image_url: isRefSelected ? base64Image : "",
-        },
-      };
-
-      if (isRefSelected && base64Image) {
-        payload.attachments = [
-          {
-            name: `${selectedRefModel}.jpg`,
-            data: base64Image,
-          },
-        ];
-      }
-
-      await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({
+          service_id: "service_ixle0hv",
+          template_id: "template_gdpmz1s",
+          user_id: "HGjLQzBmXRvt6OzWU",
+          template_params: {
+            from_name: parsed.data.name,
+            from_email: parsed.data.email,
+            phone: parsed.data.phone,
+            company: parsed.data.company || "N/A",
+            project_type: parsed.data.projectType || "Security Cabins",
+            message: parsed.data.message,
+            selected_model: isRefSelected ? selectedRefModel : "",
+            reference_image_url: refImageUrl,
+          },
+        }),
       });
 
-      setSent(true);
-      toast.success("Quote sent successfully!");
+      if (res.ok) {
+        setSent(true);
+        toast.success("Quote request sent successfully!");
+      } else {
+        const txt = await res.text();
+        console.error("EmailJS Error Response:", txt);
+        toast.error("Error sending quote request. Please try WhatsApp.");
+      }
     } catch (err) {
-      console.error(err);
-      toast.error("Network error. Please try again.");
+      console.error("EmailJS Error:", err);
+      toast.error("Network error. Please try again or contact via WhatsApp.");
     } finally {
       setLoading(false);
     }

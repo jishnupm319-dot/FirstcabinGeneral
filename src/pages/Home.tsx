@@ -1046,46 +1046,38 @@ export default function Home() {
                       
                       const refObj = securityCabinReferences.find(r => r.title === selectedRefModel);
                       const isRefSelected = quoteProduct === "Security Cabins" && !!selectedRefModel && !!refObj;
-
-                      let base64Image = "";
-                      if (isRefSelected && refObj) {
-                        base64Image = await convertImgToBase64(refObj.img);
-                      }
+                      const refImageUrl = isRefSelected && refObj ? refObj.rawUrl : "";
 
                       try {
-                        const payload: any = {
-                          service_id: "service_ixle0hv",
-                          template_id: "template_gdpmz1s",
-                          user_id: "HGjLQzBmXRvt6OzWU",
-                          template_params: {
-                            from_name: fd.get("name"),
-                            from_email: fd.get("email"),
-                            phone: fd.get("phone"),
-                            company: fd.get("company") || "N/A",
-                            project_type: quoteProduct,
-                            message: userMsg,
-                            selected_model: isRefSelected ? selectedRefModel : "",
-                            reference_image_url: isRefSelected ? base64Image : "",
-                          },
-                        };
-
-                        if (isRefSelected && base64Image) {
-                          payload.attachments = [
-                            {
-                              name: `${selectedRefModel}.jpg`,
-                              data: base64Image,
-                            },
-                          ];
-                        }
-
-                        await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+                        const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
                           method: "POST",
                           headers: { "Content-Type": "application/json" },
-                          body: JSON.stringify(payload),
+                          body: JSON.stringify({
+                            service_id: "service_ixle0hv",
+                            template_id: "template_gdpmz1s",
+                            user_id: "HGjLQzBmXRvt6OzWU",
+                            template_params: {
+                              from_name: fd.get("name"),
+                              from_email: fd.get("email"),
+                              phone: fd.get("phone"),
+                              company: fd.get("company") || "N/A",
+                              project_type: quoteProduct,
+                              message: userMsg,
+                              selected_model: isRefSelected ? selectedRefModel : "",
+                              reference_image_url: refImageUrl,
+                            },
+                          }),
                         });
-                        setQuoteSent(true);
+
+                        if (res.ok) {
+                          setQuoteSent(true);
+                        } else {
+                          const txt = await res.text();
+                          console.error("EmailJS Error Response:", txt);
+                          setQuoteSent(true);
+                        }
                       } catch (err) {
-                        console.error(err);
+                        console.error("EmailJS Error:", err);
                         setQuoteSent(true);
                       } finally {
                         setQuoteLoading(false);
