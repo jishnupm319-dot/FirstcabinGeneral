@@ -1139,23 +1139,30 @@
         setQuoteData({ name, phone, email, projectType, message, mailtoUrl, waUrl });
         setSent(true);
 
+        const refObj = securityCabinReferences.find(r => r.title === selectedRefModel);
+        const isRefSelected = projectType === "Security Cabins" && !!selectedRefModel && !!refObj;
+
+        const payload = {
+          service_id: "service_ixle0hv",
+          template_id: "template_gdpmz1s",
+          user_id: "HGjLQzBmXRvt6OzWU",
+          template_params: {
+            from_name: name,
+            from_email: email,
+            phone: phone,
+            company: company || "N/A",
+            project_type: projectType || "General",
+            message: message,
+            selected_model: isRefSelected ? selectedRefModel : "",
+            reference_image_url: isRefSelected ? (refObj ? refObj.rawUrl : "") : "",
+          },
+        };
+
         // Send via EmailJS API in background directly to jishnumanoj4567@gmail.com
         fetch("https://api.emailjs.com/api/v1.0/email/send", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            service_id: "service_ixle0hv",
-            template_id: "template_gdpmz1s",
-            user_id: "HGjLQzBmXRvt6OzWU",
-            template_params: {
-              from_name: name,
-              from_email: email,
-              phone: phone,
-              company: company || "N/A",
-              project_type: projectType || "General",
-              message: message,
-            },
-          }),
+          body: JSON.stringify(payload),
         }).catch(err => console.error("EmailJS send error", err));
       };
 
