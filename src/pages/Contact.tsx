@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Phone, MessageCircle, MapPin, Mail, Send, CheckCircle2, Shield, Maximize2, X } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -42,6 +42,13 @@ export default function Contact() {
   const [projectTypeState, setProjectTypeState] = useState<string>("Security Cabins");
   const [selectedRefModel, setSelectedRefModel] = useState<string | null>(null);
   const [lightboxImg, setLightboxImg] = useState<{ src: string; title: string } | null>(null);
+
+  useEffect(() => {
+    const elem = document.getElementById("quote-form");
+    if (elem) {
+      setTimeout(() => elem.scrollIntoView({ behavior: "smooth" }), 150);
+    }
+  }, []);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -146,7 +153,7 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} className="lg:col-span-3 p-8 md:p-10 rounded-3xl bg-card shadow-elegant border border-border/50">
+          <motion.div id="quote-form" initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} className="lg:col-span-3 p-8 md:p-10 rounded-3xl bg-card shadow-elegant border border-border/50">
             {sent ? (
               <div className="text-center py-16 space-y-4">
                 <div className="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-4">

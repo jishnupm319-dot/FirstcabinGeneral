@@ -53,15 +53,19 @@ export const SiteHeader = () => {
     }
   };
 
-  const triggerQuoteModal = () => {
+  const handleGetQuoteClick = () => {
     setOpen(false);
-    if (location.pathname !== "/") {
-      navigate("/");
+    if (location.pathname !== "/contact") {
+      navigate("/contact");
       setTimeout(() => {
-        window.dispatchEvent(new CustomEvent("openQuoteModal", { detail: "Security Cabins" }));
-      }, 100);
+        const elem = document.getElementById("quote-form");
+        if (elem) elem.scrollIntoView({ behavior: "smooth" });
+        else window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 150);
     } else {
-      window.dispatchEvent(new CustomEvent("openQuoteModal", { detail: "Security Cabins" }));
+      const elem = document.getElementById("quote-form");
+      if (elem) elem.scrollIntoView({ behavior: "smooth" });
+      else window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
@@ -110,7 +114,7 @@ export const SiteHeader = () => {
             ))}
             <button
               type="button"
-              onClick={triggerQuoteModal}
+              onClick={handleGetQuoteClick}
               className="ml-2 px-4 py-2 rounded-full gradient-primary text-primary-foreground font-semibold text-xs shadow-sm hover:shadow-glow transition-smooth cursor-pointer"
             >
               Get Quote
@@ -160,7 +164,7 @@ export const SiteHeader = () => {
                 ))}
                 <button
                   type="button"
-                  onClick={triggerQuoteModal}
+                  onClick={handleGetQuoteClick}
                   className="py-3 px-2 text-primary font-bold text-left border-b border-border/50 cursor-pointer w-full"
                 >
                   Get Quote
