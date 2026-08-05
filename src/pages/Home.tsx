@@ -64,6 +64,21 @@ const securityCabinReferences = [
   { id: "darkwood-sheraton", title: "Dark Wood Luxury Executive Booth", desc: "Rich timber-grain exterior with chrome accents & tinted panoramic glass", img: secRefDarkwoodSheraton, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-darkwood-sheraton.jpg" },
 ];
 
+async function convertImgToBase64(url: string): Promise<string> {
+  try {
+    const res = await fetch(url);
+    const blob = await res.blob();
+    return new Promise((resolve) => {
+      const reader = new FileReader();
+      reader.onloadend = () => resolve((reader.result as string) || "");
+      reader.onerror = () => resolve("");
+      reader.readAsDataURL(blob);
+    });
+  } catch (err) {
+    return "";
+  }
+}
+
 import clientKuwaitGovt from "@/assets/client-kuwait-govt.jpg";
 import clientDubaiCustoms from "@/assets/client-dubai-customs.jpg";
 import clientQatarMunicipality from "@/assets/client-qatar-municipality.jpg";
@@ -1027,34 +1042,46 @@ export default function Home() {
                       e.preventDefault();
                       setQuoteLoading(true);
                       const fd = new FormData(e.currentTarget);
-                      let userMsg = (fd.get("message") as string) || "";
+                      const userMsg = (fd.get("message") as string) || "";
+                      
                       const refObj = securityCabinReferences.find(r => r.title === selectedRefModel);
-                      const refImageUrl = (quoteProduct === "Security Cabins" && refObj) ? refObj.rawUrl : "";
+                      const isRefSelected = quoteProduct === "Security Cabins" && !!selectedRefModel && !!refObj;
 
-                      let finalMsg = userMsg;
-                      if (quoteProduct === "Security Cabins" && selectedRefModel && refObj) {
-                        finalMsg = `Selected Security Cabin Model: ${selectedRefModel}\nModel Image Link: ${refObj.rawUrl}\n\n` + userMsg;
+                      let base64Image = "";
+                      if (isRefSelected && refObj) {
+                        base64Image = await convertImgToBase64(refObj.img);
                       }
 
                       try {
+                        const payload: any = {
+                          service_id: "service_ixle0hv",
+                          template_id: "template_gdpmz1s",
+                          user_id: "HGjLQzBmXRvt6OzWU",
+                          template_params: {
+                            from_name: fd.get("name"),
+                            from_email: fd.get("email"),
+                            phone: fd.get("phone"),
+                            company: fd.get("company") || "N/A",
+                            project_type: quoteProduct,
+                            message: userMsg,
+                            selected_model: isRefSelected ? selectedRefModel : "",
+                            reference_image_url: isRefSelected ? base64Image : "",
+                          },
+                        };
+
+                        if (isRefSelected && base64Image) {
+                          payload.attachments = [
+                            {
+                              name: `${selectedRefModel}.jpg`,
+                              data: base64Image,
+                            },
+                          ];
+                        }
+
                         await fetch("https://api.emailjs.com/api/v1.0/email/send", {
                           method: "POST",
                           headers: { "Content-Type": "application/json" },
-                          body: JSON.stringify({
-                            service_id: "service_ixle0hv",
-                            template_id: "template_gdpmz1s",
-                            user_id: "HGjLQzBmXRvt6OzWU",
-                            template_params: {
-                              from_name: fd.get("name"),
-                              from_email: fd.get("email"),
-                              phone: fd.get("phone"),
-                              company: fd.get("company") || "N/A",
-                              project_type: quoteProduct,
-                              message: finalMsg,
-                              selected_model: selectedRefModel || "N/A",
-                              reference_image_url: refImageUrl,
-                            },
-                          }),
+                          body: JSON.stringify(payload),
                         });
                         setQuoteSent(true);
                       } catch (err) {

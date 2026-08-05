@@ -36,6 +36,21 @@ const schema = z.object({
   message: z.string().trim().min(5).max(1500),
 });
 
+async function convertImgToBase64(url: string): Promise<string> {
+  try {
+    const res = await fetch(url);
+    const blob = await res.blob();
+    return new Promise((resolve) => {
+      const reader = new FileReader();
+      reader.onloadend = () => resolve((reader.result as string) || "");
+      reader.onerror = () => resolve("");
+      reader.readAsDataURL(blob);
+    });
+  } catch (err) {
+    return "";
+  }
+}
+
 export default function Contact() {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -47,15 +62,7 @@ export default function Contact() {
     e.preventDefault();
     const form = e.currentTarget;
     const fd = new FormData(form);
-    let userMsg = (fd.get("message") as string) || "";
-    
-    const refObj = securityCabinReferences.find(r => r.title === selectedRefModel);
-    const refImageUrl = (projectTypeState === "Security Cabins" && refObj) ? refObj.rawUrl : "";
-
-    let finalMsg = userMsg;
-    if (projectTypeState === "Security Cabins" && selectedRefModel && refObj) {
-      finalMsg = `Selected Security Cabin Model: ${selectedRefModel}\nModel Image Link: ${refObj.rawUrl}\n\n` + userMsg;
-    }
+    const userMsg = (fd.get("message") as string) || "";
 
     const parsed = schema.safeParse({
       name: fd.get("name"),
@@ -63,7 +70,7 @@ export default function Contact() {
       phone: fd.get("phone"),
       email: fd.get("email"),
       projectType: projectTypeState,
-      message: finalMsg,
+      message: userMsg,
     });
 
     if (!parsed.success) {
@@ -73,25 +80,44 @@ export default function Contact() {
 
     setLoading(true);
 
+    const refObj = securityCabinReferences.find(r => r.title === selectedRefModel);
+    const isRefSelected = projectTypeState === "Security Cabins" && !!selectedRefModel && !!refObj;
+    
+    let base64Image = "";
+    if (isRefSelected && refObj) {
+      base64Image = await convertImgToBase64(refObj.img);
+    }
+
     try {
+      const payload: any = {
+        service_id: "service_ixle0hv",
+        template_id: "template_gdpmz1s",
+        user_id: "HGjLQzBmXRvt6OzWU",
+        template_params: {
+          from_name: parsed.data.name,
+          from_email: parsed.data.email,
+          phone: parsed.data.phone,
+          company: parsed.data.company || "N/A",
+          project_type: parsed.data.projectType || "Security Cabins",
+          message: parsed.data.message,
+          selected_model: isRefSelected ? selectedRefModel : "",
+          reference_image_url: isRefSelected ? base64Image : "",
+        },
+      };
+
+      if (isRefSelected && base64Image) {
+        payload.attachments = [
+          {
+            name: `${selectedRefModel}.jpg`,
+            data: base64Image,
+          },
+        ];
+      }
+
       await fetch("https://api.emailjs.com/api/v1.0/email/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          service_id: "service_ixle0hv",
-          template_id: "template_gdpmz1s",
-          user_id: "HGjLQzBmXRvt6OzWU",
-          template_params: {
-            from_name: parsed.data.name,
-            from_email: parsed.data.email,
-            phone: parsed.data.phone,
-            company: parsed.data.company || "N/A",
-            project_type: parsed.data.projectType || "Security Cabins",
-            message: parsed.data.message,
-            selected_model: selectedRefModel || "N/A",
-            reference_image_url: refImageUrl,
-          },
-        }),
+        body: JSON.stringify(payload),
       });
 
       setSent(true);
