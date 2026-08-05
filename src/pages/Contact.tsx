@@ -17,14 +17,14 @@ import secRefBeigeRoadside from "@/assets/security-ref-beige-roadside.jpg";
 import secRefDarkwoodSheraton from "@/assets/security-ref-darkwood-sheraton.jpg";
 
 const securityCabinReferences = [
-  { id: "trailer", title: "Mobile Trailer Security Booth", desc: "Towable cabin with integrated generator platform & safety rail", img: secRefTrailer },
-  { id: "night-dark", title: "Executive Curved Night Gatehouse", desc: "Rounded metallic finish with 360° panoramic dark glazing & ambient light", img: secRefNightDark },
-  { id: "silver-curved", title: "Silver Chrome Louvered Guard Cabin", desc: "Polished stainless steel banding with horizontal architectural louvers", img: secRefSilverCurved },
-  { id: "dwtc-ibis", title: "DWTC Luxury Entrance Gatehouse", desc: "High-security corporate checkpoint booth with illuminated government crest", img: secRefDwtcIbis },
-  { id: "beige-oval", title: "Beige Oval Architectural Guard Booth", desc: "Smooth curved cream finish with polished stainless louvers", img: secRefBeigeOval },
-  { id: "gold-curved", title: "Gold Metallic Rounded Gatehouse", desc: "Luxurious gold anodized panels with curved glass bay", img: secRefGoldCurved },
-  { id: "beige-roadside", title: "Beige Curved Oval Gate Cabin", desc: "Sleek oval roadside security unit with multi-band chrome", img: secRefBeigeRoadside },
-  { id: "darkwood-sheraton", title: "Dark Wood Luxury Executive Booth", desc: "Rich timber-grain exterior with chrome accents & tinted panoramic glass", img: secRefDarkwoodSheraton },
+  { id: "trailer", title: "Mobile Trailer Security Booth", desc: "Towable cabin with integrated generator platform & safety rail", img: secRefTrailer, rawUrl: "https://raw.githubusercontent.com/jishnupm319-dot/FirstcabinGeneral/main/src/assets/security-ref-trailer.jpg" },
+  { id: "night-dark", title: "Executive Curved Night Gatehouse", desc: "Rounded metallic finish with 360° panoramic dark glazing & ambient light", img: secRefNightDark, rawUrl: "https://raw.githubusercontent.com/jishnupm319-dot/FirstcabinGeneral/main/src/assets/security-ref-night-dark.jpg" },
+  { id: "silver-curved", title: "Silver Chrome Louvered Guard Cabin", desc: "Polished stainless steel banding with horizontal architectural louvers", img: secRefSilverCurved, rawUrl: "https://raw.githubusercontent.com/jishnupm319-dot/FirstcabinGeneral/main/src/assets/security-ref-silver-curved.jpg" },
+  { id: "dwtc-ibis", title: "DWTC Luxury Entrance Gatehouse", desc: "High-security corporate checkpoint booth with illuminated government crest", img: secRefDwtcIbis, rawUrl: "https://raw.githubusercontent.com/jishnupm319-dot/FirstcabinGeneral/main/src/assets/security-ref-dwtc-ibis.jpg" },
+  { id: "beige-oval", title: "Beige Oval Architectural Guard Booth", desc: "Smooth curved cream finish with polished stainless louvers", img: secRefBeigeOval, rawUrl: "https://raw.githubusercontent.com/jishnupm319-dot/FirstcabinGeneral/main/src/assets/security-ref-beige-oval.jpg" },
+  { id: "gold-curved", title: "Gold Metallic Rounded Gatehouse", desc: "Luxurious gold anodized panels with curved glass bay", img: secRefGoldCurved, rawUrl: "https://raw.githubusercontent.com/jishnupm319-dot/FirstcabinGeneral/main/src/assets/security-ref-gold-curved.jpg" },
+  { id: "beige-roadside", title: "Beige Curved Oval Gate Cabin", desc: "Sleek oval roadside security unit with multi-band chrome", img: secRefBeigeRoadside, rawUrl: "https://raw.githubusercontent.com/jishnupm319-dot/FirstcabinGeneral/main/src/assets/security-ref-beige-roadside.jpg" },
+  { id: "darkwood-sheraton", title: "Dark Wood Luxury Executive Booth", desc: "Rich timber-grain exterior with chrome accents & tinted panoramic glass", img: secRefDarkwoodSheraton, rawUrl: "https://raw.githubusercontent.com/jishnupm319-dot/FirstcabinGeneral/main/src/assets/security-ref-darkwood-sheraton.jpg" },
 ];
 
 const schema = z.object({
@@ -69,7 +69,7 @@ export default function Contact() {
     setLoading(true);
 
     const refObj = securityCabinReferences.find(r => r.title === selectedRefModel);
-    const refImageUrl = (projectTypeState === "Security Cabins" && refObj) ? (window.location.origin + refObj.img) : "";
+    const refImageUrl = (projectTypeState === "Security Cabins" && refObj) ? refObj.rawUrl : "";
 
     try {
       await fetch("https://api.emailjs.com/api/v1.0/email/send", {
