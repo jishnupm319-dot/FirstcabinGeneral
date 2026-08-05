@@ -1,0 +1,7013 @@
+{
+  "summary": {
+    "totalTrips": 70,
+    "totalRecords": 1094793,
+    "avgBatteryTemp": "15.4",
+    "maxBatteryTemp": 32,
+    "avgVoltage": "376.4",
+    "maxCurrent": 144.49,
+    "maxNormaldTdt": "10.000"
+  },
+  "samples": [
+    {
+      "trip": "TripA01",
+      "time": 0,
+      "batTemp": 21,
+      "cabTemp": 24.5,
+      "voltage": 391.4,
+      "current": -2.2,
+      "ambTemp": 25.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA01",
+      "time": 50,
+      "batTemp": 21,
+      "cabTemp": 25.01,
+      "voltage": 392.23,
+      "current": 15.52,
+      "ambTemp": 27.35,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA01",
+      "time": 100,
+      "batTemp": 22,
+      "cabTemp": 25.17,
+      "voltage": 389.29,
+      "current": -12.48,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA01",
+      "time": 150,
+      "batTemp": 22,
+      "cabTemp": 25.67,
+      "voltage": 384.54,
+      "current": -73.11,
+      "ambTemp": 29,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA01",
+      "time": 200,
+      "batTemp": 22,
+      "cabTemp": 25.67,
+      "voltage": 390.1,
+      "current": -5.24,
+      "ambTemp": 30,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA01",
+      "time": 250,
+      "batTemp": 22,
+      "cabTemp": 25.34,
+      "voltage": 390,
+      "current": -5.86,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA01",
+      "time": 300,
+      "batTemp": 22,
+      "cabTemp": 24.92,
+      "voltage": 388.5,
+      "current": -16.81,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA01",
+      "time": 350,
+      "batTemp": 22,
+      "cabTemp": 25.01,
+      "voltage": 388.92,
+      "current": -12.68,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA01",
+      "time": 400,
+      "batTemp": 22,
+      "cabTemp": 24.92,
+      "voltage": 389.26,
+      "current": -9.28,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA01",
+      "time": 450,
+      "batTemp": 22,
+      "cabTemp": 24.67,
+      "voltage": 388.64,
+      "current": -10.47,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA01",
+      "time": 500,
+      "batTemp": 22,
+      "cabTemp": 24,
+      "voltage": 389.84,
+      "current": 1.12,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA01",
+      "time": 550,
+      "batTemp": 22,
+      "cabTemp": 23.84,
+      "voltage": 391.1,
+      "current": 24.33,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA01",
+      "time": 600,
+      "batTemp": 22,
+      "cabTemp": 23.17,
+      "voltage": 390.7,
+      "current": 25.8,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA01",
+      "time": 650,
+      "batTemp": 22,
+      "cabTemp": 22.67,
+      "voltage": 388.6,
+      "current": -1.12,
+      "ambTemp": 31.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA01",
+      "time": 700,
+      "batTemp": 22,
+      "cabTemp": 22.5,
+      "voltage": 389.39,
+      "current": 5.29,
+      "ambTemp": 32,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA01",
+      "time": 750,
+      "batTemp": 22,
+      "cabTemp": 22.5,
+      "voltage": 386.66,
+      "current": -20.09,
+      "ambTemp": 31.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA01",
+      "time": 800,
+      "batTemp": 22,
+      "cabTemp": 22.34,
+      "voltage": 389.7,
+      "current": 12.93,
+      "ambTemp": 31.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA01",
+      "time": 850,
+      "batTemp": 22,
+      "cabTemp": 22.34,
+      "voltage": 388.2,
+      "current": -6.1,
+      "ambTemp": 32.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA01",
+      "time": 900,
+      "batTemp": 22,
+      "cabTemp": 22.5,
+      "voltage": 385.49,
+      "current": -30.48,
+      "ambTemp": 33,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA01",
+      "time": 950,
+      "batTemp": 22,
+      "cabTemp": 22.67,
+      "voltage": 382.3,
+      "current": -67.5,
+      "ambTemp": 32,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA01",
+      "time": 1000,
+      "batTemp": 22,
+      "cabTemp": 22.67,
+      "voltage": 383.93,
+      "current": -53.84,
+      "ambTemp": 33,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 0,
+      "batTemp": 23,
+      "cabTemp": 22.84,
+      "voltage": 381.8,
+      "current": -37.6,
+      "ambTemp": 32,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 50,
+      "batTemp": 24,
+      "cabTemp": 22,
+      "voltage": 379.6,
+      "current": -35.49,
+      "ambTemp": 32,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 100,
+      "batTemp": 24,
+      "cabTemp": 21.34,
+      "voltage": 386.76,
+      "current": 22.09,
+      "ambTemp": 32,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 150,
+      "batTemp": 24,
+      "cabTemp": 20.67,
+      "voltage": 391.87,
+      "current": 67.31,
+      "ambTemp": 32,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 200,
+      "batTemp": 24,
+      "cabTemp": 20.17,
+      "voltage": 391.53,
+      "current": 123.21,
+      "ambTemp": 32,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 250,
+      "batTemp": 25,
+      "cabTemp": 19.84,
+      "voltage": 388.97,
+      "current": 64.77,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 300,
+      "batTemp": 25,
+      "cabTemp": 19.94,
+      "voltage": 380.2,
+      "current": -11.4,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 350,
+      "batTemp": 25,
+      "cabTemp": 20,
+      "voltage": 382.29,
+      "current": -4.25,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 400,
+      "batTemp": 25,
+      "cabTemp": 20.5,
+      "voltage": 386.81,
+      "current": 7.87,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 450,
+      "batTemp": 25,
+      "cabTemp": 20.67,
+      "voltage": 383.04,
+      "current": -11.2,
+      "ambTemp": 32,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 500,
+      "batTemp": 25,
+      "cabTemp": 21.17,
+      "voltage": 385.1,
+      "current": -3,
+      "ambTemp": 32,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 550,
+      "batTemp": 25,
+      "cabTemp": 21.73,
+      "voltage": 383.34,
+      "current": -9.92,
+      "ambTemp": 32.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 600,
+      "batTemp": 25,
+      "cabTemp": 22.34,
+      "voltage": 385.88,
+      "current": 15.11,
+      "ambTemp": 32,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 650,
+      "batTemp": 25,
+      "cabTemp": 22.5,
+      "voltage": 381.5,
+      "current": -4.06,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 700,
+      "batTemp": 25,
+      "cabTemp": 22.34,
+      "voltage": 380.99,
+      "current": -23.63,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 750,
+      "batTemp": 25,
+      "cabTemp": 22.34,
+      "voltage": 381.4,
+      "current": -10.26,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 800,
+      "batTemp": 25,
+      "cabTemp": 22.34,
+      "voltage": 379.87,
+      "current": -36.11,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 850,
+      "batTemp": 25,
+      "cabTemp": 22.07,
+      "voltage": 382.73,
+      "current": -23.19,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 900,
+      "batTemp": 25,
+      "cabTemp": 22.17,
+      "voltage": 383.2,
+      "current": 0.93,
+      "ambTemp": 31.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 950,
+      "batTemp": 25,
+      "cabTemp": 22.17,
+      "voltage": 379.74,
+      "current": -34.02,
+      "ambTemp": 31.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 1000,
+      "batTemp": 25,
+      "cabTemp": 22.34,
+      "voltage": 384.46,
+      "current": 7.86,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 1050,
+      "batTemp": 25,
+      "cabTemp": 22.67,
+      "voltage": 381.66,
+      "current": -12.46,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 1100,
+      "batTemp": 25,
+      "cabTemp": 22.67,
+      "voltage": 382.9,
+      "current": -2.08,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 1150,
+      "batTemp": 25,
+      "cabTemp": 22.84,
+      "voltage": 383.89,
+      "current": -0.17,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 1200,
+      "batTemp": 25,
+      "cabTemp": 22.84,
+      "voltage": 380.45,
+      "current": -23.28,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 1250,
+      "batTemp": 26,
+      "cabTemp": 23.17,
+      "voltage": 381,
+      "current": 9.82,
+      "ambTemp": 30,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 1300,
+      "batTemp": 26,
+      "cabTemp": 23.17,
+      "voltage": 382.51,
+      "current": 7.68,
+      "ambTemp": 30,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 1350,
+      "batTemp": 26,
+      "cabTemp": 23.34,
+      "voltage": 377.96,
+      "current": -1.09,
+      "ambTemp": 30,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA02",
+      "time": 1400,
+      "batTemp": 26,
+      "cabTemp": 23.34,
+      "voltage": 379.66,
+      "current": -27.19,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA03",
+      "time": 0,
+      "batTemp": 24,
+      "cabTemp": 23,
+      "voltage": 390.3,
+      "current": -6.2,
+      "ambTemp": 21.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA03",
+      "time": 50,
+      "batTemp": 24,
+      "cabTemp": 23,
+      "voltage": 387.26,
+      "current": -29.44,
+      "ambTemp": 22,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA03",
+      "time": 100,
+      "batTemp": 24,
+      "cabTemp": 23.17,
+      "voltage": 391.6,
+      "current": 34.08,
+      "ambTemp": 22.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA03",
+      "time": 150,
+      "batTemp": 24,
+      "cabTemp": 23.67,
+      "voltage": 389.3,
+      "current": -3.8,
+      "ambTemp": 22.82,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA03",
+      "time": 200,
+      "batTemp": 25,
+      "cabTemp": 24.5,
+      "voltage": 387.97,
+      "current": -21.5,
+      "ambTemp": 23,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA03",
+      "time": 250,
+      "batTemp": 25,
+      "cabTemp": 25.34,
+      "voltage": 377.17,
+      "current": -113.1,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA03",
+      "time": 300,
+      "batTemp": 26,
+      "cabTemp": 26.17,
+      "voltage": 387.54,
+      "current": 41.24,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA03",
+      "time": 350,
+      "batTemp": 26,
+      "cabTemp": 26.67,
+      "voltage": 383.37,
+      "current": -12.54,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA03",
+      "time": 400,
+      "batTemp": 26,
+      "cabTemp": 27.01,
+      "voltage": 384.12,
+      "current": -6.47,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA03",
+      "time": 450,
+      "batTemp": 26,
+      "cabTemp": 26.67,
+      "voltage": 383.9,
+      "current": -13.88,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA03",
+      "time": 500,
+      "batTemp": 26,
+      "cabTemp": 25.84,
+      "voltage": 383.17,
+      "current": -23.9,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA03",
+      "time": 550,
+      "batTemp": 25,
+      "cabTemp": 25.17,
+      "voltage": 384.58,
+      "current": -12.01,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA03",
+      "time": 600,
+      "batTemp": 25,
+      "cabTemp": 24.17,
+      "voltage": 385.56,
+      "current": -7.83,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA03",
+      "time": 650,
+      "batTemp": 25,
+      "cabTemp": 23.5,
+      "voltage": 386.6,
+      "current": 1.43,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA04",
+      "time": 0,
+      "batTemp": 25,
+      "cabTemp": 23,
+      "voltage": 386.8,
+      "current": -1.7,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA04",
+      "time": 50,
+      "batTemp": 25,
+      "cabTemp": 22.67,
+      "voltage": 379.58,
+      "current": -71.84,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA04",
+      "time": 100,
+      "batTemp": 28,
+      "cabTemp": 22.34,
+      "voltage": 378.17,
+      "current": -21.76,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA04",
+      "time": 150,
+      "batTemp": 27,
+      "cabTemp": 22.17,
+      "voltage": 390.06,
+      "current": 130.11,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA04",
+      "time": 200,
+      "batTemp": 27,
+      "cabTemp": 21.84,
+      "voltage": 375.06,
+      "current": -73.24,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA04",
+      "time": 250,
+      "batTemp": 27,
+      "cabTemp": 21.84,
+      "voltage": 366.43,
+      "current": -164.44,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA04",
+      "time": 300,
+      "batTemp": 27,
+      "cabTemp": 22,
+      "voltage": 371.89,
+      "current": -94.08,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA04",
+      "time": 350,
+      "batTemp": 27,
+      "cabTemp": 21.84,
+      "voltage": 378.8,
+      "current": -9.69,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA04",
+      "time": 400,
+      "batTemp": 27,
+      "cabTemp": 22,
+      "voltage": 376.41,
+      "current": -70.48,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 0,
+      "batTemp": 27,
+      "cabTemp": 22,
+      "voltage": 380.6,
+      "current": -18.8,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 50,
+      "batTemp": 27,
+      "cabTemp": 22.17,
+      "voltage": 381.87,
+      "current": 13.02,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 100,
+      "batTemp": 27,
+      "cabTemp": 22.17,
+      "voltage": 381.79,
+      "current": 5.38,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 150,
+      "batTemp": 27,
+      "cabTemp": 22.34,
+      "voltage": 377.97,
+      "current": -50.42,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 200,
+      "batTemp": 27,
+      "cabTemp": 22.5,
+      "voltage": 381.69,
+      "current": 4.22,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 250,
+      "batTemp": 27,
+      "cabTemp": 22.84,
+      "voltage": 379.1,
+      "current": -28.54,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 300,
+      "batTemp": 27,
+      "cabTemp": 22.84,
+      "voltage": 379.79,
+      "current": -18.45,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 350,
+      "batTemp": 27,
+      "cabTemp": 22.84,
+      "voltage": 379.7,
+      "current": -13.13,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 400,
+      "batTemp": 27,
+      "cabTemp": 23.34,
+      "voltage": 381.4,
+      "current": -3.8,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 450,
+      "batTemp": 27,
+      "cabTemp": 23.34,
+      "voltage": 379.42,
+      "current": -13.7,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 500,
+      "batTemp": 27,
+      "cabTemp": 23,
+      "voltage": 373.79,
+      "current": -102.24,
+      "ambTemp": 25,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 550,
+      "batTemp": 27,
+      "cabTemp": 23,
+      "voltage": 384.12,
+      "current": 61.96,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 600,
+      "batTemp": 27,
+      "cabTemp": 23.34,
+      "voltage": 373.95,
+      "current": -61.42,
+      "ambTemp": 24.04,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 650,
+      "batTemp": 27,
+      "cabTemp": 23.34,
+      "voltage": 375.73,
+      "current": -31.43,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 700,
+      "batTemp": 27,
+      "cabTemp": 23.21,
+      "voltage": 379.56,
+      "current": -15.5,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 750,
+      "batTemp": 27,
+      "cabTemp": 23.34,
+      "voltage": 378.6,
+      "current": -11.01,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 800,
+      "batTemp": 27,
+      "cabTemp": 23.34,
+      "voltage": 379.3,
+      "current": -7.88,
+      "ambTemp": 25,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 850,
+      "batTemp": 27,
+      "cabTemp": 23.67,
+      "voltage": 379.32,
+      "current": -9.06,
+      "ambTemp": 25,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 900,
+      "batTemp": 27,
+      "cabTemp": 23.67,
+      "voltage": 378.9,
+      "current": -2.14,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 950,
+      "batTemp": 27,
+      "cabTemp": 23.84,
+      "voltage": 376.34,
+      "current": -46,
+      "ambTemp": 25.78,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 1000,
+      "batTemp": 27,
+      "cabTemp": 24,
+      "voltage": 377.5,
+      "current": -9.28,
+      "ambTemp": 25,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 1050,
+      "batTemp": 27,
+      "cabTemp": 23.71,
+      "voltage": 378.8,
+      "current": -2.12,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 1100,
+      "batTemp": 27,
+      "cabTemp": 23.84,
+      "voltage": 378.92,
+      "current": 4.08,
+      "ambTemp": 25,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 1150,
+      "batTemp": 27,
+      "cabTemp": 23.5,
+      "voltage": 378.3,
+      "current": -2.18,
+      "ambTemp": 25,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 1200,
+      "batTemp": 27,
+      "cabTemp": 23.84,
+      "voltage": 377.88,
+      "current": 1.18,
+      "ambTemp": 25.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 1250,
+      "batTemp": 27,
+      "cabTemp": 23.8,
+      "voltage": 376.43,
+      "current": -15.44,
+      "ambTemp": 25.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 1300,
+      "batTemp": 27,
+      "cabTemp": 24,
+      "voltage": 377.28,
+      "current": -2.4,
+      "ambTemp": 25,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA05",
+      "time": 1350,
+      "batTemp": 27,
+      "cabTemp": 24.34,
+      "voltage": 377.7,
+      "current": -2.03,
+      "ambTemp": 25.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 0,
+      "batTemp": 25,
+      "cabTemp": 27.67,
+      "voltage": 389.9,
+      "current": -16,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 50,
+      "batTemp": 25,
+      "cabTemp": 27.67,
+      "voltage": 389,
+      "current": -25.66,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 100,
+      "batTemp": 26,
+      "cabTemp": 27.84,
+      "voltage": 390.23,
+      "current": -3.42,
+      "ambTemp": 27,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 150,
+      "batTemp": 26,
+      "cabTemp": 27.84,
+      "voltage": 390.6,
+      "current": -2.18,
+      "ambTemp": 27.36,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 200,
+      "batTemp": 26,
+      "cabTemp": 27.84,
+      "voltage": 390.93,
+      "current": 7.54,
+      "ambTemp": 27.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 250,
+      "batTemp": 26,
+      "cabTemp": 28.01,
+      "voltage": 390.2,
+      "current": 9.42,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 300,
+      "batTemp": 26,
+      "cabTemp": 28.01,
+      "voltage": 388.27,
+      "current": -17.55,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 350,
+      "batTemp": 26,
+      "cabTemp": 27.96,
+      "voltage": 385.25,
+      "current": -45.47,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 400,
+      "batTemp": 26,
+      "cabTemp": 27.84,
+      "voltage": 388.33,
+      "current": -13.14,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 450,
+      "batTemp": 26,
+      "cabTemp": 27.67,
+      "voltage": 388.8,
+      "current": -9.05,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 500,
+      "batTemp": 26,
+      "cabTemp": 27.51,
+      "voltage": 388.27,
+      "current": -12.35,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 550,
+      "batTemp": 26,
+      "cabTemp": 27.17,
+      "voltage": 389.2,
+      "current": 1.17,
+      "ambTemp": 29,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 600,
+      "batTemp": 26,
+      "cabTemp": 26.84,
+      "voltage": 389.09,
+      "current": 4.6,
+      "ambTemp": 29,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 650,
+      "batTemp": 26,
+      "cabTemp": 26.67,
+      "voltage": 387.43,
+      "current": -14.92,
+      "ambTemp": 29,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 700,
+      "batTemp": 26,
+      "cabTemp": 26.51,
+      "voltage": 388,
+      "current": 6.05,
+      "ambTemp": 29,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 750,
+      "batTemp": 26,
+      "cabTemp": 26.17,
+      "voltage": 382.2,
+      "current": -70.44,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 800,
+      "batTemp": 26,
+      "cabTemp": 25.84,
+      "voltage": 384.07,
+      "current": -32.42,
+      "ambTemp": 28.94,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 850,
+      "batTemp": 26,
+      "cabTemp": 25.67,
+      "voltage": 381.37,
+      "current": -54.51,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 900,
+      "batTemp": 26,
+      "cabTemp": 25.67,
+      "voltage": 382.97,
+      "current": -50.29,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 950,
+      "batTemp": 26,
+      "cabTemp": 25.34,
+      "voltage": 386.13,
+      "current": -15.25,
+      "ambTemp": 28,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 1000,
+      "batTemp": 26,
+      "cabTemp": 25.34,
+      "voltage": 384.93,
+      "current": -14.13,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 1050,
+      "batTemp": 26,
+      "cabTemp": 25.01,
+      "voltage": 390.6,
+      "current": 57.97,
+      "ambTemp": 29,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 1100,
+      "batTemp": 26,
+      "cabTemp": 24.84,
+      "voltage": 387.2,
+      "current": -3.33,
+      "ambTemp": 29.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 1150,
+      "batTemp": 26,
+      "cabTemp": 24.84,
+      "voltage": 387.2,
+      "current": -2.8,
+      "ambTemp": 30,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 1200,
+      "batTemp": 26,
+      "cabTemp": 24.84,
+      "voltage": 387.2,
+      "current": -2.6,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 1250,
+      "batTemp": 26,
+      "cabTemp": 25.01,
+      "voltage": 387.2,
+      "current": -3.1,
+      "ambTemp": 31.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 1300,
+      "batTemp": 26,
+      "cabTemp": 25.34,
+      "voltage": 385.6,
+      "current": -23.24,
+      "ambTemp": 31.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 1350,
+      "batTemp": 26,
+      "cabTemp": 25.34,
+      "voltage": 386.64,
+      "current": -0.43,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 1400,
+      "batTemp": 26,
+      "cabTemp": 25.51,
+      "voltage": 387.1,
+      "current": -4.1,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 1450,
+      "batTemp": 26,
+      "cabTemp": 25.67,
+      "voltage": 387.1,
+      "current": -3,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 1500,
+      "batTemp": 26,
+      "cabTemp": 26.01,
+      "voltage": 387.24,
+      "current": 8.93,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 1550,
+      "batTemp": 26,
+      "cabTemp": 26.01,
+      "voltage": 387,
+      "current": -2.22,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 1600,
+      "batTemp": 26,
+      "cabTemp": 26.01,
+      "voltage": 386.4,
+      "current": -5.3,
+      "ambTemp": 31.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 1650,
+      "batTemp": 26,
+      "cabTemp": 26.01,
+      "voltage": 385.72,
+      "current": -14.98,
+      "ambTemp": 32,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 1700,
+      "batTemp": 26,
+      "cabTemp": 26.34,
+      "voltage": 385.8,
+      "current": -12.21,
+      "ambTemp": 31.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 1750,
+      "batTemp": 26,
+      "cabTemp": 26.17,
+      "voltage": 384.88,
+      "current": -23.08,
+      "ambTemp": 31.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 1800,
+      "batTemp": 27,
+      "cabTemp": 26.17,
+      "voltage": 386.26,
+      "current": -7.74,
+      "ambTemp": 32.49,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 1850,
+      "batTemp": 27,
+      "cabTemp": 26.17,
+      "voltage": 386.1,
+      "current": -8.47,
+      "ambTemp": 33,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 1900,
+      "batTemp": 27,
+      "cabTemp": 26.01,
+      "voltage": 385.16,
+      "current": -17.48,
+      "ambTemp": 32.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 1950,
+      "batTemp": 27,
+      "cabTemp": 26.34,
+      "voltage": 385.86,
+      "current": 7.66,
+      "ambTemp": 31.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 2000,
+      "batTemp": 27,
+      "cabTemp": 26.34,
+      "voltage": 382.33,
+      "current": -48.88,
+      "ambTemp": 32,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 2050,
+      "batTemp": 27,
+      "cabTemp": 26.17,
+      "voltage": 383.74,
+      "current": -13.43,
+      "ambTemp": 31.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 2100,
+      "batTemp": 27,
+      "cabTemp": 26.36,
+      "voltage": 382.24,
+      "current": -37.5,
+      "ambTemp": 31.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 2150,
+      "batTemp": 27,
+      "cabTemp": 26.34,
+      "voltage": 382.86,
+      "current": -4.74,
+      "ambTemp": 31.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 2200,
+      "batTemp": 27,
+      "cabTemp": 26.17,
+      "voltage": 382.3,
+      "current": -27.34,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 2250,
+      "batTemp": 27,
+      "cabTemp": 26.51,
+      "voltage": 380.75,
+      "current": -37.34,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 2300,
+      "batTemp": 27,
+      "cabTemp": 26.51,
+      "voltage": 382.1,
+      "current": -10.12,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 2350,
+      "batTemp": 27,
+      "cabTemp": 26.51,
+      "voltage": 378.07,
+      "current": -39.03,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 2400,
+      "batTemp": 27.84,
+      "cabTemp": 26.67,
+      "voltage": 377.1,
+      "current": -36.01,
+      "ambTemp": 30.06,
+      "dTdt": 1.1
+    },
+    {
+      "trip": "TripA06",
+      "time": 2450,
+      "batTemp": 28,
+      "cabTemp": 26.67,
+      "voltage": 384.2,
+      "current": 12.7,
+      "ambTemp": 29.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 2500,
+      "batTemp": 28,
+      "cabTemp": 26.67,
+      "voltage": 375.34,
+      "current": -74.08,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 2550,
+      "batTemp": 28,
+      "cabTemp": 26.34,
+      "voltage": 375.82,
+      "current": -44.19,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 2600,
+      "batTemp": 28,
+      "cabTemp": 26.17,
+      "voltage": 378.4,
+      "current": -26.06,
+      "ambTemp": 30,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 2650,
+      "batTemp": 28,
+      "cabTemp": 26.17,
+      "voltage": 378.02,
+      "current": -45.43,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 2700,
+      "batTemp": 28,
+      "cabTemp": 26.51,
+      "voltage": 384.5,
+      "current": 40.94,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 2750,
+      "batTemp": 28,
+      "cabTemp": 26.51,
+      "voltage": 380.9,
+      "current": -0.1,
+      "ambTemp": 32,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 2800,
+      "batTemp": 28,
+      "cabTemp": 26.67,
+      "voltage": 379.94,
+      "current": -10.04,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 2850,
+      "batTemp": 28,
+      "cabTemp": 26.67,
+      "voltage": 381.56,
+      "current": 4.67,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 2900,
+      "batTemp": 28,
+      "cabTemp": 26.51,
+      "voltage": 381.4,
+      "current": -2.9,
+      "ambTemp": 32.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 2950,
+      "batTemp": 28,
+      "cabTemp": 26.84,
+      "voltage": 377.72,
+      "current": -55.01,
+      "ambTemp": 32,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 3000,
+      "batTemp": 28,
+      "cabTemp": 26.84,
+      "voltage": 379.84,
+      "current": -15.61,
+      "ambTemp": 31.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 3050,
+      "batTemp": 28,
+      "cabTemp": 27.17,
+      "voltage": 381.64,
+      "current": 14.57,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 3100,
+      "batTemp": 28,
+      "cabTemp": 27.01,
+      "voltage": 380.86,
+      "current": -5.59,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA06",
+      "time": 3150,
+      "batTemp": 28,
+      "cabTemp": 26.84,
+      "voltage": 381,
+      "current": -1.27,
+      "ambTemp": 31,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 0,
+      "batTemp": 31,
+      "cabTemp": 39.84,
+      "voltage": 379.9,
+      "current": -12.9,
+      "ambTemp": 33.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 50,
+      "batTemp": 31,
+      "cabTemp": 39.84,
+      "voltage": 380.4,
+      "current": 6.04,
+      "ambTemp": 33,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 100,
+      "batTemp": 31,
+      "cabTemp": 39.84,
+      "voltage": 376.4,
+      "current": -29.41,
+      "ambTemp": 33.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 150,
+      "batTemp": 31,
+      "cabTemp": 38.06,
+      "voltage": 377.25,
+      "current": -23.59,
+      "ambTemp": 33.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 200,
+      "batTemp": 32,
+      "cabTemp": 36.34,
+      "voltage": 370.25,
+      "current": -69.51,
+      "ambTemp": 32.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 250,
+      "batTemp": 32,
+      "cabTemp": 35.01,
+      "voltage": 375.8,
+      "current": -6.05,
+      "ambTemp": 32.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 300,
+      "batTemp": 32,
+      "cabTemp": 33.84,
+      "voltage": 373.5,
+      "current": -32.34,
+      "ambTemp": 31.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 350,
+      "batTemp": 32,
+      "cabTemp": 33.01,
+      "voltage": 376.96,
+      "current": 25.81,
+      "ambTemp": 32,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 400,
+      "batTemp": 32,
+      "cabTemp": 32.51,
+      "voltage": 368.44,
+      "current": -59.92,
+      "ambTemp": 32,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 450,
+      "batTemp": 32,
+      "cabTemp": 32.01,
+      "voltage": 367.3,
+      "current": -75.41,
+      "ambTemp": 32.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 500,
+      "batTemp": 32,
+      "cabTemp": 31.84,
+      "voltage": 371.47,
+      "current": -9.45,
+      "ambTemp": 32.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 550,
+      "batTemp": 32,
+      "cabTemp": 31.96,
+      "voltage": 370.46,
+      "current": -30.36,
+      "ambTemp": 32.02,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 600,
+      "batTemp": 31,
+      "cabTemp": 31.84,
+      "voltage": 370.19,
+      "current": -36.91,
+      "ambTemp": 32,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 650,
+      "batTemp": 31,
+      "cabTemp": 31.67,
+      "voltage": 367.2,
+      "current": -51.39,
+      "ambTemp": 32,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 700,
+      "batTemp": 31,
+      "cabTemp": 31.34,
+      "voltage": 367.5,
+      "current": -35.81,
+      "ambTemp": 32,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 750,
+      "batTemp": 31,
+      "cabTemp": 31.01,
+      "voltage": 365.04,
+      "current": -73.88,
+      "ambTemp": 31.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 800,
+      "batTemp": 30,
+      "cabTemp": 30.84,
+      "voltage": 368.24,
+      "current": -35.94,
+      "ambTemp": 32,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 850,
+      "batTemp": 30,
+      "cabTemp": 30.51,
+      "voltage": 364.92,
+      "current": -93.83,
+      "ambTemp": 31.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 900,
+      "batTemp": 30,
+      "cabTemp": 30.51,
+      "voltage": 363.69,
+      "current": -68.59,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 950,
+      "batTemp": 31,
+      "cabTemp": 30.51,
+      "voltage": 362.85,
+      "current": -69.21,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 1000,
+      "batTemp": 30,
+      "cabTemp": 30.51,
+      "voltage": 377.2,
+      "current": 137.22,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 1050,
+      "batTemp": 30,
+      "cabTemp": 30.17,
+      "voltage": 366.7,
+      "current": -32.46,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 1100,
+      "batTemp": 30,
+      "cabTemp": 30.34,
+      "voltage": 368.76,
+      "current": 9.22,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 1150,
+      "batTemp": 30,
+      "cabTemp": 30.3,
+      "voltage": 358.29,
+      "current": -124.77,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 1200,
+      "batTemp": 30.11,
+      "cabTemp": 30.3,
+      "voltage": 359.7,
+      "current": -89.25,
+      "ambTemp": 30.5,
+      "dTdt": -1.3
+    },
+    {
+      "trip": "TripA07",
+      "time": 1250,
+      "batTemp": 31,
+      "cabTemp": 30.17,
+      "voltage": 363.3,
+      "current": -23.23,
+      "ambTemp": 29.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 1300,
+      "batTemp": 31,
+      "cabTemp": 30.17,
+      "voltage": 364.67,
+      "current": -21.12,
+      "ambTemp": 29,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 1350,
+      "batTemp": 30,
+      "cabTemp": 30.01,
+      "voltage": 364.9,
+      "current": -35.57,
+      "ambTemp": 29.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 1400,
+      "batTemp": 30,
+      "cabTemp": 29.84,
+      "voltage": 368.97,
+      "current": 29.51,
+      "ambTemp": 30,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 1450,
+      "batTemp": 30,
+      "cabTemp": 29.84,
+      "voltage": 364.74,
+      "current": -25.45,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 1500,
+      "batTemp": 30,
+      "cabTemp": 29.51,
+      "voltage": 363.7,
+      "current": -35.82,
+      "ambTemp": 29.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 1550,
+      "batTemp": 30,
+      "cabTemp": 28.84,
+      "voltage": 362.83,
+      "current": -46.82,
+      "ambTemp": 29,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 1600,
+      "batTemp": 30,
+      "cabTemp": 28.51,
+      "voltage": 363.8,
+      "current": -16.37,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 1650,
+      "batTemp": 30,
+      "cabTemp": 27.87,
+      "voltage": 364.31,
+      "current": -10.47,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 1700,
+      "batTemp": 30,
+      "cabTemp": 27.2,
+      "voltage": 364.2,
+      "current": -17,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 1750,
+      "batTemp": 30,
+      "cabTemp": 26.67,
+      "voltage": 363.15,
+      "current": -27.76,
+      "ambTemp": 22.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 1800,
+      "batTemp": 30,
+      "cabTemp": 26.17,
+      "voltage": 364.2,
+      "current": -13.89,
+      "ambTemp": 22.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 1850,
+      "batTemp": 30,
+      "cabTemp": 25.67,
+      "voltage": 363.28,
+      "current": -17.05,
+      "ambTemp": 21.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 1900,
+      "batTemp": 30,
+      "cabTemp": 25.17,
+      "voltage": 364.35,
+      "current": -15.48,
+      "ambTemp": 20.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 1950,
+      "batTemp": 30,
+      "cabTemp": 25.01,
+      "voltage": 365.57,
+      "current": 10.11,
+      "ambTemp": 20.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 2000,
+      "batTemp": 30,
+      "cabTemp": 24.67,
+      "voltage": 364.78,
+      "current": -9.52,
+      "ambTemp": 20,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA07",
+      "time": 2050,
+      "batTemp": 30,
+      "cabTemp": 24.67,
+      "voltage": 365.1,
+      "current": -4.3,
+      "ambTemp": 20.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 0,
+      "batTemp": 26,
+      "cabTemp": 39.17,
+      "voltage": 391.6,
+      "current": -8.6,
+      "ambTemp": 27,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 50,
+      "batTemp": 26,
+      "cabTemp": 37.84,
+      "voltage": 390.4,
+      "current": -6.7,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 100,
+      "batTemp": 26,
+      "cabTemp": 36.17,
+      "voltage": 390.43,
+      "current": -12.68,
+      "ambTemp": 26.64,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 150,
+      "batTemp": 26,
+      "cabTemp": 34.67,
+      "voltage": 390.9,
+      "current": -5.93,
+      "ambTemp": 27.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 200,
+      "batTemp": 26,
+      "cabTemp": 33.34,
+      "voltage": 390.8,
+      "current": -6.3,
+      "ambTemp": 27.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 250,
+      "batTemp": 26,
+      "cabTemp": 31.84,
+      "voltage": 390.8,
+      "current": -4.83,
+      "ambTemp": 28,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 300,
+      "batTemp": 26,
+      "cabTemp": 30.67,
+      "voltage": 391,
+      "current": -2.94,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 350,
+      "batTemp": 26,
+      "cabTemp": 29.68,
+      "voltage": 390.93,
+      "current": -3.41,
+      "ambTemp": 28,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 400,
+      "batTemp": 26,
+      "cabTemp": 29.01,
+      "voltage": 390.9,
+      "current": -3.43,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 450,
+      "batTemp": 26,
+      "cabTemp": 28.51,
+      "voltage": 390.9,
+      "current": -3,
+      "ambTemp": 29,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 500,
+      "batTemp": 26,
+      "cabTemp": 28.01,
+      "voltage": 390.83,
+      "current": -3.18,
+      "ambTemp": 29.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 550,
+      "batTemp": 26,
+      "cabTemp": 28.01,
+      "voltage": 390.8,
+      "current": -2.8,
+      "ambTemp": 30,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 600,
+      "batTemp": 26,
+      "cabTemp": 28.01,
+      "voltage": 390.7,
+      "current": -3.2,
+      "ambTemp": 30,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 650,
+      "batTemp": 26,
+      "cabTemp": 28.01,
+      "voltage": 390.6,
+      "current": -3.1,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 700,
+      "batTemp": 26,
+      "cabTemp": 28.01,
+      "voltage": 390.7,
+      "current": -2.7,
+      "ambTemp": 28,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 750,
+      "batTemp": 26,
+      "cabTemp": 27.84,
+      "voltage": 391.1,
+      "current": 5.9,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 800,
+      "batTemp": 26,
+      "cabTemp": 27.84,
+      "voltage": 385.45,
+      "current": -62.64,
+      "ambTemp": 27.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 850,
+      "batTemp": 26,
+      "cabTemp": 27.84,
+      "voltage": 384.57,
+      "current": -65.13,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 900,
+      "batTemp": 26,
+      "cabTemp": 27.84,
+      "voltage": 386.56,
+      "current": -35.81,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 950,
+      "batTemp": 26,
+      "cabTemp": 27.67,
+      "voltage": 393.98,
+      "current": 74.92,
+      "ambTemp": 26,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 1000,
+      "batTemp": 27,
+      "cabTemp": 27.51,
+      "voltage": 388.44,
+      "current": -11,
+      "ambTemp": 25,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 1050,
+      "batTemp": 27,
+      "cabTemp": 27.17,
+      "voltage": 386.8,
+      "current": -14.07,
+      "ambTemp": 25,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 1100,
+      "batTemp": 26,
+      "cabTemp": 27.01,
+      "voltage": 390.36,
+      "current": 35.77,
+      "ambTemp": 25,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 1150,
+      "batTemp": 26,
+      "cabTemp": 26.67,
+      "voltage": 384.64,
+      "current": -45.18,
+      "ambTemp": 26,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 1200,
+      "batTemp": 26,
+      "cabTemp": 26.83,
+      "voltage": 387.8,
+      "current": -10.33,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 1250,
+      "batTemp": 26,
+      "cabTemp": 26.51,
+      "voltage": 388.24,
+      "current": -0.71,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 1300,
+      "batTemp": 26,
+      "cabTemp": 26.51,
+      "voltage": 388.6,
+      "current": -3.16,
+      "ambTemp": 27.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 1350,
+      "batTemp": 26,
+      "cabTemp": 26.51,
+      "voltage": 388.75,
+      "current": -2.3,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 1400,
+      "batTemp": 26,
+      "cabTemp": 26.67,
+      "voltage": 388.8,
+      "current": -2.25,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 1450,
+      "batTemp": 26,
+      "cabTemp": 26.51,
+      "voltage": 388.8,
+      "current": -1.86,
+      "ambTemp": 30,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 1500,
+      "batTemp": 26,
+      "cabTemp": 26.52,
+      "voltage": 383.69,
+      "current": -73.86,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 1550,
+      "batTemp": 26,
+      "cabTemp": 26.51,
+      "voltage": 389.05,
+      "current": 7.72,
+      "ambTemp": 28,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 1600,
+      "batTemp": 26,
+      "cabTemp": 26.51,
+      "voltage": 389.75,
+      "current": 21.75,
+      "ambTemp": 28,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 1650,
+      "batTemp": 26,
+      "cabTemp": 26.51,
+      "voltage": 387.55,
+      "current": -9.36,
+      "ambTemp": 27,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 1700,
+      "batTemp": 26,
+      "cabTemp": 26.51,
+      "voltage": 388.4,
+      "current": -2.5,
+      "ambTemp": 27,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 1750,
+      "batTemp": 27,
+      "cabTemp": 26.51,
+      "voltage": 389.49,
+      "current": 27.45,
+      "ambTemp": 26,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 1800,
+      "batTemp": 27,
+      "cabTemp": 26.34,
+      "voltage": 385.25,
+      "current": -27.27,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 1850,
+      "batTemp": 27,
+      "cabTemp": 26.34,
+      "voltage": 384.86,
+      "current": -49.69,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 1900,
+      "batTemp": 27,
+      "cabTemp": 26.17,
+      "voltage": 388.2,
+      "current": -1.9,
+      "ambTemp": 27.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 1950,
+      "batTemp": 27,
+      "cabTemp": 26.01,
+      "voltage": 388.2,
+      "current": -1.95,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 2000,
+      "batTemp": 27,
+      "cabTemp": 26.17,
+      "voltage": 387.85,
+      "current": -7.24,
+      "ambTemp": 28,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 2050,
+      "batTemp": 27,
+      "cabTemp": 25.84,
+      "voltage": 386.63,
+      "current": -24.67,
+      "ambTemp": 28,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 2100,
+      "batTemp": 27,
+      "cabTemp": 25.84,
+      "voltage": 387.14,
+      "current": -2.68,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 2150,
+      "batTemp": 27,
+      "cabTemp": 25.67,
+      "voltage": 380.74,
+      "current": -97.92,
+      "ambTemp": 27,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 2200,
+      "batTemp": 27,
+      "cabTemp": 25.34,
+      "voltage": 387.7,
+      "current": -1.94,
+      "ambTemp": 27,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 2250,
+      "batTemp": 27,
+      "cabTemp": 25.17,
+      "voltage": 387.6,
+      "current": -2.6,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 2300,
+      "batTemp": 27,
+      "cabTemp": 25.17,
+      "voltage": 386.2,
+      "current": -19.84,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 2350,
+      "batTemp": 27,
+      "cabTemp": 25.17,
+      "voltage": 387.7,
+      "current": -2.44,
+      "ambTemp": 29,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 2400,
+      "batTemp": 27,
+      "cabTemp": 25.15,
+      "voltage": 386.12,
+      "current": -19.86,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 2450,
+      "batTemp": 27,
+      "cabTemp": 24.84,
+      "voltage": 386.66,
+      "current": -8.86,
+      "ambTemp": 28,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 2500,
+      "batTemp": 27,
+      "cabTemp": 24.5,
+      "voltage": 386.86,
+      "current": -10.27,
+      "ambTemp": 27.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 2550,
+      "batTemp": 27,
+      "cabTemp": 24.17,
+      "voltage": 387.62,
+      "current": -0.35,
+      "ambTemp": 27.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 2600,
+      "batTemp": 27,
+      "cabTemp": 24.17,
+      "voltage": 391.32,
+      "current": 61.66,
+      "ambTemp": 27,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 2650,
+      "batTemp": 27,
+      "cabTemp": 23.84,
+      "voltage": 385.6,
+      "current": -16.51,
+      "ambTemp": 27,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 2700,
+      "batTemp": 27,
+      "cabTemp": 23.84,
+      "voltage": 388.36,
+      "current": 16.07,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 2750,
+      "batTemp": 27,
+      "cabTemp": 23.67,
+      "voltage": 387.86,
+      "current": 7.96,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA08",
+      "time": 2800,
+      "batTemp": 27,
+      "cabTemp": 23.5,
+      "voltage": 387.4,
+      "current": -0.6,
+      "ambTemp": 27.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 0,
+      "batTemp": 22,
+      "cabTemp": 18.5,
+      "voltage": 387.2,
+      "current": -1,
+      "ambTemp": 17.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 50,
+      "batTemp": 22,
+      "cabTemp": 19,
+      "voltage": 387.61,
+      "current": 7.89,
+      "ambTemp": 17.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 100,
+      "batTemp": 22,
+      "cabTemp": 19.67,
+      "voltage": 386.4,
+      "current": -1.29,
+      "ambTemp": 17.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 150,
+      "batTemp": 22,
+      "cabTemp": 20.5,
+      "voltage": 386.9,
+      "current": -1.1,
+      "ambTemp": 17.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 200,
+      "batTemp": 22,
+      "cabTemp": 21.17,
+      "voltage": 386.9,
+      "current": -2.06,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 250,
+      "batTemp": 22,
+      "cabTemp": 21.84,
+      "voltage": 387.32,
+      "current": 6.47,
+      "ambTemp": 17.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 300,
+      "batTemp": 22,
+      "cabTemp": 22.5,
+      "voltage": 383.66,
+      "current": -37.98,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 350,
+      "batTemp": 22,
+      "cabTemp": 22.99,
+      "voltage": 387.86,
+      "current": 17.42,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 400,
+      "batTemp": 22,
+      "cabTemp": 23.34,
+      "voltage": 384.92,
+      "current": -13.62,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 450,
+      "batTemp": 22,
+      "cabTemp": 23.5,
+      "voltage": 386.62,
+      "current": 2.6,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 500,
+      "batTemp": 22,
+      "cabTemp": 23.5,
+      "voltage": 386.3,
+      "current": -1.68,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 550,
+      "batTemp": 22,
+      "cabTemp": 23.67,
+      "voltage": 386.7,
+      "current": 7.08,
+      "ambTemp": 18.1,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 600,
+      "batTemp": 22,
+      "cabTemp": 23.5,
+      "voltage": 385.7,
+      "current": -1.2,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 650,
+      "batTemp": 22,
+      "cabTemp": 23.19,
+      "voltage": 385.8,
+      "current": 2.32,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 700,
+      "batTemp": 22,
+      "cabTemp": 23.17,
+      "voltage": 384.62,
+      "current": -7.88,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 750,
+      "batTemp": 22,
+      "cabTemp": 23,
+      "voltage": 384.92,
+      "current": -8.28,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 800,
+      "batTemp": 22,
+      "cabTemp": 22.67,
+      "voltage": 384.82,
+      "current": -13.3,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 850,
+      "batTemp": 22,
+      "cabTemp": 22.34,
+      "voltage": 385.5,
+      "current": -0.71,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 900,
+      "batTemp": 22,
+      "cabTemp": 21.84,
+      "voltage": 384.8,
+      "current": -2.98,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 950,
+      "batTemp": 22,
+      "cabTemp": 21.67,
+      "voltage": 383.4,
+      "current": -16.62,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 1000,
+      "batTemp": 22,
+      "cabTemp": 21.5,
+      "voltage": 383.88,
+      "current": -13.3,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 1050,
+      "batTemp": 22,
+      "cabTemp": 21.33,
+      "voltage": 385,
+      "current": -3.26,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 1100,
+      "batTemp": 22,
+      "cabTemp": 20.84,
+      "voltage": 385.32,
+      "current": -0.84,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 1150,
+      "batTemp": 22,
+      "cabTemp": 20.84,
+      "voltage": 385.3,
+      "current": -0.72,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 1200,
+      "batTemp": 22,
+      "cabTemp": 20.84,
+      "voltage": 384.98,
+      "current": -4.57,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 1250,
+      "batTemp": 22,
+      "cabTemp": 20.84,
+      "voltage": 381.82,
+      "current": -43.08,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 1300,
+      "batTemp": 22,
+      "cabTemp": 20.84,
+      "voltage": 383.32,
+      "current": -15.9,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 1350,
+      "batTemp": 22,
+      "cabTemp": 20.84,
+      "voltage": 383.27,
+      "current": -7.61,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 1400,
+      "batTemp": 22,
+      "cabTemp": 20.67,
+      "voltage": 383.2,
+      "current": -10.06,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 1450,
+      "batTemp": 22,
+      "cabTemp": 20.67,
+      "voltage": 384.6,
+      "current": -2,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 1500,
+      "batTemp": 22,
+      "cabTemp": 20.67,
+      "voltage": 383.07,
+      "current": -8.27,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 1550,
+      "batTemp": 22,
+      "cabTemp": 20.5,
+      "voltage": 384.57,
+      "current": 9.44,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 1600,
+      "batTemp": 22,
+      "cabTemp": 20.34,
+      "voltage": 383.2,
+      "current": -3.8,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 1650,
+      "batTemp": 22,
+      "cabTemp": 20.01,
+      "voltage": 384.1,
+      "current": -1.8,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 1700,
+      "batTemp": 22,
+      "cabTemp": 20,
+      "voltage": 382.8,
+      "current": -17.94,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 1750,
+      "batTemp": 22,
+      "cabTemp": 20.5,
+      "voltage": 381.42,
+      "current": -27.52,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA09",
+      "time": 1800,
+      "batTemp": 22,
+      "cabTemp": 20.5,
+      "voltage": 382.56,
+      "current": -12.92,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 0,
+      "batTemp": 22,
+      "cabTemp": 38.17,
+      "voltage": 384.1,
+      "current": -5.7,
+      "ambTemp": 22.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 50,
+      "batTemp": 22,
+      "cabTemp": 37.51,
+      "voltage": 381.93,
+      "current": -26.23,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 100,
+      "batTemp": 22,
+      "cabTemp": 36.34,
+      "voltage": 378.89,
+      "current": -58.71,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 150,
+      "batTemp": 22,
+      "cabTemp": 35.01,
+      "voltage": 384.01,
+      "current": 2.59,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 200,
+      "batTemp": 22,
+      "cabTemp": 33.17,
+      "voltage": 383.1,
+      "current": -4.46,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 250,
+      "batTemp": 22,
+      "cabTemp": 31.34,
+      "voltage": 383.33,
+      "current": 0.66,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 300,
+      "batTemp": 22,
+      "cabTemp": 29.34,
+      "voltage": 384.57,
+      "current": 15.09,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 350,
+      "batTemp": 22,
+      "cabTemp": 27.84,
+      "voltage": 381.93,
+      "current": -14.94,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 400,
+      "batTemp": 22,
+      "cabTemp": 26.84,
+      "voltage": 382.7,
+      "current": -2.41,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 450,
+      "batTemp": 22,
+      "cabTemp": 26.34,
+      "voltage": 380.03,
+      "current": -25.91,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 500,
+      "batTemp": 22,
+      "cabTemp": 25.84,
+      "voltage": 374.34,
+      "current": -74.19,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 550,
+      "batTemp": 23,
+      "cabTemp": 25.51,
+      "voltage": 380.03,
+      "current": 1.49,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 600,
+      "batTemp": 23,
+      "cabTemp": 25.51,
+      "voltage": 377.26,
+      "current": -19.55,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 650,
+      "batTemp": 23,
+      "cabTemp": 25.51,
+      "voltage": 369.02,
+      "current": -143.96,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 700,
+      "batTemp": 23,
+      "cabTemp": 25.37,
+      "voltage": 380,
+      "current": 8.01,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 750,
+      "batTemp": 23,
+      "cabTemp": 25.51,
+      "voltage": 377.16,
+      "current": -20.82,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 800,
+      "batTemp": 23,
+      "cabTemp": 25.51,
+      "voltage": 377.37,
+      "current": -14.22,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 850,
+      "batTemp": 23,
+      "cabTemp": 25.51,
+      "voltage": 376.33,
+      "current": -19.18,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 900,
+      "batTemp": 23,
+      "cabTemp": 25.34,
+      "voltage": 375.9,
+      "current": -18.31,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 950,
+      "batTemp": 23,
+      "cabTemp": 25.17,
+      "voltage": 374.3,
+      "current": -31.22,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 1000,
+      "batTemp": 23,
+      "cabTemp": 25.17,
+      "voltage": 376.24,
+      "current": -11.45,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 1050,
+      "batTemp": 23,
+      "cabTemp": 25.34,
+      "voltage": 376.6,
+      "current": -13.94,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 1100,
+      "batTemp": 23,
+      "cabTemp": 25.34,
+      "voltage": 374.58,
+      "current": -25.69,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 1150,
+      "batTemp": 23,
+      "cabTemp": 25.01,
+      "voltage": 378.94,
+      "current": 16.11,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 1200,
+      "batTemp": 23,
+      "cabTemp": 24.96,
+      "voltage": 379.28,
+      "current": 25.69,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 1250,
+      "batTemp": 23,
+      "cabTemp": 25.17,
+      "voltage": 377.1,
+      "current": -1.72,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 1300,
+      "batTemp": 23,
+      "cabTemp": 25.17,
+      "voltage": 376.28,
+      "current": -10.67,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 1350,
+      "batTemp": 23,
+      "cabTemp": 25.51,
+      "voltage": 375.7,
+      "current": -13.6,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA10",
+      "time": 1400,
+      "batTemp": 23,
+      "cabTemp": 25.51,
+      "voltage": 378.1,
+      "current": 16.1,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 0,
+      "batTemp": 26,
+      "cabTemp": 39.84,
+      "voltage": 391.6,
+      "current": -7.6,
+      "ambTemp": 30,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 50,
+      "batTemp": 26,
+      "cabTemp": 39.84,
+      "voltage": 390.8,
+      "current": -8.11,
+      "ambTemp": 30,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 100,
+      "batTemp": 26,
+      "cabTemp": 39.84,
+      "voltage": 387.2,
+      "current": -54.99,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 150,
+      "batTemp": 26,
+      "cabTemp": 39.84,
+      "voltage": 390.99,
+      "current": -0.11,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 200,
+      "batTemp": 26,
+      "cabTemp": 39.84,
+      "voltage": 390.5,
+      "current": -7.2,
+      "ambTemp": 30,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 250,
+      "batTemp": 26,
+      "cabTemp": 39.84,
+      "voltage": 389.1,
+      "current": -19.74,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 300,
+      "batTemp": 26,
+      "cabTemp": 39.84,
+      "voltage": 392.05,
+      "current": 31.19,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 350,
+      "batTemp": 26,
+      "cabTemp": 38.34,
+      "voltage": 388,
+      "current": -24.35,
+      "ambTemp": 28,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 400,
+      "batTemp": 27,
+      "cabTemp": 36.17,
+      "voltage": 392.59,
+      "current": 36.41,
+      "ambTemp": 27.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 450,
+      "batTemp": 27,
+      "cabTemp": 34.67,
+      "voltage": 386.7,
+      "current": -44.26,
+      "ambTemp": 28,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 500,
+      "batTemp": 27,
+      "cabTemp": 33.01,
+      "voltage": 384.6,
+      "current": -40.5,
+      "ambTemp": 27.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 550,
+      "batTemp": 27,
+      "cabTemp": 32.01,
+      "voltage": 387.2,
+      "current": -12.79,
+      "ambTemp": 27.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 600,
+      "batTemp": 27,
+      "cabTemp": 31.01,
+      "voltage": 369.41,
+      "current": -272.79,
+      "ambTemp": 27,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 650,
+      "batTemp": 28,
+      "cabTemp": 30.51,
+      "voltage": 385.11,
+      "current": -16.57,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 700,
+      "batTemp": 27,
+      "cabTemp": 30.01,
+      "voltage": 380.91,
+      "current": -68.23,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 750,
+      "batTemp": 27,
+      "cabTemp": 29.67,
+      "voltage": 386.42,
+      "current": -9.35,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 800,
+      "batTemp": 28,
+      "cabTemp": 29.51,
+      "voltage": 384.99,
+      "current": -9.29,
+      "ambTemp": 26,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 850,
+      "batTemp": 28,
+      "cabTemp": 29.34,
+      "voltage": 381.5,
+      "current": -39.89,
+      "ambTemp": 25.53,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 900,
+      "batTemp": 28,
+      "cabTemp": 29.34,
+      "voltage": 384.97,
+      "current": -5.62,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 950,
+      "batTemp": 28,
+      "cabTemp": 29.01,
+      "voltage": 382.69,
+      "current": -38.73,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 1000,
+      "batTemp": 28,
+      "cabTemp": 29.01,
+      "voltage": 388.89,
+      "current": 37.76,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 1050,
+      "batTemp": 27.15,
+      "cabTemp": 29.17,
+      "voltage": 388.7,
+      "current": 27.12,
+      "ambTemp": 27,
+      "dTdt": -3.1
+    },
+    {
+      "trip": "TripA11",
+      "time": 1100,
+      "batTemp": 28,
+      "cabTemp": 29.01,
+      "voltage": 389.91,
+      "current": 24.1,
+      "ambTemp": 27,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 1150,
+      "batTemp": 27,
+      "cabTemp": 28.84,
+      "voltage": 387.3,
+      "current": -2.8,
+      "ambTemp": 28,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 1200,
+      "batTemp": 27,
+      "cabTemp": 29.01,
+      "voltage": 387.2,
+      "current": -2.8,
+      "ambTemp": 28,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 1250,
+      "batTemp": 27,
+      "cabTemp": 29.01,
+      "voltage": 387.1,
+      "current": -2.86,
+      "ambTemp": 29,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 1300,
+      "batTemp": 27,
+      "cabTemp": 28.91,
+      "voltage": 386.51,
+      "current": -3.53,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 1350,
+      "batTemp": 27,
+      "cabTemp": 29.01,
+      "voltage": 386.08,
+      "current": -7.45,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA11",
+      "time": 1400,
+      "batTemp": 27,
+      "cabTemp": 29.17,
+      "voltage": 386.16,
+      "current": -12.28,
+      "ambTemp": 29,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 0,
+      "batTemp": 28,
+      "cabTemp": 37.17,
+      "voltage": 387,
+      "current": -7.5,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 50,
+      "batTemp": 28,
+      "cabTemp": 36.84,
+      "voltage": 386.9,
+      "current": -5,
+      "ambTemp": 27.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 100,
+      "batTemp": 28,
+      "cabTemp": 36.34,
+      "voltage": 385,
+      "current": -31.03,
+      "ambTemp": 27,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 150,
+      "batTemp": 28,
+      "cabTemp": 35.02,
+      "voltage": 386.6,
+      "current": -5.1,
+      "ambTemp": 29.32,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 200,
+      "batTemp": 28,
+      "cabTemp": 33.34,
+      "voltage": 386.5,
+      "current": -5.2,
+      "ambTemp": 30,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 250,
+      "batTemp": 28,
+      "cabTemp": 31.51,
+      "voltage": 384.49,
+      "current": -37.25,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 300,
+      "batTemp": 28,
+      "cabTemp": 30.01,
+      "voltage": 386.2,
+      "current": -4.79,
+      "ambTemp": 30,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 350,
+      "batTemp": 28,
+      "cabTemp": 28.67,
+      "voltage": 385.5,
+      "current": -13.63,
+      "ambTemp": 31.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 400,
+      "batTemp": 28,
+      "cabTemp": 27.51,
+      "voltage": 383.71,
+      "current": -18.45,
+      "ambTemp": 30.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 450,
+      "batTemp": 28,
+      "cabTemp": 26.34,
+      "voltage": 383.9,
+      "current": -7.4,
+      "ambTemp": 29.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 500,
+      "batTemp": 28,
+      "cabTemp": 25.67,
+      "voltage": 384.8,
+      "current": -3.8,
+      "ambTemp": 31.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 550,
+      "batTemp": 28,
+      "cabTemp": 25.17,
+      "voltage": 383.3,
+      "current": -4.99,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 600,
+      "batTemp": 28,
+      "cabTemp": 24.5,
+      "voltage": 379.6,
+      "current": -63.95,
+      "ambTemp": 28,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 650,
+      "batTemp": 28,
+      "cabTemp": 24.17,
+      "voltage": 387.21,
+      "current": 45.47,
+      "ambTemp": 27.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 700,
+      "batTemp": 28,
+      "cabTemp": 24,
+      "voltage": 382.5,
+      "current": -27.89,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 750,
+      "batTemp": 28,
+      "cabTemp": 23.84,
+      "voltage": 382.9,
+      "current": -20.5,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 800,
+      "batTemp": 28,
+      "cabTemp": 23.67,
+      "voltage": 381.8,
+      "current": -23.05,
+      "ambTemp": 26.62,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 850,
+      "batTemp": 28,
+      "cabTemp": 23.67,
+      "voltage": 383.3,
+      "current": -7.73,
+      "ambTemp": 27,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 900,
+      "batTemp": 28,
+      "cabTemp": 23.67,
+      "voltage": 384.41,
+      "current": 8.57,
+      "ambTemp": 27,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 950,
+      "batTemp": 28,
+      "cabTemp": 23.84,
+      "voltage": 368.54,
+      "current": -227.13,
+      "ambTemp": 27,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 1000,
+      "batTemp": 30,
+      "cabTemp": 23.84,
+      "voltage": 376.99,
+      "current": -14.74,
+      "ambTemp": 25.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 1050,
+      "batTemp": 30,
+      "cabTemp": 24.17,
+      "voltage": 378.69,
+      "current": -15.73,
+      "ambTemp": 26.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 1100,
+      "batTemp": 30,
+      "cabTemp": 24,
+      "voltage": 379.58,
+      "current": -22.2,
+      "ambTemp": 26.64,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 1150,
+      "batTemp": 29,
+      "cabTemp": 24.17,
+      "voltage": 381.99,
+      "current": 12.85,
+      "ambTemp": 27.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 1200,
+      "batTemp": 29,
+      "cabTemp": 24,
+      "voltage": 383.91,
+      "current": 38.78,
+      "ambTemp": 27,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 1250,
+      "batTemp": 29,
+      "cabTemp": 24,
+      "voltage": 381.66,
+      "current": -13.54,
+      "ambTemp": 27,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 1300,
+      "batTemp": 29,
+      "cabTemp": 24.17,
+      "voltage": 375.6,
+      "current": -85.19,
+      "ambTemp": 28,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 1350,
+      "batTemp": 29,
+      "cabTemp": 24.17,
+      "voltage": 380.1,
+      "current": -19.16,
+      "ambTemp": 27,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 1400,
+      "batTemp": 29,
+      "cabTemp": 24.34,
+      "voltage": 382.2,
+      "current": -0.33,
+      "ambTemp": 27,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 1450,
+      "batTemp": 29,
+      "cabTemp": 24.34,
+      "voltage": 380.61,
+      "current": -6.55,
+      "ambTemp": 28.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 1500,
+      "batTemp": 29,
+      "cabTemp": 24.5,
+      "voltage": 382.53,
+      "current": 8.77,
+      "ambTemp": 27.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 1550,
+      "batTemp": 29,
+      "cabTemp": 24.67,
+      "voltage": 380.44,
+      "current": -6.05,
+      "ambTemp": 27.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA12",
+      "time": 1600,
+      "batTemp": 30,
+      "cabTemp": 24.5,
+      "voltage": 378.9,
+      "current": -14.25,
+      "ambTemp": 27,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA13",
+      "time": 0,
+      "batTemp": 22,
+      "cabTemp": 26.01,
+      "voltage": 391.1,
+      "current": -6.2,
+      "ambTemp": 21,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA13",
+      "time": 50,
+      "batTemp": 22,
+      "cabTemp": 26.34,
+      "voltage": 389.52,
+      "current": -16.05,
+      "ambTemp": 21,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA13",
+      "time": 100,
+      "batTemp": 22,
+      "cabTemp": 26.34,
+      "voltage": 391.7,
+      "current": 8.88,
+      "ambTemp": 21,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA13",
+      "time": 150,
+      "batTemp": 22,
+      "cabTemp": 26.34,
+      "voltage": 389.59,
+      "current": -17.45,
+      "ambTemp": 21.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA13",
+      "time": 200,
+      "batTemp": 22,
+      "cabTemp": 26.01,
+      "voltage": 390.7,
+      "current": -2.11,
+      "ambTemp": 21.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA13",
+      "time": 250,
+      "batTemp": 22,
+      "cabTemp": 25.67,
+      "voltage": 387.95,
+      "current": -27.83,
+      "ambTemp": 21.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA13",
+      "time": 300,
+      "batTemp": 22,
+      "cabTemp": 25.17,
+      "voltage": 390.8,
+      "current": -0.6,
+      "ambTemp": 22,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA13",
+      "time": 350,
+      "batTemp": 22,
+      "cabTemp": 24.84,
+      "voltage": 389.49,
+      "current": -16,
+      "ambTemp": 22.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA13",
+      "time": 400,
+      "batTemp": 22,
+      "cabTemp": 24.42,
+      "voltage": 392.19,
+      "current": 22.94,
+      "ambTemp": 22,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA13",
+      "time": 450,
+      "batTemp": 22,
+      "cabTemp": 24,
+      "voltage": 390,
+      "current": -1.89,
+      "ambTemp": 22.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA13",
+      "time": 500,
+      "batTemp": 22,
+      "cabTemp": 23.5,
+      "voltage": 390.3,
+      "current": -2.73,
+      "ambTemp": 22.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA13",
+      "time": 550,
+      "batTemp": 22,
+      "cabTemp": 23.5,
+      "voltage": 387.42,
+      "current": -33.21,
+      "ambTemp": 22,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA13",
+      "time": 600,
+      "batTemp": 22,
+      "cabTemp": 23.34,
+      "voltage": 389.38,
+      "current": -11.65,
+      "ambTemp": 21.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA13",
+      "time": 650,
+      "batTemp": 22,
+      "cabTemp": 23,
+      "voltage": 384.9,
+      "current": -55.49,
+      "ambTemp": 22,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA13",
+      "time": 700,
+      "batTemp": 22,
+      "cabTemp": 23.34,
+      "voltage": 387.1,
+      "current": -21.15,
+      "ambTemp": 22,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA14",
+      "time": 0,
+      "batTemp": 22,
+      "cabTemp": 26.34,
+      "voltage": 389.4,
+      "current": -5.3,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA14",
+      "time": 50,
+      "batTemp": 22,
+      "cabTemp": 26.17,
+      "voltage": 388.28,
+      "current": -13.23,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA14",
+      "time": 100,
+      "batTemp": 22,
+      "cabTemp": 25.79,
+      "voltage": 387.92,
+      "current": -13.54,
+      "ambTemp": 23,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA14",
+      "time": 150,
+      "batTemp": 22,
+      "cabTemp": 25.22,
+      "voltage": 389,
+      "current": -3.1,
+      "ambTemp": 23,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA14",
+      "time": 200,
+      "batTemp": 22,
+      "cabTemp": 24.5,
+      "voltage": 389.7,
+      "current": 6.3,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA14",
+      "time": 250,
+      "batTemp": 22,
+      "cabTemp": 23.84,
+      "voltage": 388.8,
+      "current": -4.83,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA14",
+      "time": 300,
+      "batTemp": 22,
+      "cabTemp": 23,
+      "voltage": 387.42,
+      "current": -11.88,
+      "ambTemp": 23,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA14",
+      "time": 350,
+      "batTemp": 22,
+      "cabTemp": 22.34,
+      "voltage": 388.9,
+      "current": 10.07,
+      "ambTemp": 22.35,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA14",
+      "time": 400,
+      "batTemp": 22,
+      "cabTemp": 21.55,
+      "voltage": 387.54,
+      "current": -11.84,
+      "ambTemp": 22.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA14",
+      "time": 450,
+      "batTemp": 22,
+      "cabTemp": 21.17,
+      "voltage": 389.92,
+      "current": 21.79,
+      "ambTemp": 22,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA14",
+      "time": 500,
+      "batTemp": 22,
+      "cabTemp": 21.3,
+      "voltage": 388.86,
+      "current": 11.91,
+      "ambTemp": 22.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA14",
+      "time": 550,
+      "batTemp": 22,
+      "cabTemp": 21.5,
+      "voltage": 387.32,
+      "current": -9.33,
+      "ambTemp": 22.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA14",
+      "time": 600,
+      "batTemp": 22,
+      "cabTemp": 21.5,
+      "voltage": 390.32,
+      "current": 28.35,
+      "ambTemp": 22.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA14",
+      "time": 650,
+      "batTemp": 22,
+      "cabTemp": 22,
+      "voltage": 388.3,
+      "current": -1.3,
+      "ambTemp": 23,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 0,
+      "batTemp": 17,
+      "cabTemp": 23.67,
+      "voltage": 387.1,
+      "current": -3.1,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 50,
+      "batTemp": 17,
+      "cabTemp": 23.84,
+      "voltage": 387.81,
+      "current": 10.08,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 100,
+      "batTemp": 17,
+      "cabTemp": 23.98,
+      "voltage": 386.69,
+      "current": 2.95,
+      "ambTemp": 17.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 150,
+      "batTemp": 17,
+      "cabTemp": 24.17,
+      "voltage": 382.39,
+      "current": -30.73,
+      "ambTemp": 17.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 200,
+      "batTemp": 17,
+      "cabTemp": 24.5,
+      "voltage": 383.1,
+      "current": -15.11,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 250,
+      "batTemp": 17,
+      "cabTemp": 24.84,
+      "voltage": 384.21,
+      "current": -12.8,
+      "ambTemp": 17.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 300,
+      "batTemp": 17,
+      "cabTemp": 25.34,
+      "voltage": 381.48,
+      "current": -25.01,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 350,
+      "batTemp": 18,
+      "cabTemp": 25.67,
+      "voltage": 382.39,
+      "current": -19.42,
+      "ambTemp": 17.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 400,
+      "batTemp": 18,
+      "cabTemp": 25.67,
+      "voltage": 385,
+      "current": -2.48,
+      "ambTemp": 17.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 450,
+      "batTemp": 18,
+      "cabTemp": 25.84,
+      "voltage": 383.61,
+      "current": -15.12,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 500,
+      "batTemp": 18,
+      "cabTemp": 25.84,
+      "voltage": 382.1,
+      "current": -34.51,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 550,
+      "batTemp": 18,
+      "cabTemp": 25.84,
+      "voltage": 381.89,
+      "current": -27.62,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 600,
+      "batTemp": 18,
+      "cabTemp": 25.51,
+      "voltage": 386.48,
+      "current": 16.08,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 650,
+      "batTemp": 18,
+      "cabTemp": 25.34,
+      "voltage": 376.81,
+      "current": -61.98,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 700,
+      "batTemp": 18,
+      "cabTemp": 24.84,
+      "voltage": 375.08,
+      "current": -59.73,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 750,
+      "batTemp": 18,
+      "cabTemp": 24.84,
+      "voltage": 377.1,
+      "current": -33.48,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 800,
+      "batTemp": 18,
+      "cabTemp": 24.5,
+      "voltage": 380.36,
+      "current": -13.21,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 850,
+      "batTemp": 18,
+      "cabTemp": 24.34,
+      "voltage": 380.59,
+      "current": 0.96,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 900,
+      "batTemp": 18,
+      "cabTemp": 24.17,
+      "voltage": 377.6,
+      "current": -27.31,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 950,
+      "batTemp": 18,
+      "cabTemp": 23.84,
+      "voltage": 380.39,
+      "current": -6.17,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 1000,
+      "batTemp": 18,
+      "cabTemp": 23.67,
+      "voltage": 376.4,
+      "current": -32.57,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 1050,
+      "batTemp": 18,
+      "cabTemp": 23.67,
+      "voltage": 377.08,
+      "current": -40.55,
+      "ambTemp": 19.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 1100,
+      "batTemp": 18,
+      "cabTemp": 23.67,
+      "voltage": 382.6,
+      "current": 18.81,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 1150,
+      "batTemp": 18,
+      "cabTemp": 23.34,
+      "voltage": 377.15,
+      "current": -31.02,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 1200,
+      "batTemp": 18,
+      "cabTemp": 23.5,
+      "voltage": 381,
+      "current": -1.12,
+      "ambTemp": 19.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 1250,
+      "batTemp": 18,
+      "cabTemp": 23.67,
+      "voltage": 374.07,
+      "current": -62.02,
+      "ambTemp": 19.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 1300,
+      "batTemp": 18,
+      "cabTemp": 23.5,
+      "voltage": 386.17,
+      "current": 65.78,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 1350,
+      "batTemp": 18,
+      "cabTemp": 23.67,
+      "voltage": 381.6,
+      "current": -1.92,
+      "ambTemp": 19.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 1400,
+      "batTemp": 18,
+      "cabTemp": 23.55,
+      "voltage": 380.53,
+      "current": -12.46,
+      "ambTemp": 19.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 1450,
+      "batTemp": 18,
+      "cabTemp": 23.34,
+      "voltage": 381.4,
+      "current": -0.97,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 1500,
+      "batTemp": 18,
+      "cabTemp": 23.5,
+      "voltage": 381.2,
+      "current": -0.9,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 1550,
+      "batTemp": 18,
+      "cabTemp": 23.5,
+      "voltage": 381.1,
+      "current": -0.9,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 1600,
+      "batTemp": 18,
+      "cabTemp": 23.34,
+      "voltage": 380,
+      "current": -2.04,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 1650,
+      "batTemp": 18,
+      "cabTemp": 23.17,
+      "voltage": 380.4,
+      "current": -6.81,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 1700,
+      "batTemp": 18,
+      "cabTemp": 23.34,
+      "voltage": 381.4,
+      "current": -0.9,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 1750,
+      "batTemp": 18,
+      "cabTemp": 23,
+      "voltage": 380.59,
+      "current": -7.97,
+      "ambTemp": 19.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 1800,
+      "batTemp": 18,
+      "cabTemp": 22.84,
+      "voltage": 381.29,
+      "current": -1.2,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 1850,
+      "batTemp": 18,
+      "cabTemp": 23,
+      "voltage": 381.2,
+      "current": -1.6,
+      "ambTemp": 18.74,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 1900,
+      "batTemp": 19,
+      "cabTemp": 23.17,
+      "voltage": 376.36,
+      "current": -53.93,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 1950,
+      "batTemp": 19,
+      "cabTemp": 22.84,
+      "voltage": 381.1,
+      "current": -0.91,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 2000,
+      "batTemp": 19,
+      "cabTemp": 23.17,
+      "voltage": 381.43,
+      "current": 0.89,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 2050,
+      "batTemp": 19,
+      "cabTemp": 23.34,
+      "voltage": 381.2,
+      "current": -0.99,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 2100,
+      "batTemp": 19,
+      "cabTemp": 23.67,
+      "voltage": 381.3,
+      "current": -1.86,
+      "ambTemp": 19.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 2150,
+      "batTemp": 19,
+      "cabTemp": 23.72,
+      "voltage": 381.2,
+      "current": -0.55,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA15",
+      "time": 2200,
+      "batTemp": 19,
+      "cabTemp": 23.84,
+      "voltage": 380.79,
+      "current": -0.76,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 0,
+      "batTemp": 19,
+      "cabTemp": 25.67,
+      "voltage": 381.6,
+      "current": -1,
+      "ambTemp": 19.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 50,
+      "batTemp": 19,
+      "cabTemp": 25.51,
+      "voltage": 380.6,
+      "current": -0.51,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 100,
+      "batTemp": 19,
+      "cabTemp": 25.17,
+      "voltage": 380.84,
+      "current": 13.03,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 150,
+      "batTemp": 19,
+      "cabTemp": 24.84,
+      "voltage": 377.52,
+      "current": -17.72,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 200,
+      "batTemp": 19,
+      "cabTemp": 24.34,
+      "voltage": 377.15,
+      "current": -17.49,
+      "ambTemp": 18.65,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 250,
+      "batTemp": 19,
+      "cabTemp": 23.67,
+      "voltage": 379.8,
+      "current": -2.29,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 300,
+      "batTemp": 19,
+      "cabTemp": 23.17,
+      "voltage": 373.85,
+      "current": -48.16,
+      "ambTemp": 19.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 350,
+      "batTemp": 19,
+      "cabTemp": 22.67,
+      "voltage": 379.7,
+      "current": -0.92,
+      "ambTemp": 19.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 400,
+      "batTemp": 19,
+      "cabTemp": 22.34,
+      "voltage": 375.39,
+      "current": -28.82,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 450,
+      "batTemp": 19,
+      "cabTemp": 22,
+      "voltage": 373.19,
+      "current": -32.12,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 500,
+      "batTemp": 19,
+      "cabTemp": 21.67,
+      "voltage": 372.59,
+      "current": -37.56,
+      "ambTemp": 19.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 550,
+      "batTemp": 19,
+      "cabTemp": 21.5,
+      "voltage": 374.4,
+      "current": -12.86,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 600,
+      "batTemp": 19,
+      "cabTemp": 21.5,
+      "voltage": 375.89,
+      "current": -6.58,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 650,
+      "batTemp": 19,
+      "cabTemp": 21.34,
+      "voltage": 374.99,
+      "current": -15.53,
+      "ambTemp": 19.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 700,
+      "batTemp": 19,
+      "cabTemp": 21.5,
+      "voltage": 370.58,
+      "current": -54.22,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 750,
+      "batTemp": 19,
+      "cabTemp": 21.67,
+      "voltage": 368.02,
+      "current": -74.44,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 800,
+      "batTemp": 19,
+      "cabTemp": 21.84,
+      "voltage": 369.79,
+      "current": -47.95,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 850,
+      "batTemp": 19,
+      "cabTemp": 22,
+      "voltage": 370.07,
+      "current": -46.64,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 900,
+      "batTemp": 19,
+      "cabTemp": 22,
+      "voltage": 371.81,
+      "current": -15.51,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 950,
+      "batTemp": 19,
+      "cabTemp": 22,
+      "voltage": 370.78,
+      "current": -27.48,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 1000,
+      "batTemp": 19,
+      "cabTemp": 22,
+      "voltage": 369.69,
+      "current": -32.1,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 1050,
+      "batTemp": 19,
+      "cabTemp": 22.17,
+      "voltage": 372.72,
+      "current": 10.41,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 1100,
+      "batTemp": 19,
+      "cabTemp": 22.17,
+      "voltage": 364.52,
+      "current": -64.56,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 1150,
+      "batTemp": 20,
+      "cabTemp": 22.17,
+      "voltage": 366.09,
+      "current": -35.87,
+      "ambTemp": 17.83,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 1200,
+      "batTemp": 20,
+      "cabTemp": 22.34,
+      "voltage": 368.8,
+      "current": -19.94,
+      "ambTemp": 17.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 1250,
+      "batTemp": 19,
+      "cabTemp": 22.34,
+      "voltage": 370.6,
+      "current": -10.21,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 1300,
+      "batTemp": 19,
+      "cabTemp": 22.34,
+      "voltage": 368.4,
+      "current": -30.49,
+      "ambTemp": 18.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 1350,
+      "batTemp": 19,
+      "cabTemp": 22.34,
+      "voltage": 369.2,
+      "current": -15.55,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 1400,
+      "batTemp": 19,
+      "cabTemp": 22.34,
+      "voltage": 369.1,
+      "current": -15.89,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 1450,
+      "batTemp": 19,
+      "cabTemp": 22.34,
+      "voltage": 368.7,
+      "current": -18.68,
+      "ambTemp": 17.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 1500,
+      "batTemp": 19,
+      "cabTemp": 22.34,
+      "voltage": 367.3,
+      "current": -28.18,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 1550,
+      "batTemp": 19,
+      "cabTemp": 22.17,
+      "voltage": 366.8,
+      "current": -38.42,
+      "ambTemp": 16.83,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 1600,
+      "batTemp": 19,
+      "cabTemp": 22.34,
+      "voltage": 363.8,
+      "current": -78.33,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 1650,
+      "batTemp": 19,
+      "cabTemp": 22.34,
+      "voltage": 368.3,
+      "current": -16.09,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 1700,
+      "batTemp": 19,
+      "cabTemp": 22.34,
+      "voltage": 367.99,
+      "current": -29.91,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 1750,
+      "batTemp": 19,
+      "cabTemp": 22.34,
+      "voltage": 371.28,
+      "current": 10.38,
+      "ambTemp": 16,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 1800,
+      "batTemp": 19,
+      "cabTemp": 22.67,
+      "voltage": 371.1,
+      "current": 6.99,
+      "ambTemp": 15.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 1850,
+      "batTemp": 19,
+      "cabTemp": 22.67,
+      "voltage": 369.02,
+      "current": -14.12,
+      "ambTemp": 15.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA16",
+      "time": 1900,
+      "batTemp": 19,
+      "cabTemp": 22.5,
+      "voltage": 370.4,
+      "current": -1.51,
+      "ambTemp": 15.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA17",
+      "time": 0,
+      "batTemp": 16,
+      "cabTemp": 24.5,
+      "voltage": 392.1,
+      "current": -1,
+      "ambTemp": 15.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA17",
+      "time": 50,
+      "batTemp": 17,
+      "cabTemp": 24.67,
+      "voltage": 388.45,
+      "current": -20.64,
+      "ambTemp": 15.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA17",
+      "time": 100,
+      "batTemp": 17,
+      "cabTemp": 24.5,
+      "voltage": 386.95,
+      "current": -21.35,
+      "ambTemp": 15.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA17",
+      "time": 150,
+      "batTemp": 17,
+      "cabTemp": 24.5,
+      "voltage": 389.35,
+      "current": -5.15,
+      "ambTemp": 16,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA17",
+      "time": 200,
+      "batTemp": 17,
+      "cabTemp": 24.34,
+      "voltage": 390.55,
+      "current": 6.14,
+      "ambTemp": 16,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA17",
+      "time": 250,
+      "batTemp": 18,
+      "cabTemp": 24.5,
+      "voltage": 370.68,
+      "current": -167.35,
+      "ambTemp": 16,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA17",
+      "time": 300,
+      "batTemp": 18,
+      "cabTemp": 24.34,
+      "voltage": 375.78,
+      "current": -80.29,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA17",
+      "time": 350,
+      "batTemp": 18,
+      "cabTemp": 24.5,
+      "voltage": 382.3,
+      "current": -14.36,
+      "ambTemp": 16,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA17",
+      "time": 400,
+      "batTemp": 18,
+      "cabTemp": 24.5,
+      "voltage": 385.85,
+      "current": 10.18,
+      "ambTemp": 15.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA17",
+      "time": 450,
+      "batTemp": 18,
+      "cabTemp": 24.5,
+      "voltage": 376.21,
+      "current": -100.23,
+      "ambTemp": 15.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA17",
+      "time": 500,
+      "batTemp": 18,
+      "cabTemp": 24.67,
+      "voltage": 379.95,
+      "current": -51.71,
+      "ambTemp": 15.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA17",
+      "time": 550,
+      "batTemp": 18,
+      "cabTemp": 24.64,
+      "voltage": 384.13,
+      "current": -0.55,
+      "ambTemp": 15.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA17",
+      "time": 600,
+      "batTemp": 18,
+      "cabTemp": 24.67,
+      "voltage": 393.51,
+      "current": 80.56,
+      "ambTemp": 16,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA17",
+      "time": 650,
+      "batTemp": 18,
+      "cabTemp": 24.84,
+      "voltage": 382.92,
+      "current": -27.33,
+      "ambTemp": 16,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA18",
+      "time": 0,
+      "batTemp": 18,
+      "cabTemp": 25.01,
+      "voltage": 386.6,
+      "current": -2.6,
+      "ambTemp": 16,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA18",
+      "time": 50,
+      "batTemp": 18,
+      "cabTemp": 25.01,
+      "voltage": 386.9,
+      "current": -0.9,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA18",
+      "time": 100,
+      "batTemp": 18,
+      "cabTemp": 25.34,
+      "voltage": 382.48,
+      "current": -35.03,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA18",
+      "time": 150,
+      "batTemp": 18,
+      "cabTemp": 25.67,
+      "voltage": 378.69,
+      "current": -67.19,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA18",
+      "time": 200,
+      "batTemp": 18,
+      "cabTemp": 26.34,
+      "voltage": 383.08,
+      "current": -7.51,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA18",
+      "time": 250,
+      "batTemp": 18,
+      "cabTemp": 27.01,
+      "voltage": 383.58,
+      "current": -15.65,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA18",
+      "time": 300,
+      "batTemp": 18,
+      "cabTemp": 27.84,
+      "voltage": 384.4,
+      "current": -11.11,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA18",
+      "time": 350,
+      "batTemp": 18,
+      "cabTemp": 28.34,
+      "voltage": 369.91,
+      "current": -134.99,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA18",
+      "time": 400,
+      "batTemp": 19,
+      "cabTemp": 28.51,
+      "voltage": 391.64,
+      "current": 122.45,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA18",
+      "time": 450,
+      "batTemp": 19,
+      "cabTemp": 28.17,
+      "voltage": 366.13,
+      "current": -147.08,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA18",
+      "time": 500,
+      "batTemp": 19,
+      "cabTemp": 27.67,
+      "voltage": 376.68,
+      "current": -25.21,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA18",
+      "time": 550,
+      "batTemp": 19,
+      "cabTemp": 26.8,
+      "voltage": 383.46,
+      "current": -0.68,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA18",
+      "time": 600,
+      "batTemp": 19,
+      "cabTemp": 25.84,
+      "voltage": 382.9,
+      "current": -2.2,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA18",
+      "time": 650,
+      "batTemp": 19,
+      "cabTemp": 24.84,
+      "voltage": 378.8,
+      "current": -50.27,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA18",
+      "time": 700,
+      "batTemp": 19,
+      "cabTemp": 23.84,
+      "voltage": 383.1,
+      "current": -2,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA18",
+      "time": 750,
+      "batTemp": 19,
+      "cabTemp": 23.34,
+      "voltage": 383.3,
+      "current": -2.1,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA18",
+      "time": 800,
+      "batTemp": 19,
+      "cabTemp": 22.8,
+      "voltage": 381.54,
+      "current": -14.04,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA18",
+      "time": 850,
+      "batTemp": 19,
+      "cabTemp": 22.34,
+      "voltage": 382.2,
+      "current": -5,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 0,
+      "batTemp": 22,
+      "cabTemp": 37.51,
+      "voltage": 392.9,
+      "current": -0.9,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 50,
+      "batTemp": 22,
+      "cabTemp": 36.84,
+      "voltage": 389.36,
+      "current": -28.1,
+      "ambTemp": 22.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 100,
+      "batTemp": 22,
+      "cabTemp": 35.84,
+      "voltage": 389.78,
+      "current": -19.1,
+      "ambTemp": 21.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 150,
+      "batTemp": 22,
+      "cabTemp": 35.34,
+      "voltage": 391.5,
+      "current": -2.7,
+      "ambTemp": 22,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 200,
+      "batTemp": 22,
+      "cabTemp": 35.17,
+      "voltage": 391.6,
+      "current": -2.26,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 250,
+      "batTemp": 22,
+      "cabTemp": 34.84,
+      "voltage": 382.68,
+      "current": -104.24,
+      "ambTemp": 22.32,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 300,
+      "batTemp": 22,
+      "cabTemp": 34.51,
+      "voltage": 389.96,
+      "current": -0.26,
+      "ambTemp": 21.73,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 350,
+      "batTemp": 22,
+      "cabTemp": 34.04,
+      "voltage": 386.56,
+      "current": -43.96,
+      "ambTemp": 21.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 400,
+      "batTemp": 22,
+      "cabTemp": 34.17,
+      "voltage": 380.88,
+      "current": -83.66,
+      "ambTemp": 20.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 450,
+      "batTemp": 22,
+      "cabTemp": 33.51,
+      "voltage": 389.88,
+      "current": 12.9,
+      "ambTemp": 20.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 500,
+      "batTemp": 22,
+      "cabTemp": 33.51,
+      "voltage": 387.4,
+      "current": -9.54,
+      "ambTemp": 20.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 550,
+      "batTemp": 22,
+      "cabTemp": 33.34,
+      "voltage": 389.4,
+      "current": 5.54,
+      "ambTemp": 20.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 600,
+      "batTemp": 22,
+      "cabTemp": 32.84,
+      "voltage": 388.2,
+      "current": -13.17,
+      "ambTemp": 20.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 650,
+      "batTemp": 22,
+      "cabTemp": 33.01,
+      "voltage": 385,
+      "current": -57.72,
+      "ambTemp": 20.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 700,
+      "batTemp": 22,
+      "cabTemp": 32.67,
+      "voltage": 389.4,
+      "current": -2,
+      "ambTemp": 21,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 750,
+      "batTemp": 22,
+      "cabTemp": 32.7,
+      "voltage": 389.34,
+      "current": -1.51,
+      "ambTemp": 21,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 800,
+      "batTemp": 22,
+      "cabTemp": 32.67,
+      "voltage": 389.33,
+      "current": -1.87,
+      "ambTemp": 22,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 850,
+      "batTemp": 22,
+      "cabTemp": 32.34,
+      "voltage": 389.23,
+      "current": 0.96,
+      "ambTemp": 22,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 900,
+      "batTemp": 22,
+      "cabTemp": 32.01,
+      "voltage": 387.46,
+      "current": -17.63,
+      "ambTemp": 21.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 950,
+      "batTemp": 22,
+      "cabTemp": 31.51,
+      "voltage": 386.9,
+      "current": -15.5,
+      "ambTemp": 21,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 1000,
+      "batTemp": 22,
+      "cabTemp": 31.51,
+      "voltage": 388.9,
+      "current": -1.67,
+      "ambTemp": 22,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 1050,
+      "batTemp": 22,
+      "cabTemp": 31.51,
+      "voltage": 387.52,
+      "current": -14.5,
+      "ambTemp": 21.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 1100,
+      "batTemp": 22,
+      "cabTemp": 31.34,
+      "voltage": 393.65,
+      "current": 71.13,
+      "ambTemp": 21,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 1150,
+      "batTemp": 22,
+      "cabTemp": 31.65,
+      "voltage": 389.08,
+      "current": 8.18,
+      "ambTemp": 20.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 1200,
+      "batTemp": 22,
+      "cabTemp": 31.34,
+      "voltage": 389.23,
+      "current": 13.99,
+      "ambTemp": 21,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 1250,
+      "batTemp": 22,
+      "cabTemp": 31.67,
+      "voltage": 380.94,
+      "current": -83.36,
+      "ambTemp": 20.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 1300,
+      "batTemp": 22,
+      "cabTemp": 31.51,
+      "voltage": 388.68,
+      "current": 7.23,
+      "ambTemp": 20.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 1350,
+      "batTemp": 22,
+      "cabTemp": 31.51,
+      "voltage": 389.98,
+      "current": 24.71,
+      "ambTemp": 21,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 1400,
+      "batTemp": 22,
+      "cabTemp": 31.01,
+      "voltage": 388.9,
+      "current": 7.08,
+      "ambTemp": 21.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 1450,
+      "batTemp": 22,
+      "cabTemp": 30.84,
+      "voltage": 385.86,
+      "current": -23.97,
+      "ambTemp": 21.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 1500,
+      "batTemp": 22,
+      "cabTemp": 31.17,
+      "voltage": 386.48,
+      "current": -12.74,
+      "ambTemp": 21.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA19",
+      "time": 1550,
+      "batTemp": 22,
+      "cabTemp": 31.01,
+      "voltage": 385.89,
+      "current": -23.38,
+      "ambTemp": 21,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 0,
+      "batTemp": 17,
+      "cabTemp": 14.84,
+      "voltage": 386.9,
+      "current": -17.4,
+      "ambTemp": 14,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 50,
+      "batTemp": 17,
+      "cabTemp": 15.34,
+      "voltage": 386.2,
+      "current": -13.58,
+      "ambTemp": 14,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 100,
+      "batTemp": 17,
+      "cabTemp": 16,
+      "voltage": 384.48,
+      "current": -25,
+      "ambTemp": 14,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 150,
+      "batTemp": 17,
+      "cabTemp": 16.67,
+      "voltage": 388.37,
+      "current": 9.69,
+      "ambTemp": 14,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 200,
+      "batTemp": 17,
+      "cabTemp": 17.5,
+      "voltage": 387.01,
+      "current": -5.8,
+      "ambTemp": 14.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 250,
+      "batTemp": 17,
+      "cabTemp": 18.67,
+      "voltage": 387.04,
+      "current": -2.04,
+      "ambTemp": 14,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 300,
+      "batTemp": 17,
+      "cabTemp": 19.84,
+      "voltage": 386.9,
+      "current": -2.22,
+      "ambTemp": 14.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 350,
+      "batTemp": 17,
+      "cabTemp": 21,
+      "voltage": 386.96,
+      "current": 6.71,
+      "ambTemp": 14.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 400,
+      "batTemp": 17,
+      "cabTemp": 22.11,
+      "voltage": 383,
+      "current": -36.54,
+      "ambTemp": 14.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 450,
+      "batTemp": 17,
+      "cabTemp": 23,
+      "voltage": 385.35,
+      "current": -15.69,
+      "ambTemp": 15,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 500,
+      "batTemp": 17,
+      "cabTemp": 23.84,
+      "voltage": 386.7,
+      "current": -0.9,
+      "ambTemp": 14.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 550,
+      "batTemp": 17,
+      "cabTemp": 24.5,
+      "voltage": 384.39,
+      "current": -12.95,
+      "ambTemp": 14.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 600,
+      "batTemp": 17,
+      "cabTemp": 25.01,
+      "voltage": 384.82,
+      "current": -12.39,
+      "ambTemp": 14.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 650,
+      "batTemp": 17,
+      "cabTemp": 25.67,
+      "voltage": 384.78,
+      "current": -10.74,
+      "ambTemp": 14.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 700,
+      "batTemp": 17,
+      "cabTemp": 26.01,
+      "voltage": 384.52,
+      "current": -14.01,
+      "ambTemp": 14.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 750,
+      "batTemp": 17,
+      "cabTemp": 26.17,
+      "voltage": 384.78,
+      "current": -6.46,
+      "ambTemp": 14,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 800,
+      "batTemp": 17,
+      "cabTemp": 26.23,
+      "voltage": 385.52,
+      "current": -4.16,
+      "ambTemp": 14,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 850,
+      "batTemp": 17,
+      "cabTemp": 26.17,
+      "voltage": 383.84,
+      "current": -20.35,
+      "ambTemp": 14,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 900,
+      "batTemp": 17,
+      "cabTemp": 26.51,
+      "voltage": 385.2,
+      "current": -3.66,
+      "ambTemp": 14,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 950,
+      "batTemp": 17,
+      "cabTemp": 26.67,
+      "voltage": 385.28,
+      "current": -5.46,
+      "ambTemp": 14,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 1000,
+      "batTemp": 17,
+      "cabTemp": 26.84,
+      "voltage": 385.58,
+      "current": -3.11,
+      "ambTemp": 14.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 1050,
+      "batTemp": 17,
+      "cabTemp": 27.01,
+      "voltage": 385.4,
+      "current": -4.59,
+      "ambTemp": 15,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 1100,
+      "batTemp": 17,
+      "cabTemp": 27.01,
+      "voltage": 384.78,
+      "current": -5.27,
+      "ambTemp": 15,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 1150,
+      "batTemp": 17,
+      "cabTemp": 27.17,
+      "voltage": 383.3,
+      "current": -16.77,
+      "ambTemp": 14.88,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 1200,
+      "batTemp": 17,
+      "cabTemp": 27.34,
+      "voltage": 381.81,
+      "current": -25.36,
+      "ambTemp": 14.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 1250,
+      "batTemp": 17,
+      "cabTemp": 27.34,
+      "voltage": 382.53,
+      "current": -20.05,
+      "ambTemp": 14.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 1300,
+      "batTemp": 17,
+      "cabTemp": 27.34,
+      "voltage": 384.7,
+      "current": -4.55,
+      "ambTemp": 15,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 1350,
+      "batTemp": 17,
+      "cabTemp": 27.17,
+      "voltage": 384.7,
+      "current": -2.76,
+      "ambTemp": 15,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 1400,
+      "batTemp": 17,
+      "cabTemp": 27.01,
+      "voltage": 387.29,
+      "current": 26.35,
+      "ambTemp": 14.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 1450,
+      "batTemp": 17,
+      "cabTemp": 27.17,
+      "voltage": 382.84,
+      "current": -11.06,
+      "ambTemp": 14.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 1500,
+      "batTemp": 17,
+      "cabTemp": 27.01,
+      "voltage": 383.55,
+      "current": -2.94,
+      "ambTemp": 14.67,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 1550,
+      "batTemp": 17,
+      "cabTemp": 26.67,
+      "voltage": 382.1,
+      "current": -14.54,
+      "ambTemp": 15,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 1600,
+      "batTemp": 17,
+      "cabTemp": 26.67,
+      "voltage": 382.4,
+      "current": -12.72,
+      "ambTemp": 15,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 1650,
+      "batTemp": 17,
+      "cabTemp": 26.84,
+      "voltage": 384.22,
+      "current": 1.8,
+      "ambTemp": 15,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA20",
+      "time": 1700,
+      "batTemp": 17,
+      "cabTemp": 26.79,
+      "voltage": 383.58,
+      "current": -5.88,
+      "ambTemp": 15,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 0,
+      "batTemp": 18,
+      "cabTemp": 39.84,
+      "voltage": 385.1,
+      "current": -4.7,
+      "ambTemp": 22.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 50,
+      "batTemp": 18,
+      "cabTemp": 39.84,
+      "voltage": 385.11,
+      "current": -2.41,
+      "ambTemp": 22.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 100,
+      "batTemp": 18,
+      "cabTemp": 39.84,
+      "voltage": 385.1,
+      "current": -2.46,
+      "ambTemp": 23,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 150,
+      "batTemp": 18,
+      "cabTemp": 39.84,
+      "voltage": 386.7,
+      "current": 19.43,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 200,
+      "batTemp": 18,
+      "cabTemp": 39.84,
+      "voltage": 385.9,
+      "current": 13.97,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 250,
+      "batTemp": 19,
+      "cabTemp": 39.17,
+      "voltage": 383.36,
+      "current": -8.92,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 300,
+      "batTemp": 19,
+      "cabTemp": 37.17,
+      "voltage": 383.3,
+      "current": -5.36,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 350,
+      "batTemp": 19,
+      "cabTemp": 35.17,
+      "voltage": 383.7,
+      "current": -1.62,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 400,
+      "batTemp": 19,
+      "cabTemp": 33.67,
+      "voltage": 382.48,
+      "current": -10.3,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 450,
+      "batTemp": 19,
+      "cabTemp": 32.01,
+      "voltage": 382.9,
+      "current": -12.62,
+      "ambTemp": 23,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 500,
+      "batTemp": 19,
+      "cabTemp": 31.01,
+      "voltage": 382.8,
+      "current": -7.59,
+      "ambTemp": 23,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 550,
+      "batTemp": 19,
+      "cabTemp": 29.84,
+      "voltage": 383.7,
+      "current": -2.16,
+      "ambTemp": 23,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 600,
+      "batTemp": 19,
+      "cabTemp": 28.84,
+      "voltage": 386.24,
+      "current": 29.98,
+      "ambTemp": 22.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 650,
+      "batTemp": 19,
+      "cabTemp": 28.01,
+      "voltage": 383.1,
+      "current": 18.57,
+      "ambTemp": 23,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 700,
+      "batTemp": 19,
+      "cabTemp": 27.34,
+      "voltage": 378.04,
+      "current": -30.2,
+      "ambTemp": 22.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 750,
+      "batTemp": 19,
+      "cabTemp": 26.51,
+      "voltage": 385.43,
+      "current": 45,
+      "ambTemp": 23,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 800,
+      "batTemp": 19,
+      "cabTemp": 26.17,
+      "voltage": 377.5,
+      "current": -18.46,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 850,
+      "batTemp": 20,
+      "cabTemp": 25.84,
+      "voltage": 382.17,
+      "current": 34.3,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 900,
+      "batTemp": 20,
+      "cabTemp": 25.51,
+      "voltage": 380.83,
+      "current": -6.67,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 950,
+      "batTemp": 19,
+      "cabTemp": 24.67,
+      "voltage": 381.2,
+      "current": -2.17,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 1000,
+      "batTemp": 19,
+      "cabTemp": 24.34,
+      "voltage": 382,
+      "current": -1,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 1050,
+      "batTemp": 19,
+      "cabTemp": 24,
+      "voltage": 381.5,
+      "current": -3.09,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 1100,
+      "batTemp": 19,
+      "cabTemp": 23.76,
+      "voltage": 381.67,
+      "current": -2.15,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 1150,
+      "batTemp": 19,
+      "cabTemp": 23.5,
+      "voltage": 378.91,
+      "current": -24.74,
+      "ambTemp": 24.08,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 1200,
+      "batTemp": 20,
+      "cabTemp": 23.17,
+      "voltage": 382.2,
+      "current": 21.06,
+      "ambTemp": 23,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 1250,
+      "batTemp": 20,
+      "cabTemp": 23.43,
+      "voltage": 382.2,
+      "current": 23.5,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 1300,
+      "batTemp": 20,
+      "cabTemp": 23.5,
+      "voltage": 381.17,
+      "current": 6.93,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 1350,
+      "batTemp": 20,
+      "cabTemp": 23.34,
+      "voltage": 377.94,
+      "current": -22.98,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 1400,
+      "batTemp": 20,
+      "cabTemp": 23.17,
+      "voltage": 377.87,
+      "current": -18.38,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 1450,
+      "batTemp": 20,
+      "cabTemp": 23.34,
+      "voltage": 380.1,
+      "current": -2.62,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 1500,
+      "batTemp": 20,
+      "cabTemp": 23.34,
+      "voltage": 376.38,
+      "current": -41.72,
+      "ambTemp": 25,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 1550,
+      "batTemp": 20,
+      "cabTemp": 23,
+      "voltage": 378.7,
+      "current": -17.58,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 1600,
+      "batTemp": 20,
+      "cabTemp": 22.67,
+      "voltage": 378.26,
+      "current": -22.5,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 1650,
+      "batTemp": 20,
+      "cabTemp": 22.67,
+      "voltage": 378.07,
+      "current": -24.91,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 1700,
+      "batTemp": 20,
+      "cabTemp": 22.67,
+      "voltage": 376.9,
+      "current": -29.54,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 1750,
+      "batTemp": 20,
+      "cabTemp": 22.5,
+      "voltage": 378.12,
+      "current": -11.1,
+      "ambTemp": 23.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 1800,
+      "batTemp": 20,
+      "cabTemp": 22.34,
+      "voltage": 379.98,
+      "current": 1.08,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 1850,
+      "batTemp": 20,
+      "cabTemp": 22,
+      "voltage": 381.03,
+      "current": 22.18,
+      "ambTemp": 24.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 1900,
+      "batTemp": 20,
+      "cabTemp": 22,
+      "voltage": 373.26,
+      "current": -66.86,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA21",
+      "time": 1950,
+      "batTemp": 20,
+      "cabTemp": 22,
+      "voltage": 378.92,
+      "current": -2.79,
+      "ambTemp": 24,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 0,
+      "batTemp": 19,
+      "cabTemp": 17.0034,
+      "voltage": 392.5,
+      "current": -1,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 50,
+      "batTemp": 19,
+      "cabTemp": 17.5035,
+      "voltage": 391.53737,
+      "current": -2.55156,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 100,
+      "batTemp": 19,
+      "cabTemp": 17.9506,
+      "voltage": 391.1,
+      "current": -6.11668,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 150,
+      "batTemp": 19,
+      "cabTemp": 18.1703,
+      "voltage": 393.01708,
+      "current": 17.8,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 200,
+      "batTemp": 19,
+      "cabTemp": 18.45007,
+      "voltage": 391.06784,
+      "current": -7.98594,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 250,
+      "batTemp": 19,
+      "cabTemp": 18.55764,
+      "voltage": 391.7,
+      "current": -0.91558,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 300,
+      "batTemp": 19,
+      "cabTemp": 18.8371,
+      "voltage": 389.06115,
+      "current": -20.3968,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 350,
+      "batTemp": 19,
+      "cabTemp": 19.0038,
+      "voltage": 388.48457,
+      "current": -21.25426,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 400,
+      "batTemp": 19,
+      "cabTemp": 19.1705,
+      "voltage": 388.1,
+      "current": -32.53135,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 450,
+      "batTemp": 19,
+      "cabTemp": 19.3372,
+      "voltage": 391.7,
+      "current": 10.81358,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 500,
+      "batTemp": 19,
+      "cabTemp": 19.5039,
+      "voltage": 389.93317,
+      "current": -2.4517,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 550,
+      "batTemp": 19,
+      "cabTemp": 19.6706,
+      "voltage": 390.7,
+      "current": -1.1,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 600,
+      "batTemp": 19,
+      "cabTemp": 19.8373,
+      "voltage": 388.48415,
+      "current": -18.07923,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 650,
+      "batTemp": 19,
+      "cabTemp": 19.8373,
+      "voltage": 390.5,
+      "current": -0.8162,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 700,
+      "batTemp": 19,
+      "cabTemp": 20.004,
+      "voltage": 390.4,
+      "current": -0.8,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 750,
+      "batTemp": 19,
+      "cabTemp": 20.3374,
+      "voltage": 381.55232,
+      "current": -98.102,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 800,
+      "batTemp": 19,
+      "cabTemp": 20.5041,
+      "voltage": 388.84715,
+      "current": -7.03997,
+      "ambTemp": 16.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 850,
+      "batTemp": 19,
+      "cabTemp": 20.72918,
+      "voltage": 384.97633,
+      "current": -38.16037,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 900,
+      "batTemp": 19,
+      "cabTemp": 20.8375,
+      "voltage": 389.81637,
+      "current": -0.96727,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 950,
+      "batTemp": 19,
+      "cabTemp": 21.0042,
+      "voltage": 389.38382,
+      "current": -5.14853,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 1000,
+      "batTemp": 20,
+      "cabTemp": 21.1709,
+      "voltage": 382.30223,
+      "current": -66.9886,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 1050,
+      "batTemp": 20,
+      "cabTemp": 21.06433,
+      "voltage": 370.63358,
+      "current": -167.81385,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 1100,
+      "batTemp": 20,
+      "cabTemp": 21.3376,
+      "voltage": 387.2,
+      "current": -1.13162,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 1150,
+      "batTemp": 20,
+      "cabTemp": 21.5043,
+      "voltage": 386.4,
+      "current": -11.58697,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 1200,
+      "batTemp": 20,
+      "cabTemp": 21.8377,
+      "voltage": 380.71768,
+      "current": -65.41717,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 1250,
+      "batTemp": 20,
+      "cabTemp": 21.8377,
+      "voltage": 383.6,
+      "current": -28.78233,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 1300,
+      "batTemp": 20,
+      "cabTemp": 21.8377,
+      "voltage": 382.8,
+      "current": -32.44971,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 1350,
+      "batTemp": 20,
+      "cabTemp": 22.0044,
+      "voltage": 383.59009,
+      "current": -19.75861,
+      "ambTemp": 17.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 1400,
+      "batTemp": 20,
+      "cabTemp": 22.1711,
+      "voltage": 385.61036,
+      "current": 2.01036,
+      "ambTemp": 17.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 1450,
+      "batTemp": 20,
+      "cabTemp": 22.1711,
+      "voltage": 385.8213,
+      "current": -3.67634,
+      "ambTemp": 17.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 1500,
+      "batTemp": 20,
+      "cabTemp": 22.3378,
+      "voltage": 387.11986,
+      "current": 13.63899,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 1550,
+      "batTemp": 20,
+      "cabTemp": 22.1711,
+      "voltage": 386.9,
+      "current": -0.88979,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 1600,
+      "batTemp": 20,
+      "cabTemp": 22.0044,
+      "voltage": 386.1,
+      "current": -8.45262,
+      "ambTemp": 18,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 1650,
+      "batTemp": 20,
+      "cabTemp": 22.3378,
+      "voltage": 386.8,
+      "current": -1,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 1700,
+      "batTemp": 20,
+      "cabTemp": 22.5045,
+      "voltage": 382.56188,
+      "current": -47.05746,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 1750,
+      "batTemp": 20,
+      "cabTemp": 22.6712,
+      "voltage": 381.62752,
+      "current": -47.17162,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA22",
+      "time": 1800,
+      "batTemp": 20,
+      "cabTemp": 23.0046,
+      "voltage": 386.81011,
+      "current": 0.93031,
+      "ambTemp": 17,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA23",
+      "time": 0,
+      "batTemp": 16,
+      "cabTemp": 28.0056,
+      "voltage": 390.8,
+      "current": -19.3,
+      "ambTemp": 19.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA23",
+      "time": 50,
+      "batTemp": 16,
+      "cabTemp": 28.339,
+      "voltage": 388.95119,
+      "current": -14.96822,
+      "ambTemp": 19.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA23",
+      "time": 100,
+      "batTemp": 16,
+      "cabTemp": 28.5057,
+      "voltage": 388.15067,
+      "current": -21.54266,
+      "ambTemp": 19.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA23",
+      "time": 150,
+      "batTemp": 17,
+      "cabTemp": 28.5057,
+      "voltage": 382.57002,
+      "current": -79.15494,
+      "ambTemp": 19.13678,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA23",
+      "time": 200,
+      "batTemp": 17,
+      "cabTemp": 28.5057,
+      "voltage": 388.31644,
+      "current": -23.7406,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA23",
+      "time": 250,
+      "batTemp": 17,
+      "cabTemp": 28.6724,
+      "voltage": 391.3,
+      "current": 3.88493,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA23",
+      "time": 300,
+      "batTemp": 17,
+      "cabTemp": 28.5057,
+      "voltage": 389.36377,
+      "current": -8.55364,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA23",
+      "time": 350,
+      "batTemp": 17,
+      "cabTemp": 28.339,
+      "voltage": 389.5253,
+      "current": -7.01083,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA23",
+      "time": 400,
+      "batTemp": 17,
+      "cabTemp": 28.0056,
+      "voltage": 390.1,
+      "current": -4.08905,
+      "ambTemp": 19.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA23",
+      "time": 450,
+      "batTemp": 17,
+      "cabTemp": 27.8389,
+      "voltage": 392.53764,
+      "current": 23.32696,
+      "ambTemp": 19.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA23",
+      "time": 500,
+      "batTemp": 17,
+      "cabTemp": 27.6722,
+      "voltage": 387.04478,
+      "current": -25.94773,
+      "ambTemp": 19.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA23",
+      "time": 550,
+      "batTemp": 17,
+      "cabTemp": 27.5055,
+      "voltage": 388.7,
+      "current": -10.87704,
+      "ambTemp": 19.5,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA23",
+      "time": 600,
+      "batTemp": 17,
+      "cabTemp": 27.1721,
+      "voltage": 390.93865,
+      "current": 8.97306,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA23",
+      "time": 650,
+      "batTemp": 17,
+      "cabTemp": 27.1721,
+      "voltage": 386.47877,
+      "current": -23.78184,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA23",
+      "time": 700,
+      "batTemp": 17,
+      "cabTemp": 27.1721,
+      "voltage": 386.83904,
+      "current": -17.10965,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA23",
+      "time": 750,
+      "batTemp": 17,
+      "cabTemp": 27.5055,
+      "voltage": 387.7,
+      "current": -8.8225,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA23",
+      "time": 800,
+      "batTemp": 17,
+      "cabTemp": 27.6722,
+      "voltage": 387.47704,
+      "current": -13.59924,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA23",
+      "time": 850,
+      "batTemp": 17,
+      "cabTemp": 28.0056,
+      "voltage": 387.36181,
+      "current": -14.28188,
+      "ambTemp": 19,
+      "dTdt": 0
+    },
+    {
+      "trip": "TripA23",
+      "time": 900,
+      "batTemp": 17,
+      "cabTemp": 28.0056,
+      "voltage": 390.1,
+      "current": 15.75769,
+      "ambTemp": 19.5,
+      "dTdt": 0
+    }
+  ]
+}

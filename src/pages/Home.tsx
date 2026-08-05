@@ -1032,6 +1032,9 @@ export default function Home() {
                         msg = `[Reference Model: ${selectedRefModel}]\n` + msg;
                       }
 
+                      const refObj = securityCabinReferences.find(r => r.title === selectedRefModel);
+                      const refImageUrl = (quoteProduct === "Security Cabins" && refObj) ? (window.location.origin + refObj.img) : "";
+
                       try {
                         await fetch("https://api.emailjs.com/api/v1.0/email/send", {
                           method: "POST",
@@ -1047,6 +1050,8 @@ export default function Home() {
                               company: fd.get("company") || "N/A",
                               project_type: quoteProduct,
                               message: msg,
+                              selected_model: selectedRefModel || "N/A",
+                              reference_image_url: refImageUrl,
                             },
                           }),
                         });

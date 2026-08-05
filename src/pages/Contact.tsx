@@ -68,6 +68,9 @@ export default function Contact() {
 
     setLoading(true);
 
+    const refObj = securityCabinReferences.find(r => r.title === selectedRefModel);
+    const refImageUrl = (projectTypeState === "Security Cabins" && refObj) ? (window.location.origin + refObj.img) : "";
+
     try {
       await fetch("https://api.emailjs.com/api/v1.0/email/send", {
         method: "POST",
@@ -83,6 +86,8 @@ export default function Contact() {
             company: parsed.data.company || "N/A",
             project_type: parsed.data.projectType || "Security Cabins",
             message: parsed.data.message,
+            selected_model: selectedRefModel || "N/A",
+            reference_image_url: refImageUrl,
           },
         }),
       });
