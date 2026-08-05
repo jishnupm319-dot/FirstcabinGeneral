@@ -210,6 +210,17 @@ export default function Home() {
   const [refLightboxImg, setRefLightboxImg] = useState<{ src: string; title: string } | null>(null);
 
   useEffect(() => {
+    const handleOpenModal = (e: Event) => {
+      const customEvent = e as CustomEvent;
+      setQuoteProduct(customEvent.detail || "Security Cabins");
+      setSelectedRefModel(null);
+      setQuoteSent(false);
+    };
+    window.addEventListener("openQuoteModal", handleOpenModal);
+    return () => window.removeEventListener("openQuoteModal", handleOpenModal);
+  }, []);
+
+  useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setLightbox(null);
