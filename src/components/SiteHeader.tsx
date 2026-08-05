@@ -53,22 +53,6 @@ export const SiteHeader = () => {
     }
   };
 
-  const handleGetQuoteClick = () => {
-    setOpen(false);
-    if (location.pathname !== "/contact") {
-      navigate("/contact");
-      setTimeout(() => {
-        const elem = document.getElementById("quote-form");
-        if (elem) elem.scrollIntoView({ behavior: "smooth" });
-        else window.scrollTo({ top: 0, behavior: "smooth" });
-      }, 150);
-    } else {
-      const elem = document.getElementById("quote-form");
-      if (elem) elem.scrollIntoView({ behavior: "smooth" });
-      else window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
-
   return (
     <>
       {/* Top contact bar */}
@@ -112,13 +96,12 @@ export const SiteHeader = () => {
                 <span className="absolute bottom-0 left-3 right-3 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 origin-left transition-transform" />
               </a>
             ))}
-            <button
-              type="button"
-              onClick={handleGetQuoteClick}
-              className="ml-2 px-4 py-2 rounded-full gradient-primary text-primary-foreground font-semibold text-xs shadow-sm hover:shadow-glow transition-smooth cursor-pointer"
+            <Link
+              to="/contact"
+              className="ml-2 px-4 py-2 rounded-full gradient-primary text-primary-foreground font-semibold text-xs shadow-sm hover:shadow-glow transition-smooth"
             >
               Get Quote
-            </button>
+            </Link>
           </nav>
 
           <div className="hidden md:flex items-center gap-2">
@@ -162,13 +145,13 @@ export const SiteHeader = () => {
                     {n.label}
                   </a>
                 ))}
-                <button
-                  type="button"
-                  onClick={handleGetQuoteClick}
-                  className="py-3 px-2 text-primary font-bold text-left border-b border-border/50 cursor-pointer w-full"
+                <Link
+                  to="/contact"
+                  onClick={() => setOpen(false)}
+                  className="py-3 px-2 text-primary font-bold text-center border-b border-border/50 block"
                 >
                   Get Quote
-                </button>
+                </Link>
                 <div className="flex gap-2 pt-4">
                   <a href="tel:+971551000148" className="flex-1 text-center py-3 rounded-full bg-primary text-primary-foreground text-sm font-medium">Call</a>
                   <a href="https://wa.me/971551000148" className="flex-1 text-center py-3 rounded-full bg-accent text-accent-foreground text-sm font-medium">WhatsApp</a>

@@ -43,12 +43,7 @@ export default function Contact() {
   const [selectedRefModel, setSelectedRefModel] = useState<string | null>(null);
   const [lightboxImg, setLightboxImg] = useState<{ src: string; title: string } | null>(null);
 
-  useEffect(() => {
-    const elem = document.getElementById("quote-form");
-    if (elem) {
-      setTimeout(() => elem.scrollIntoView({ behavior: "smooth" }), 150);
-    }
-  }, []);
+
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
