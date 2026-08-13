@@ -15,7 +15,7 @@ import heroImg from "@/assets/hero-cabin.jpg";
 import interiorImg from "@/assets/cabin-interior.jpg";
 import securityImg from "@/assets/security-cabin.jpg";
 import accommodationImg from "@/assets/accommodation.jpg";
-import productStandardCabin from "@/assets/product-standard-cabin.jpg";
+import productStandardCabin from "@/assets/product-standard-cabin-cover.jpg";
 import projectDubaiFisherman from "@/assets/project-dubai-fisherman-accommodation.jpg";
 import factoryImg from "@/assets/factory.jpg";
 import villaImg from "@/assets/villa.jpg";
