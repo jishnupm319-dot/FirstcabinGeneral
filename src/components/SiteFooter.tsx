@@ -10,13 +10,13 @@ export const SiteFooter = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
           <div>
-            <div className="flex items-center gap-3 mb-5">
-              <div className="w-11 h-11 rounded-xl bg-white p-1 flex items-center justify-center border border-white/20">
-                <img src={logoImg} alt="First Cabin Logo" className="w-full h-full object-contain" />
+            <div className="flex items-center gap-3.5 mb-5">
+              <div className="w-13 h-13 rounded-2xl bg-white p-1.5 flex items-center justify-center border border-white/20 shrink-0">
+                <img src={logoImg} alt="FIRST CABIN GENERAL TRADING LLC Logo" className="w-full h-full object-contain" />
               </div>
-              <div>
-                <div className="font-display font-bold">First Cabin</div>
-                <div className="text-[10px] uppercase tracking-widest opacity-70">General Trading LLC</div>
+              <div className="leading-tight">
+                <div className="font-display font-black text-xl text-white uppercase tracking-wide">FIRST CABIN</div>
+                <div className="text-xs font-bold uppercase tracking-widest text-accent">GENERAL TRADING LLC</div>
               </div>
             </div>
             <p className="text-sm opacity-80 leading-relaxed mb-5">

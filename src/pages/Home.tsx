@@ -958,7 +958,7 @@ export default function Home() {
             </div>
             <div className="p-10 rounded-3xl gradient-primary text-primary-foreground shadow-elegant flex flex-col justify-center">
               <SectionLabel>Visit Us</SectionLabel>
-              <h3 className="font-display font-bold text-3xl mb-6">First Cabin<br />General Trading LLC</h3>
+              <h3 className="font-display font-black text-3xl md:text-4xl uppercase tracking-wide mb-6">FIRST CABIN<br /><span className="text-accent">GENERAL TRADING LLC</span></h3>
               <div className="space-y-4 text-primary-foreground/90">
                 <div className="flex gap-3"><MapPin className="w-5 h-5 shrink-0 mt-1 text-accent" /><div>Industrial Area<br />Dubai, United Arab Emirates</div></div>
                 <div className="flex gap-3"><Phone className="w-5 h-5 shrink-0 mt-1 text-accent" /><a href="tel:+971551000148" className="hover:text-accent">+971 55 100 0148</a></div>
