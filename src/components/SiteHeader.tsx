@@ -74,13 +74,13 @@ export const SiteHeader = () => {
         }`}
       >
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3.5 group">
-            <div className="w-13 h-13 md:w-14 md:h-14 rounded-2xl bg-white p-1.5 shadow-glow group-hover:scale-105 transition-smooth flex items-center justify-center border border-border/50 shrink-0">
+          <Link to="/" className="flex items-center gap-4 group">
+            <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white p-2 shadow-glow group-hover:scale-105 transition-smooth flex items-center justify-center border border-border/60 shrink-0">
               <img src={logoImg} alt="FIRST CABIN GENERAL TRADING LLC Logo" className="w-full h-full object-contain" />
             </div>
-            <div className="leading-tight">
-              <div className="font-display font-black text-xl md:text-2xl text-foreground tracking-wide uppercase">FIRST CABIN</div>
-              <div className="text-xs md:text-sm font-bold uppercase tracking-widest text-primary">GENERAL TRADING LLC</div>
+            <div className="leading-none">
+              <div className="font-display font-black text-2xl md:text-3xl text-foreground tracking-wide uppercase">FIRST CABIN</div>
+              <div className="text-xs md:text-sm font-extrabold uppercase tracking-[0.2em] text-primary mt-1">GENERAL TRADING LLC</div>
             </div>
           </Link>
 
