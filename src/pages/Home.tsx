@@ -11,6 +11,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import logoImg from "@/assets/logo.png";
 import heroImg from "@/assets/hero-cabin.jpg";
 import interiorImg from "@/assets/cabin-interior.jpg";
 import securityImg from "@/assets/security-cabin.jpg";
@@ -357,6 +358,19 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
               <SectionLabel>About Us</SectionLabel>
+
+              {/* COMPANY LOGO BRANDING CARD */}
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-card border border-primary/20 shadow-card w-fit mb-6">
+                <div className="w-16 h-16 rounded-xl bg-white p-2 flex items-center justify-center border border-border/40 shadow-sm shrink-0">
+                  <img src={logoImg} alt="FIRST CABIN GENERAL TRADING LLC Logo" className="w-full h-full object-contain" />
+                </div>
+                <div>
+                  <div className="font-display font-black text-xl text-foreground uppercase tracking-wide">FIRST CABIN</div>
+                  <div className="text-xs font-bold uppercase tracking-widest text-primary">GENERAL TRADING LLC</div>
+                  <div className="text-[11px] text-muted-foreground mt-0.5">Licensed Portable Building Manufacturer · Dubai, UAE</div>
+                </div>
+              </div>
+
               <h2 className="font-display font-bold text-4xl md:text-5xl mb-6 leading-tight">
                 A trusted portable building manufacturer <span className="text-gradient">serving the UAE.</span>
               </h2>
@@ -379,6 +393,15 @@ export default function Home() {
             <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="relative">
               <div className="rounded-3xl overflow-hidden shadow-elegant">
                 <img src={aboutGoldCabinImg} alt="Luxury Gold Security Cabin — constructed by First Cabin General Trading LLC" className="w-full h-[500px] object-cover" loading="lazy" width={1200} height={800} />
+              </div>
+              <div className="absolute top-6 right-6 glass rounded-2xl p-3.5 shadow-elegant flex items-center gap-3 border border-white/20">
+                <div className="w-12 h-12 rounded-xl bg-white p-1.5 flex items-center justify-center shrink-0 border border-border/20">
+                  <img src={logoImg} alt="First Cabin Logo" className="w-full h-full object-contain" />
+                </div>
+                <div>
+                  <div className="text-xs font-black text-white uppercase tracking-wider">FIRST CABIN</div>
+                  <div className="text-[10px] text-accent font-bold uppercase tracking-widest">DUBAI, UAE</div>
+                </div>
               </div>
               <div className="absolute -bottom-8 -left-8 glass rounded-2xl p-6 shadow-elegant max-w-xs hidden md:block">
                 <div className="flex items-center gap-3 mb-2">
