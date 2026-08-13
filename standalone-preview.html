@@ -334,7 +334,7 @@
       { id: "trailer", title: "Mobile Trailer Security Booth", desc: "Towable cabin with integrated generator platform & safety rail", img: "./src/assets/security-ref-trailer.jpg" },
       { id: "night-dark", title: "Executive Curved Night Gatehouse", desc: "Rounded metallic finish with 360° panoramic dark glazing", img: "./src/assets/security-ref-night-dark.jpg" },
       { id: "silver-curved", title: "Silver Chrome Louvered Guard Cabin", desc: "Polished stainless steel banding with horizontal architectural louvers", img: "./src/assets/security-ref-silver-curved.jpg" },
-      { id: "dwtc-ibis", title: "DWTC Luxury Entrance Gatehouse", desc: "High-security corporate checkpoint booth with government crest", img: "./src/assets/security-ref-dwtc-ibis.jpg" },
+      { id: "dpworld-blue", title: "DP World Custom Security Booth", desc: "Official DP World blue security booth with reinforced steel cladding & climate control", img: "./src/assets/gallery-dpworld-blue-booth.jpg" },
       { id: "beige-oval", title: "Beige Oval Architectural Guard Booth", desc: "Smooth curved cream finish with polished stainless louvers", img: "./src/assets/security-ref-beige-oval.jpg" },
       { id: "gold-curved", title: "Gold Metallic Rounded Gatehouse", desc: "Luxurious gold anodized panels with curved glass bay", img: "./src/assets/security-ref-gold-curved.jpg" },
       { id: "beige-roadside", title: "Beige Curved Oval Gate Cabin", desc: "Sleek oval roadside security unit with multi-band chrome", img: "./src/assets/security-ref-beige-roadside.jpg" },
@@ -344,7 +344,7 @@
     // Home Page
     const HomePage = ({ setPage }) => {
       const products = [
-        { icon: "shield", name: "Security Cabins", desc: "Compact guard booths built for heavy-duty security in extreme UAE climates.", img: "./src/assets/featured-security-dwtc.jpg" },
+        { icon: "shield", name: "Security Cabins", desc: "Compact guard booths built for heavy-duty security in extreme UAE climates.", img: "./src/assets/gallery-dpworld-blue-booth.jpg" },
         { icon: "home", name: "Standard Cabins", desc: "Cost-effective, versatile modular standard cabins for site offices, guard posts & utility use.", img: "./src/assets/product-standard-cabin-cover.jpg" },
         { icon: "settings", name: "Customized Cabins", desc: "Any size, layout or finish — custom engineered around your exact project specifications.", img: "./src/assets/product-customized-cabin.jpg" },
         { icon: "bus", name: "Bus Stations", desc: "Modern smart bus shelters and passenger transit stations with climate control.", img: "./src/assets/gallery-bus-shelter.jpg" },
@@ -358,24 +358,22 @@
         { icon: "award", title: "Premium Materials", desc: "High-grade steel frames, insulated sandwich panels, corrosion-resistant coatings." },
         { icon: "wind", title: "Weather Resistant", desc: "Engineered for UAE heat, dust storms and coastal humidity." },
         { icon: "snowflake", title: "Heat Insulated", desc: "50–75mm PU / rockwool panels keeping interiors 15°C cooler." },
-        { icon: "zap", title: "Fast Manufacturing", desc: "Standard units delivered in 7–14 days, ready to install." },
-        { icon: "settings", title: "Custom Sizes", desc: "Any dimension, layout, colour and interior specification." },
-        { icon: "dollar-sign", title: "Affordable Pricing", desc: "Factory-direct pricing with transparent, itemised quotes." },
-        { icon: "hard-hat", title: "Professional Team", desc: "Experienced engineers, welders, electricians and installers." },
-        { icon: "clock", title: "Dedicated Support", desc: "Expert guidance for orders, service and custom requests." },
+        { icon: "wrench", title: "Turnkey Installation", desc: "Complete foundation, crane placement, MEP hookup and handover." },
+      ];
+
+      const serviceProcess = [
+        { icon: "factory", title: "Precision Manufacturing", desc: "High-volume modular fabrication in our Dubai facility with multi-stage quality checks." },
+        { icon: "truck", title: "UAE & Regional Logistics", desc: "Direct flatbed transport and heavy-crane placement to any emirate or job site." },
+        { icon: "hard-hat", title: "Site Installation & MEP", desc: "Complete levelling, structural anchoring, electrical wiring, HVAC and plumbing setup." },
+        { icon: "wrench", title: "Refurbishment & Upgrades", desc: "Panel replacement, structural repairs, repainting and interior fit-out modifications." },
       ];
 
       const services = [
-        { icon: "factory", title: "Manufacturing" },
-        { icon: "settings", title: "Customization" },
-        { icon: "truck", title: "Transportation" },
         { icon: "wrench", title: "Installation" },
         { icon: "hammer", title: "Maintenance" },
         { icon: "wrench", title: "Repair Services" },
         { icon: "home", title: "Interior Fit-Out" },
         { icon: "factory", title: "Steel Fabrication" },
-        { icon: "zap", title: "Electrical Installation" },
-        { icon: "wind", title: "HVAC Installation" },
       ];
 
       const industries = ["Construction", "Oil & Gas", "Government", "Education", "Healthcare", "Commercial", "Military", "Residential"];
@@ -385,7 +383,7 @@
         { title: "Sharjah University Modular Buildings", loc: "Sharjah", time: "30 days", img: "./src/assets/gallery-modular-building-white.jpg" },
         { title: "Dubai Custom Fisherman Accommodation", loc: "Dubai", time: "40 days", img: "./src/assets/project-dubai-fisherman-accommodation.jpg" },
         { title: "Toll Gate at Sharjah", loc: "Sharjah", time: "18 days", img: "./src/assets/gallery-mountain-toll-gate.jpg" },
-        { title: "Dubai Authority Customized Cabins", loc: "Dubai", time: "20 days", img: "./src/assets/featured-security-dwtc.jpg" },
+        { title: "Dubai Authority Customized Cabins", loc: "Dubai", time: "20 days", img: "./src/assets/security-ref-beige-oval.jpg" },
       ];
 
 
@@ -660,12 +658,12 @@
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="group rounded-3xl overflow-hidden glass-dark border border-white/10 hover:border-accent transition-smooth">
                   <div className="h-72 overflow-hidden relative">
-                    <img src="./src/assets/featured-security-dwtc.jpg" alt="Dubai World Trade Centre Security Booth" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-500" />
-                    <span className="absolute bottom-3 left-3 bg-secondary/80 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold text-accent">DWTC Checkpoint</span>
+                    <img src="./src/assets/gallery-dpworld-blue-booth.jpg" alt="DP World Custom Security Booth" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-500" />
+                    <span className="absolute bottom-3 left-3 bg-secondary/80 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold text-accent">DP World Checkpoint</span>
                   </div>
                   <div className="p-6">
-                    <h3 className="font-display font-bold text-xl text-white mb-2">Dubai World Trade Centre Booth</h3>
-                    <p className="text-xs text-white/70 leading-relaxed">Metallic curved paneling with integrated DWTC illuminated crest, dark panoramic tint, and warm perimeter LED lighting.</p>
+                    <h3 className="font-display font-bold text-xl text-white mb-2">DP World Security Booth</h3>
+                    <p className="text-xs text-white/70 leading-relaxed">Custom blue DP World branding with reinforced steel cladding, tinted panoramic glazing, and climate control.</p>
                   </div>
                 </div>
 

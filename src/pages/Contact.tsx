@@ -10,7 +10,7 @@ import { z } from "zod";
 import secRefTrailer from "@/assets/security-ref-trailer.jpg";
 import secRefNightDark from "@/assets/security-ref-night-dark.jpg";
 import secRefSilverCurved from "@/assets/security-ref-silver-curved.jpg";
-import secRefDwtcIbis from "@/assets/security-ref-dwtc-ibis.jpg";
+import galleryDpworldBlueBooths from "@/assets/gallery-dpworld-blue-booth.jpg";
 import secRefBeigeOval from "@/assets/security-ref-beige-oval.jpg";
 import secRefGoldCurved from "@/assets/security-ref-gold-curved.jpg";
 import secRefBeigeRoadside from "@/assets/security-ref-beige-roadside.jpg";
@@ -25,7 +25,7 @@ const securityCabinReferences = [
   { id: "trailer", title: "Mobile Trailer Security Booth", desc: "Towable cabin with integrated generator platform & safety rail", img: secRefTrailer, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-trailer.jpg" },
   { id: "night-dark", title: "Executive Curved Night Gatehouse", desc: "Rounded metallic finish with 360° panoramic dark glazing & ambient light", img: secRefNightDark, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-night-dark.jpg" },
   { id: "silver-curved", title: "Silver Chrome Louvered Guard Cabin", desc: "Polished stainless steel banding with horizontal architectural louvers", img: secRefSilverCurved, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-silver-curved.jpg" },
-  { id: "dwtc-ibis", title: "DWTC Luxury Entrance Gatehouse", desc: "High-security corporate checkpoint booth with illuminated government crest", img: secRefDwtcIbis, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-dwtc-ibis.jpg" },
+  { id: "dpworld-blue", title: "DP World Custom Security Booth", desc: "Official DP World blue security booth with reinforced steel cladding & climate control", img: galleryDpworldBlueBooths, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/gallery-dpworld-blue-booth.jpg" },
   { id: "beige-oval", title: "Beige Oval Architectural Guard Booth", desc: "Smooth curved cream finish with polished stainless louvers", img: secRefBeigeOval, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-beige-oval.jpg" },
   { id: "gold-curved", title: "Gold Metallic Rounded Gatehouse", desc: "Luxurious gold anodized panels with curved glass bay", img: secRefGoldCurved, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-gold-curved.jpg" },
   { id: "beige-roadside", title: "Beige Curved Oval Gate Cabin", desc: "Sleek oval roadside security unit with multi-band chrome", img: secRefBeigeRoadside, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-beige-roadside.jpg" },

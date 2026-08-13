@@ -64,7 +64,7 @@ const securityCabinReferences = [
   { id: "trailer", title: "Mobile Trailer Security Booth", desc: "Towable cabin with integrated generator platform & safety rail", img: secRefTrailer, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-trailer.jpg" },
   { id: "night-dark", title: "Executive Curved Night Gatehouse", desc: "Rounded metallic finish with 360° panoramic dark glazing", img: secRefNightDark, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-night-dark.jpg" },
   { id: "silver-curved", title: "Silver Chrome Louvered Guard Cabin", desc: "Polished stainless steel banding with horizontal architectural louvers", img: secRefSilverCurved, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-silver-curved.jpg" },
-  { id: "dwtc-ibis", title: "DWTC Luxury Entrance Gatehouse", desc: "High-security corporate checkpoint booth with government crest", img: secRefDwtcIbis, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-dwtc-ibis.jpg" },
+  { id: "dpworld-blue", title: "DP World Custom Security Booth", desc: "Official DP World blue security booth with reinforced steel cladding & climate control", img: galleryDpworldBlueBooths, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/gallery-dpworld-blue-booth.jpg" },
   { id: "beige-oval", title: "Beige Oval Architectural Guard Booth", desc: "Smooth curved cream finish with polished stainless louvers", img: secRefBeigeOval, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-beige-oval.jpg" },
   { id: "gold-curved", title: "Gold Metallic Rounded Gatehouse", desc: "Luxurious gold anodized panels with curved glass bay", img: secRefGoldCurved, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-gold-curved.jpg" },
   { id: "beige-roadside", title: "Beige Curved Oval Gate Cabin", desc: "Sleek oval roadside security unit with multi-band chrome", img: secRefBeigeRoadside, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-beige-roadside.jpg" },
@@ -148,7 +148,7 @@ const Counter = ({ end, suffix = "" }: { end: number; suffix?: string }) => {
 };
 
 const products = [
-  { icon: Shield, name: "Security Cabins", desc: "Compact guard booths built for heavy-duty security in extreme UAE climates.", img: featuredSecurityDwtc },
+  { icon: Shield, name: "Security Cabins", desc: "Compact guard booths built for heavy-duty security in extreme UAE climates.", img: galleryDpworldBlueBooths },
   { icon: HomeIcon, name: "Standard Cabins", desc: "Cost-effective, versatile modular standard cabins for site offices, guard posts & utility use.", img: productStandardCabin },
   { icon: Settings, name: "Customized Cabins", desc: "Any size, layout or finish — custom engineered around your exact project specifications.", img: productCustomizedCabin },
   { icon: Bus, name: "Bus Stations", desc: "Modern smart bus shelters and passenger transit stations with climate control.", img: galleryBusShelter },
@@ -193,7 +193,7 @@ const projects = [
   { title: "Sharjah University Modular Buildings", loc: "Sharjah", time: "30 days", img: galleryModularBuildingWhite },
   { title: "Dubai Custom Fisherman Accommodation", loc: "Dubai", time: "40 days", img: projectDubaiFisherman },
   { title: "Toll Gate at Sharjah", loc: "Sharjah", time: "18 days", img: galleryMountainTollGate },
-  { title: "Dubai Authority Customized Cabins", loc: "Dubai", time: "20 days", img: featuredSecurityDwtc },
+  { title: "Dubai Authority Customized Cabins", loc: "Dubai", time: "20 days", img: galleryBeigeOvalCabin },
 ];
 
 
@@ -567,12 +567,12 @@ export default function Home() {
               className="group rounded-3xl overflow-hidden glass-dark border border-white/10 hover:border-accent transition-smooth"
             >
               <div className="h-72 overflow-hidden relative">
-                <img src={featuredSecurityDwtc} alt="Dubai World Trade Centre Security Booth" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-500" />
-                <span className="absolute bottom-3 left-3 bg-secondary/80 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold text-accent">DWTC Checkpoint</span>
+                <img src={galleryDpworldBlueBooths} alt="DP World Custom Security Booth" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-500" />
+                <span className="absolute bottom-3 left-3 bg-secondary/80 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold text-accent">DP World Checkpoint</span>
               </div>
               <div className="p-6">
-                <h3 className="font-display font-bold text-xl text-white mb-2">Dubai World Trade Centre Booth</h3>
-                <p className="text-xs text-white/70 leading-relaxed">Metallic curved paneling with integrated DWTC illuminated crest, dark panoramic tint, and warm perimeter LED lighting.</p>
+                <h3 className="font-display font-bold text-xl text-white mb-2">DP World Security Booth</h3>
+                <p className="text-xs text-white/70 leading-relaxed">Custom blue DP World branding with reinforced steel cladding, tinted panoramic glazing, and climate control.</p>
               </div>
             </motion.div>
 
