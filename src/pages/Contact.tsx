@@ -16,6 +16,11 @@ import secRefGoldCurved from "@/assets/security-ref-gold-curved.jpg";
 import secRefBeigeRoadside from "@/assets/security-ref-beige-roadside.jpg";
 import secRefDarkwoodSheraton from "@/assets/security-ref-darkwood-sheraton.jpg";
 
+import stdRefSilverDoor from "@/assets/std-ref-silver-door.jpg";
+import stdRefSilverCurve from "@/assets/std-ref-silver-curve.jpg";
+import stdRefSilverSide from "@/assets/std-ref-silver-side.jpg";
+import stdRefSilverFront from "@/assets/std-ref-silver-front.jpg";
+
 const securityCabinReferences = [
   { id: "trailer", title: "Mobile Trailer Security Booth", desc: "Towable cabin with integrated generator platform & safety rail", img: secRefTrailer, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-trailer.jpg" },
   { id: "night-dark", title: "Executive Curved Night Gatehouse", desc: "Rounded metallic finish with 360° panoramic dark glazing & ambient light", img: secRefNightDark, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-night-dark.jpg" },
@@ -25,6 +30,13 @@ const securityCabinReferences = [
   { id: "gold-curved", title: "Gold Metallic Rounded Gatehouse", desc: "Luxurious gold anodized panels with curved glass bay", img: secRefGoldCurved, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-gold-curved.jpg" },
   { id: "beige-roadside", title: "Beige Curved Oval Gate Cabin", desc: "Sleek oval roadside security unit with multi-band chrome", img: secRefBeigeRoadside, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-beige-roadside.jpg" },
   { id: "darkwood-sheraton", title: "Dark Wood Luxury Executive Booth", desc: "Rich timber-grain exterior with chrome accents & tinted panoramic glass", img: secRefDarkwoodSheraton, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-darkwood-sheraton.jpg" },
+];
+
+const standardCabinReferences = [
+  { id: "std-door", title: "Standard Silver Door Gatehouse", desc: "Sleek silver curved cabin with integrated glass security door & louvers", img: stdRefSilverDoor, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/std-ref-silver-door.jpg" },
+  { id: "std-curve", title: "Standard Curved Bay Site Cabin", desc: "Executive rounded silver finish with panoramic tinted viewing glass", img: stdRefSilverCurve, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/std-ref-silver-curve.jpg" },
+  { id: "std-side", title: "Standard Louvered Side Office Cabin", desc: "Polished horizontal chrome banding with sliding window panel", img: stdRefSilverSide, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/std-ref-silver-side.jpg" },
+  { id: "std-front", title: "Standard Executive Guard Booth", desc: "High-durability stainless steel finish with 360° panoramic glazing", img: stdRefSilverFront, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/std-ref-silver-front.jpg" },
 ];
 
 const schema = z.object({
@@ -67,8 +79,14 @@ export default function Contact() {
 
     setLoading(true);
 
-    const refObj = securityCabinReferences.find(r => r.title === selectedRefModel);
-    const isRefSelected = projectTypeState === "Security Cabins" && !!selectedRefModel && !!refObj;
+    const activeRefList = projectTypeState === "Security Cabins"
+      ? securityCabinReferences
+      : projectTypeState === "Standard Cabins"
+      ? standardCabinReferences
+      : [];
+
+    const refObj = activeRefList.find(r => r.title === selectedRefModel);
+    const isRefSelected = (projectTypeState === "Security Cabins" || projectTypeState === "Standard Cabins") && !!selectedRefModel && !!refObj;
     const refImageUrl = isRefSelected && refObj ? refObj.rawUrl : "";
 
     try {
@@ -188,18 +206,18 @@ export default function Contact() {
                   </select>
                 </div>
 
-                {/* SECURITY CABIN CUSTOMER REFERENCE IMAGES PANEL */}
-                {projectTypeState === "Security Cabins" && (
+                {/* CUSTOMER REFERENCE IMAGES PANEL FOR SECURITY & STANDARD CABINS */}
+                {(projectTypeState === "Security Cabins" || projectTypeState === "Standard Cabins") && (
                   <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} className="p-4 rounded-2xl bg-muted/50 border border-primary/20 space-y-3">
                     <div className="flex items-center gap-2">
                       <Shield className="w-4 h-4 text-primary shrink-0" />
-                      <span className="font-display font-bold text-sm text-foreground">Security Cabin Reference Models (Customer Reference Only)</span>
+                      <span className="font-display font-bold text-sm text-foreground">{projectTypeState} Reference Models (Customer Reference Only)</span>
                     </div>
                     <p className="text-xs text-muted-foreground">
                       Click any model image to attach it to your quote request:
                     </p>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                      {securityCabinReferences.map((ref) => (
+                      {(projectTypeState === "Security Cabins" ? securityCabinReferences : standardCabinReferences).map((ref) => (
                         <div
                           key={ref.id}
                           onClick={() => {

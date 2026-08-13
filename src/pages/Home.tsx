@@ -54,6 +54,11 @@ import secRefGoldCurved from "@/assets/security-ref-gold-curved.jpg";
 import secRefBeigeRoadside from "@/assets/security-ref-beige-roadside.jpg";
 import secRefDarkwoodSheraton from "@/assets/security-ref-darkwood-sheraton.jpg";
 
+import stdRefSilverDoor from "@/assets/std-ref-silver-door.jpg";
+import stdRefSilverCurve from "@/assets/std-ref-silver-curve.jpg";
+import stdRefSilverSide from "@/assets/std-ref-silver-side.jpg";
+import stdRefSilverFront from "@/assets/std-ref-silver-front.jpg";
+
 const securityCabinReferences = [
   { id: "trailer", title: "Mobile Trailer Security Booth", desc: "Towable cabin with integrated generator platform & safety rail", img: secRefTrailer, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-trailer.jpg" },
   { id: "night-dark", title: "Executive Curved Night Gatehouse", desc: "Rounded metallic finish with 360° panoramic dark glazing", img: secRefNightDark, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-night-dark.jpg" },
@@ -63,6 +68,13 @@ const securityCabinReferences = [
   { id: "gold-curved", title: "Gold Metallic Rounded Gatehouse", desc: "Luxurious gold anodized panels with curved glass bay", img: secRefGoldCurved, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-gold-curved.jpg" },
   { id: "beige-roadside", title: "Beige Curved Oval Gate Cabin", desc: "Sleek oval roadside security unit with multi-band chrome", img: secRefBeigeRoadside, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-beige-roadside.jpg" },
   { id: "darkwood-sheraton", title: "Dark Wood Luxury Executive Booth", desc: "Rich timber-grain exterior with chrome accents & tinted panoramic glass", img: secRefDarkwoodSheraton, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/security-ref-darkwood-sheraton.jpg" },
+];
+
+const standardCabinReferences = [
+  { id: "std-door", title: "Standard Silver Door Gatehouse", desc: "Sleek silver curved cabin with integrated glass security door & louvers", img: stdRefSilverDoor, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/std-ref-silver-door.jpg" },
+  { id: "std-curve", title: "Standard Curved Bay Site Cabin", desc: "Executive rounded silver finish with panoramic tinted viewing glass", img: stdRefSilverCurve, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/std-ref-silver-curve.jpg" },
+  { id: "std-side", title: "Standard Louvered Side Office Cabin", desc: "Polished horizontal chrome banding with sliding window panel", img: stdRefSilverSide, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/std-ref-silver-side.jpg" },
+  { id: "std-front", title: "Standard Executive Guard Booth", desc: "High-durability stainless steel finish with 360° panoramic glazing", img: stdRefSilverFront, rawUrl: "https://cdn.jsdelivr.net/gh/jishnupm319-dot/FirstcabinGeneral@main/src/assets/std-ref-silver-front.jpg" },
 ];
 
 async function convertImgToBase64(url: string): Promise<string> {
@@ -1048,7 +1060,7 @@ export default function Home() {
                   <h2 className="font-display font-bold text-2xl md:text-3xl text-foreground">Request Quote for {quoteProduct}</h2>
                 </div>
 
-                <div className={quoteProduct === "Security Cabins" ? "grid lg:grid-cols-2 gap-8 items-start" : "block"}>
+                <div className={(quoteProduct === "Security Cabins" || quoteProduct === "Standard Cabins") ? "grid lg:grid-cols-2 gap-8 items-start" : "block"}>
                   {/* FORM */}
                   <form
                     onSubmit={async (e) => {
@@ -1057,8 +1069,14 @@ export default function Home() {
                       const fd = new FormData(e.currentTarget);
                       const userMsg = (fd.get("message") as string) || "";
                       
-                      const refObj = securityCabinReferences.find(r => r.title === selectedRefModel);
-                      const isRefSelected = quoteProduct === "Security Cabins" && !!selectedRefModel && !!refObj;
+                      const activeRefList = quoteProduct === "Security Cabins"
+                        ? securityCabinReferences
+                        : quoteProduct === "Standard Cabins"
+                        ? standardCabinReferences
+                        : [];
+
+                      const refObj = activeRefList.find(r => r.title === selectedRefModel);
+                      const isRefSelected = (quoteProduct === "Security Cabins" || quoteProduct === "Standard Cabins") && !!selectedRefModel && !!refObj;
                       const refImageUrl = isRefSelected && refObj ? refObj.rawUrl : "";
 
                       try {
@@ -1125,18 +1143,18 @@ export default function Home() {
                     </button>
                   </form>
 
-                  {/* SECURITY CABIN CUSTOMER REFERENCE IMAGES PANEL (ONLY FOR SECURITY CABINS) */}
-                  {quoteProduct === "Security Cabins" && (
+                  {/* CUSTOMER REFERENCE IMAGES PANEL (FOR SECURITY & STANDARD CABINS) */}
+                  {(quoteProduct === "Security Cabins" || quoteProduct === "Standard Cabins") && (
                     <div className="p-5 rounded-2xl bg-muted/40 border border-primary/20 space-y-4">
                       <div className="flex items-center gap-2">
                         <Shield className="w-5 h-5 text-primary shrink-0" />
-                        <h3 className="font-display font-bold text-base text-foreground">Reference Models (Customer Reference Only)</h3>
+                        <h3 className="font-display font-bold text-base text-foreground">{quoteProduct} Reference Models (Customer Reference Only)</h3>
                       </div>
                       <p className="text-xs text-muted-foreground leading-relaxed">
-                        Below are reference designs for Security Cabins. Click any model image to attach it to your quote request:
+                        Below are reference designs for {quoteProduct}. Click any model image to attach it to your quote request:
                       </p>
                       <div className="grid grid-cols-2 gap-3">
-                        {securityCabinReferences.map((ref) => (
+                        {(quoteProduct === "Security Cabins" ? securityCabinReferences : standardCabinReferences).map((ref) => (
                           <div
                             key={ref.id}
                             onClick={() => {
@@ -1146,28 +1164,28 @@ export default function Home() {
                               selectedRefModel === ref.title ? "border-primary ring-2 ring-primary/20" : "border-border/60 hover:border-primary/50"
                             }`}
                           >
-                            <div className="h-32 relative overflow-hidden">
+                            <div className="h-28 relative overflow-hidden">
                               <img src={ref.img} alt={ref.title} className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-500" />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                               <button
                                 type="button"
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   setRefLightboxImg({ src: ref.img, title: ref.title });
                                 }}
-                                className="absolute top-2 right-2 p-1.5 rounded-full bg-black/60 text-white hover:bg-primary transition-smooth"
+                                className="absolute top-1.5 right-1.5 p-1 rounded-full bg-black/60 text-white hover:bg-primary transition-smooth z-10"
                                 title="Full Screen Preview"
                               >
                                 <Maximize2 className="w-3.5 h-3.5" />
                               </button>
                               {selectedRefModel === ref.title && (
-                                <span className="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-primary text-[10px] text-primary-foreground font-bold flex items-center gap-1">
-                                  <CheckCircle2 className="w-3 h-3" /> Selected
+                                <span className="absolute top-1.5 left-1.5 px-2 py-0.5 rounded-md bg-primary text-[10px] text-primary-foreground font-bold shadow">
+                                  Selected
                                 </span>
                               )}
                             </div>
                             <div className="p-2.5">
-                              <div className="font-display font-semibold text-xs text-foreground line-clamp-1">{ref.title}</div>
+                              <div className="font-display font-semibold text-xs text-foreground leading-snug line-clamp-1">{ref.title}</div>
                               <div className="text-[10px] text-muted-foreground line-clamp-1 mt-0.5">{ref.desc}</div>
                             </div>
                           </div>
