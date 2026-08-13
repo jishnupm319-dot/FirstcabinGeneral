@@ -42,7 +42,6 @@ import galleryGoldCabinsTrio from "@/assets/gallery-gold-cabins-trio.jpg";
 import galleryContainerOffice2Story from "@/assets/gallery-container-office-2story.jpg";
 import galleryModularSiteConstruction from "@/assets/gallery-modular-site-construction.jpg";
 import galleryDpworldBlueBooths from "@/assets/gallery-dpworld-blue-booth.jpg";
-import galleryFgbBankCabin from "@/assets/gallery-fgb-bank-cabin.jpg";
 import galleryBeigeOvalCabin from "@/assets/gallery-beige-oval-cabin.jpg";
 import galleryGreenVipBooth from "@/assets/gallery-green-vip-booth.jpg";
 import galleryDarkwoodCabin from "@/assets/gallery-darkwood-cabin.jpg";
@@ -228,7 +227,6 @@ const galleryGridItems = [
   { id: 7, src: galleryContainerOffice2Story, alt: "2-Story Container Office Complex", label: "2-Story Container Office", category: "Container Office" },
   { id: 8, src: galleryModularSiteConstruction, alt: "Modular Complex Site Installation", label: "Modular Site Installation", category: "Modular Building" },
   { id: 9, src: galleryDpworldBlueBooths, alt: "DP World Blue Security Booth", label: "DP World Security Booth", category: "DP World Checkpoint" },
-  { id: 10, src: galleryFgbBankCabin, alt: "FGB Bank Curved Guard Booth", label: "FGB Bank Guard Booth", category: "Banking Checkpoint" },
   { id: 11, src: galleryBeigeOvalCabin, alt: "Beige Oval Executive Cabin", label: "Beige Oval Executive Cabin", category: "Executive Booth" },
   { id: 12, src: galleryGreenVipBooth, alt: "Green Metallic VIP Gatehouse", label: "Green Metallic VIP Gatehouse", category: "VIP Access Gate" },
   { id: 13, src: galleryDarkwoodCabin, alt: "Dark Wood & Chrome Luxury Cabin", label: "Dark Wood Luxury Cabin", category: "Luxury Fit-Out" },
