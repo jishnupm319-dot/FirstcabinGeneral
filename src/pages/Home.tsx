@@ -833,7 +833,7 @@ export default function Home() {
             <div className="rounded-3xl overflow-hidden shadow-elegant h-[500px]">
               <iframe
                 title="First Cabin location"
-                src="https://maps.google.com/maps?q=Industrial+Area+Dubai+United+Arab+Emirates&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=Dubai+United+Arab+Emirates&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 className="w-full h-full border-0"
                 loading="lazy"
               />
