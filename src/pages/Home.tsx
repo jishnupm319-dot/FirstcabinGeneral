@@ -187,6 +187,7 @@ const industries = [
 ];
 
 const projects = [
+  { title: "DP World Custom Security Booth", loc: "Dubai", time: "15 days", img: galleryDpworldBlueBooths },
   { title: "Sharjah RTA Smart Modular Station", loc: "Sharjah", time: "25 days", img: rtaNightImg },
   { title: "Sharjah University Modular Buildings", loc: "Sharjah", time: "30 days", img: galleryModularBuildingWhite },
   { title: "Dubai Custom Fisherman Accommodation", loc: "Dubai", time: "40 days", img: projectDubaiFisherman },
