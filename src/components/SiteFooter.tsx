@@ -59,7 +59,7 @@ export const SiteFooter = () => {
           <div>
             <h4 className="font-display font-bold mb-5 text-accent">Get in Touch</h4>
             <ul className="space-y-3 text-sm opacity-90">
-              <li className="flex gap-3"><MapPin className="w-4 h-4 shrink-0 mt-0.5 text-accent" /><span>Industrial Area, Dubai, United Arab Emirates</span></li>
+              <li className="flex gap-3"><MapPin className="w-4 h-4 shrink-0 mt-0.5 text-accent" /><span>Dubai, United Arab Emirates</span></li>
               <li className="flex gap-3"><Phone className="w-4 h-4 shrink-0 mt-0.5 text-accent" /><a href="tel:+971551000148">+971 55 100 0148</a></li>
               <li className="flex gap-3"><Mail className="w-4 h-4 shrink-0 mt-0.5 text-accent" /><a href="mailto:jishnumanoj4567@gmail.com">jishnumanoj4567@gmail.com</a></li>
             </ul>
