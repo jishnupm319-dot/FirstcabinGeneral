@@ -34,7 +34,7 @@ export const SiteFooter = () => {
           <div>
             <h4 className="font-display font-bold mb-5 text-accent">Products</h4>
             <ul className="space-y-2.5 text-sm opacity-80">
-              {["Security Cabins", "Customized Cabins", "Bus Stations", "Container Office", "Toll Gates", "Fabricated Buildings", "Labour Accommodation"].map(x => (
+              {["Security Cabins", "Standard Cabins", "Customized Cabins", "Bus Stations", "Container Office", "Toll Gates", "Fabricated Buildings", "Labour Accommodation"].map(x => (
                 <li key={x}>
                   <button
                     type="button"

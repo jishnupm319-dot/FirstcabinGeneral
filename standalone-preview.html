@@ -277,7 +277,7 @@
             <div>
               <h4 className="font-display font-bold mb-5 text-accent">Products</h4>
               <ul className="space-y-2.5 text-sm opacity-80">
-                {["Security Cabins", "Customized Cabins", "Bus Stations", "Container Office", "Toll Gates", "Fabricated Buildings", "Labour Accommodation"].map(x => (
+                {["Security Cabins", "Standard Cabins", "Customized Cabins", "Bus Stations", "Container Office", "Toll Gates", "Fabricated Buildings", "Labour Accommodation"].map(x => (
                   <li key={x}><a href="#products" className="hover:text-accent transition-smooth">{x}</a></li>
                 ))}
               </ul>
@@ -350,6 +350,7 @@
     const HomePage = ({ setPage }) => {
       const products = [
         { icon: "shield", name: "Security Cabins", desc: "Compact guard booths built for heavy-duty security in extreme UAE climates.", img: "./src/assets/featured-security-dwtc.jpg" },
+        { icon: "home", name: "Standard Cabins", desc: "Cost-effective, versatile modular standard cabins for site offices, guard posts & utility use.", img: "./src/assets/product-standard-cabin.jpg" },
         { icon: "settings", name: "Customized Cabins", desc: "Any size, layout or finish — custom engineered around your exact project specifications.", img: "./src/assets/sharjah-rta-cabin-side.jpg" },
         { icon: "bus", name: "Bus Stations", desc: "Modern smart bus shelters and passenger transit stations with climate control.", img: "./src/assets/gallery-bus-shelter.jpg" },
         { icon: "warehouse", name: "Container Office", desc: "20ft & 40ft converted container offices with premium insulated interiors.", img: "./src/assets/gallery-container-office-2story.jpg" },

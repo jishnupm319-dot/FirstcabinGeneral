@@ -184,7 +184,7 @@ export default function Contact() {
                     onChange={(e) => setProjectTypeState(e.target.value)}
                     className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-smooth font-medium"
                   >
-                    {["Security Cabins", "Customized Cabins", "Bus Stations", "Container Office", "Toll Gates", "Fabricated Buildings", "Labour Accommodation"].map(x => <option key={x} value={x}>{x}</option>)}
+                    {["Security Cabins", "Standard Cabins", "Customized Cabins", "Bus Stations", "Container Office", "Toll Gates", "Fabricated Buildings", "Labour Accommodation"].map(x => <option key={x} value={x}>{x}</option>)}
                   </select>
                 </div>
 
