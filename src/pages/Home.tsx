@@ -216,6 +216,36 @@ const faqs = [
   { q: "Can I request custom dimensions?", a: "Absolutely. Send us drawings or a brief — we'll engineer any size that meets road transport limits." },
 ];
 
+const galleryGridItems = [
+  { id: 1, src: galleryAirport, alt: "Airport Passenger Waiting Cabin", label: "Passenger Waiting Cabin", category: "Airport Terminal" },
+  { id: 2, src: galleryGoldCabinsTrio, alt: "Triple Gold Checkpoint Cabins", label: "Gold Checkpoint Cabins", category: "Security Checkpoint" },
+  { id: 3, src: galleryBusShelter, alt: "Smart Bus Shelter", label: "Smart Bus Shelter", category: "Transit" },
+  { id: 4, src: galleryTollGate, alt: "Toll Gate & Entry Structure", label: "Toll Gate Entry Structure", category: "Infrastructure" },
+  { id: 5, src: gallerySecurityGold, alt: "Premium Gold Security Cabin", label: "Premium Gold Security Cabin", category: "Security" },
+  { id: 6, src: gallerySecurityWhite, alt: "First Cabins Guard Booth", label: "First Cabins Guard Booth", category: "Guard Room" },
+  { id: 7, src: galleryContainerOffice2Story, alt: "2-Story Container Office Complex", label: "2-Story Container Office", category: "Container Office" },
+  { id: 8, src: galleryModularSiteConstruction, alt: "Modular Complex Site Installation", label: "Modular Site Installation", category: "Modular Building" },
+  { id: 9, src: galleryDpworldBlueBooths, alt: "DP World Blue Security Booth", label: "DP World Security Booth", category: "DP World Checkpoint" },
+  { id: 10, src: galleryFgbBankCabin, alt: "FGB Bank Curved Guard Booth", label: "FGB Bank Guard Booth", category: "Banking Checkpoint" },
+  { id: 11, src: galleryBeigeOvalCabin, alt: "Beige Oval Executive Cabin", label: "Beige Oval Executive Cabin", category: "Executive Booth" },
+  { id: 12, src: galleryGreenVipBooth, alt: "Green Metallic VIP Gatehouse", label: "Green Metallic VIP Gatehouse", category: "VIP Access Gate" },
+  { id: 13, src: galleryDarkwoodCabin, alt: "Dark Wood & Chrome Luxury Cabin", label: "Dark Wood Luxury Cabin", category: "Luxury Fit-Out" },
+];
+
+const popInVariant = {
+  hidden: { opacity: 0, scale: 0.85, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      duration: 0.45,
+      delay: (i % 4) * 0.08,
+      ease: [0.215, 0.61, 0.355, 1],
+    },
+  }),
+};
+
 export default function Home() {
   const [lightbox, setLightbox] = useState<{ src: string; alt: string; label: string; category: string } | null>(null);
   const [quoteProduct, setQuoteProduct] = useState<string | null>(null);
@@ -621,215 +651,29 @@ export default function Home() {
             <p className="text-muted-foreground mt-4 max-w-xl mx-auto">A showcase of our premium modular cabins, shelters and gate structures delivered across the UAE and region.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-            {/* 1 */}
-            <div
-              className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-              onClick={() => setLightbox({ src: galleryAirport, alt: "Airport Passenger Waiting Cabin", label: "Passenger Waiting Cabin", category: "Airport Terminal" })}
-            >
-              <img src={galleryAirport} alt="Airport Passenger Waiting Cabin" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 p-5">
-                <span className="text-xs font-semibold text-accent uppercase tracking-widest">Airport Terminal</span>
-                <p className="text-white font-display font-bold text-base">Passenger Waiting Cabin</p>
-              </div>
-              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                <Maximize2 className="w-4 h-4 text-white" />
-              </div>
-            </div>
-
-            {/* 2 */}
-            <div
-              className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-              onClick={() => setLightbox({ src: galleryGoldCabinsTrio, alt: "Triple Gold Checkpoint Cabins", label: "Gold Checkpoint Cabins Trio", category: "Security Checkpoint" })}
-            >
-              <img src={galleryGoldCabinsTrio} alt="Triple Gold Checkpoint Cabins" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 p-5">
-                <span className="text-xs font-semibold text-accent uppercase tracking-widest">Security Checkpoint</span>
-                <p className="text-white font-display font-bold text-base">Gold Checkpoint Cabins</p>
-              </div>
-              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                <Maximize2 className="w-4 h-4 text-white" />
-              </div>
-            </div>
-
-
-
-            {/* 7 */}
-            <div
-              className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-              onClick={() => setLightbox({ src: galleryBusShelter, alt: "Smart Bus Shelter", label: "Smart Bus Shelter", category: "Transit" })}
-            >
-              <img src={galleryBusShelter} alt="Smart Bus Shelter" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 p-5">
-                <span className="text-xs font-semibold text-accent uppercase tracking-widest">Transit</span>
-                <p className="text-white font-display font-bold text-base">Smart Bus Shelter</p>
-              </div>
-              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                <Maximize2 className="w-4 h-4 text-white" />
-              </div>
-            </div>
-
-            {/* 8 */}
-            <div
-              className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-              onClick={() => setLightbox({ src: galleryTollGate, alt: "Toll Gate & Entry Structure", label: "Toll Gate Entry Structure", category: "Infrastructure" })}
-            >
-              <img src={galleryTollGate} alt="Toll Gate & Entry Structure" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 p-5">
-                <span className="text-xs font-semibold text-accent uppercase tracking-widest">Infrastructure</span>
-                <p className="text-white font-display font-bold text-base">Toll Gate Entry Structure</p>
-              </div>
-              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                <Maximize2 className="w-4 h-4 text-white" />
-              </div>
-            </div>
-
-            {/* 9 */}
-            <div
-              className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-              onClick={() => setLightbox({ src: gallerySecurityGold, alt: "Premium Gold Security Cabin", label: "Premium Gold Security Cabin", category: "Security" })}
-            >
-              <img src={gallerySecurityGold} alt="Premium Gold Security Cabin" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 p-5">
-                <span className="text-xs font-semibold text-accent uppercase tracking-widest">Security</span>
-                <p className="text-white font-display font-bold text-base">Premium Gold Security Cabin</p>
-              </div>
-              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                <Maximize2 className="w-4 h-4 text-white" />
-              </div>
-            </div>
-
-            {/* 10 */}
-            <div
-              className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-              onClick={() => setLightbox({ src: gallerySecurityWhite, alt: "First Cabins Guard Booth", label: "First Cabins Guard Booth", category: "Guard Room" })}
-            >
-              <img src={gallerySecurityWhite} alt="First Cabins Guard Booth" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 p-5">
-                <span className="text-xs font-semibold text-accent uppercase tracking-widest">Guard Room</span>
-                <p className="text-white font-display font-bold text-base">First Cabins Guard Booth</p>
-              </div>
-              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                <Maximize2 className="w-4 h-4 text-white" />
-              </div>
-            </div>
-
-            {/* 11 */}
-            <div
-              className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-              onClick={() => setLightbox({ src: galleryContainerOffice2Story, alt: "2-Story Container Office Complex", label: "2-Story Container Office", category: "Container Office" })}
-            >
-              <img src={galleryContainerOffice2Story} alt="2-Story Container Office Complex" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 p-5">
-                <span className="text-xs font-semibold text-accent uppercase tracking-widest">Container Office</span>
-                <p className="text-white font-display font-bold text-base">2-Story Container Office</p>
-              </div>
-              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                <Maximize2 className="w-4 h-4 text-white" />
-              </div>
-            </div>
-
-            {/* 12 */}
-            <div
-              className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-              onClick={() => setLightbox({ src: galleryModularSiteConstruction, alt: "Modular Complex Site Installation", label: "Modular Site Installation", category: "Modular Building" })}
-            >
-              <img src={galleryModularSiteConstruction} alt="Modular Complex Site Installation" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 p-5">
-                <span className="text-xs font-semibold text-accent uppercase tracking-widest">Modular Building</span>
-                <p className="text-white font-display font-bold text-base">Modular Site Installation</p>
-              </div>
-              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                <Maximize2 className="w-4 h-4 text-white" />
-              </div>
-            </div>
-
-            {/* 13 - DP World */}
-            <div
-              className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-              onClick={() => setLightbox({ src: galleryDpworldBlueBooths, alt: "DP World Blue Security Booth", label: "DP World Security Booth", category: "DP World Checkpoint" })}
-            >
-              <img src={galleryDpworldBlueBooths} alt="DP World Blue Security Booth" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 p-5">
-                <span className="text-xs font-semibold text-accent uppercase tracking-widest">DP World Checkpoint</span>
-                <p className="text-white font-display font-bold text-base">DP World Security Booth</p>
-              </div>
-              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                <Maximize2 className="w-4 h-4 text-white" />
-              </div>
-            </div>
-
-            {/* 14 - FGB Bank */}
-            <div
-              className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-              onClick={() => setLightbox({ src: galleryFgbBankCabin, alt: "FGB Bank Curved Guard Booth", label: "FGB Bank Guard Booth", category: "Banking Checkpoint" })}
-            >
-              <img src={galleryFgbBankCabin} alt="FGB Bank Curved Guard Booth" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 p-5">
-                <span className="text-xs font-semibold text-accent uppercase tracking-widest">Banking Checkpoint</span>
-                <p className="text-white font-display font-bold text-base">FGB Bank Guard Booth</p>
-              </div>
-              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                <Maximize2 className="w-4 h-4 text-white" />
-              </div>
-            </div>
-
-            {/* 15 - Beige Oval Cabin */}
-            <div
-              className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-              onClick={() => setLightbox({ src: galleryBeigeOvalCabin, alt: "Beige Oval Executive Cabin", label: "Beige Oval Executive Cabin", category: "Executive Booth" })}
-            >
-              <img src={galleryBeigeOvalCabin} alt="Beige Oval Executive Cabin" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 p-5">
-                <span className="text-xs font-semibold text-accent uppercase tracking-widest">Executive Booth</span>
-                <p className="text-white font-display font-bold text-base">Beige Oval Executive Cabin</p>
-              </div>
-              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                <Maximize2 className="w-4 h-4 text-white" />
-              </div>
-            </div>
-
-            {/* 16 - Green VIP Gatehouse */}
-            <div
-              className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-              onClick={() => setLightbox({ src: galleryGreenVipBooth, alt: "Green Metallic VIP Gatehouse", label: "Green Metallic VIP Gatehouse", category: "VIP Access Gate" })}
-            >
-              <img src={galleryGreenVipBooth} alt="Green Metallic VIP Gatehouse" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 p-5">
-                <span className="text-xs font-semibold text-accent uppercase tracking-widest">VIP Access Gate</span>
-                <p className="text-white font-display font-bold text-base">Green Metallic VIP Gatehouse</p>
-              </div>
-              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                <Maximize2 className="w-4 h-4 text-white" />
-              </div>
-            </div>
-
-            {/* 17 - Dark Wood Luxury Cabin */}
-            <div
-              className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-              onClick={() => setLightbox({ src: galleryDarkwoodCabin, alt: "Dark Wood & Chrome Luxury Cabin", label: "Dark Wood & Chrome Luxury Cabin", category: "Luxury Fit-Out" })}
-            >
-              <img src={galleryDarkwoodCabin} alt="Dark Wood & Chrome Luxury Cabin" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 p-5">
-                <span className="text-xs font-semibold text-accent uppercase tracking-widest">Luxury Fit-Out</span>
-                <p className="text-white font-display font-bold text-base">Dark Wood Luxury Cabin</p>
-              </div>
-              <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                <Maximize2 className="w-4 h-4 text-white" />
-              </div>
-            </div>
+            {galleryGridItems.map((item, index) => (
+              <motion.div
+                key={item.id}
+                custom={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-30px" }}
+                variants={popInVariant}
+                whileHover={{ scale: 1.03, y: -6 }}
+                className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72 bg-card"
+                onClick={() => setLightbox({ src: item.src, alt: item.alt, label: item.label, category: item.category })}
+              >
+                <img src={item.src} alt={item.alt} className="w-full h-full object-cover group-hover:scale-110 transition-smooth duration-700" loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 p-5">
+                  <span className="text-xs font-semibold text-accent uppercase tracking-widest">{item.category}</span>
+                  <p className="text-white font-display font-bold text-base">{item.label}</p>
+                </div>
+                <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
+                  <Maximize2 className="w-4 h-4 text-white" />
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </Section>
