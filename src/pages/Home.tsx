@@ -429,8 +429,8 @@ export default function Home() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((p) => (
               <motion.div key={p.name} variants={fadeUp} whileHover={{ y: -8 }} className="group bg-card rounded-3xl overflow-hidden shadow-card hover:shadow-elegant transition-smooth">
-                <div className={`relative h-60 overflow-hidden ${p.name.includes("Standard") ? "bg-[#0d1527] p-2 flex items-center justify-center" : ""}`}>
-                  <img src={p.img} alt={p.name} className={`w-full h-full ${p.name.includes("Standard") ? "object-contain" : "object-cover"} group-hover:scale-105 transition-smooth duration-700`} loading="lazy" />
+                <div className="relative h-56 overflow-hidden">
+                  <img src={p.img} alt={p.name} className={`w-full h-full object-cover ${p.name.includes("Standard") ? "object-[50%_25%]" : ""} group-hover:scale-110 transition-smooth duration-700`} loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent" />
                   <div className="absolute top-4 left-4 w-12 h-12 rounded-xl glass flex items-center justify-center">
                     <p.icon className="w-5 h-5 text-primary" />
@@ -568,7 +568,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="group rounded-3xl overflow-hidden glass-dark border border-white/10 hover:border-accent transition-smooth flex flex-col justify-between"
             >
-              <div className="h-[360px] md:h-[400px] overflow-hidden relative">
+              <div className="h-80 md:h-[360px] overflow-hidden relative">
                 <img src={galleryDpworldBlueBooths} alt="DP World Custom Security Booth" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-500" />
                 <span className="absolute bottom-3 left-3 bg-secondary/80 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold text-accent">DP World Checkpoint</span>
               </div>
@@ -585,7 +585,7 @@ export default function Home() {
               transition={{ delay: 0.1 }}
               className="group rounded-3xl overflow-hidden glass-dark border border-white/10 hover:border-accent transition-smooth flex flex-col justify-between"
             >
-              <div className="h-[360px] md:h-[400px] overflow-hidden relative">
+              <div className="h-80 md:h-[360px] overflow-hidden relative">
                 <img src={featuredSecurityGold} alt="VIP Gold Security Guard Cabin" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-500" />
                 <span className="absolute bottom-3 left-3 bg-secondary/80 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold text-accent">VIP Checkpoint</span>
               </div>
@@ -602,9 +602,9 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="group rounded-3xl overflow-hidden glass-dark border border-white/10 hover:border-accent transition-smooth flex flex-col justify-between"
             >
-              <div className="h-[380px] md:h-[420px] overflow-hidden relative bg-[#0d1527] p-2 flex items-center justify-center border-b border-white/10">
-                <img src={featuredStandardCabin} alt="First Cabins Standard Cabin" className="w-full h-full object-contain group-hover:scale-105 transition-smooth duration-500" />
-                <span className="absolute bottom-3 left-3 bg-secondary/90 backdrop-blur px-3.5 py-1 rounded-full text-xs font-semibold text-accent border border-white/10 z-10">Standard Cabin</span>
+              <div className="h-80 md:h-[360px] overflow-hidden relative">
+                <img src={featuredStandardCabin} alt="First Cabins Standard Cabin" className="w-full h-full object-cover object-[50%_25%] group-hover:scale-105 transition-smooth duration-500" />
+                <span className="absolute bottom-3 left-3 bg-secondary/80 backdrop-blur px-3.5 py-1 rounded-full text-xs font-semibold text-accent border border-white/10">Standard Cabin</span>
               </div>
               <div className="p-6">
                 <h3 className="font-display font-bold text-xl text-white mb-2">Standard Cabin</h3>
