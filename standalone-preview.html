@@ -345,6 +345,24 @@
     const HomePage = ({ setPage }) => {
       const [revealedFeatureCount, setRevealedFeatureCount] = React.useState(1);
       const [activeFeatureIndex, setActiveFeatureIndex] = React.useState(0);
+      const [galleryFilter, setGalleryFilter] = React.useState("All");
+      const [galleryKey, setGalleryKey] = React.useState(0);
+
+      const galleryGridItems = [
+        { id: 1, src: "./src/assets/gallery-airport-cabin.jpg", alt: "Airport Passenger Waiting Cabin", label: "Passenger Waiting Cabin", category: "Airport Terminal" },
+        { id: 2, src: "./src/assets/gallery-gold-cabins-trio.jpg", alt: "Triple Gold Checkpoint Cabins", label: "Gold Checkpoint Cabins", category: "Security Checkpoint" },
+        { id: 3, src: "./src/assets/gallery-bus-shelter.jpg", alt: "Smart Bus Shelter", label: "Smart Bus Shelter", category: "Transit" },
+        { id: 4, src: "./src/assets/gallery-toll-gate.jpg", alt: "Toll Gate & Entry Structure", label: "Toll Gate Entry Structure", category: "Infrastructure" },
+        { id: 5, src: "./src/assets/gallery-security-gold.jpg", alt: "Premium Gold Security Cabin", label: "Premium Gold Security Cabin", category: "Security" },
+        { id: 6, src: "./src/assets/gallery-security-white.jpg", alt: "First Cabins Guard Booth", label: "First Cabins Guard Booth", category: "Guard Room" },
+        { id: 7, src: "./src/assets/gallery-container-office-2story.jpg", alt: "2-Story Container Office Complex", label: "2-Story Container Office", category: "Container Office" },
+        { id: 8, src: "./src/assets/gallery-modular-site-construction.jpg", alt: "Modular Complex Site Installation", label: "Modular Site Installation", category: "Modular Building" },
+        { id: 9, src: "./src/assets/gallery-dpworld-blue-booth.jpg", alt: "DP World Blue Security Booth", label: "DP World Security Booth", category: "DP World Checkpoint" },
+        { id: 10, src: "./src/assets/featured-standard-cabin.jpg", alt: "First Cabins Executive Standard Booth", label: "Executive Standard Guard Booth", category: "Standard Cabin" },
+        { id: 11, src: "./src/assets/gallery-beige-oval-cabin.jpg", alt: "Beige Oval Executive Cabin", label: "Beige Oval Executive Cabin", category: "Executive Booth" },
+        { id: 12, src: "./src/assets/gallery-green-vip-booth.jpg", alt: "Green Metallic VIP Gatehouse", label: "Green Metallic VIP Gatehouse", category: "VIP Access Gate" },
+        { id: 13, src: "./src/assets/gallery-darkwood-cabin.jpg", alt: "Dark Wood & Chrome Luxury Cabin", label: "Dark Wood Luxury Cabin", category: "Luxury Fit-Out" },
+      ];
 
       const products = [
         { icon: "shield", name: "Security Cabins", desc: "Compact guard booths built for heavy-duty security in extreme UAE climates.", img: "./src/assets/gallery-dpworld-blue-booth.jpg" },
@@ -815,211 +833,79 @@
             </div>
           </section>
 
-          {/* GALLERY */}
+          {/* GALLERY - AUTOMATIC POP FROM BLANK SPACE */}
           <section id="gallery" className="py-24 md:py-32 relative">
             <div className="container mx-auto px-6">
-              <div className="text-center mb-16">
+              <div className="text-center mb-10">
                 <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-widest mb-4">Image Gallery</span>
                 <h2 className="font-display font-bold text-4xl md:text-5xl">Our constructed projects</h2>
-                <p className="text-muted-foreground mt-4 max-w-xl mx-auto">A showcase of our premium modular cabins, shelters and gate structures delivered across the UAE and region.</p>
+                <p className="text-muted-foreground mt-4 max-w-xl mx-auto text-sm md:text-base">
+                  A showcase of our premium modular cabins, shelters and gate structures delivered across the UAE.
+                </p>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-                {/* 1 */}
-                <div
-                  className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-                  onClick={() => setLightbox({ src: "./src/assets/gallery-airport-cabin.jpg", alt: "Airport Passenger Waiting Cabin", label: "Passenger Waiting Cabin", category: "Airport Terminal" })}
+
+              {/* Interactive Filter Pills & Replay Control */}
+              <div className="flex flex-wrap items-center justify-center gap-2.5 mb-10">
+                {[
+                  { id: "All", label: "All Projects" },
+                  { id: "Security", label: "Security & Checkpoints" },
+                  { id: "Modular", label: "Modular Buildings & Offices" },
+                  { id: "Transit", label: "Transit & Infrastructure" },
+                  { id: "VIP", label: "VIP & Executive" },
+                ].map((tab) => (
+                  <button
+                    key={tab.id}
+                    onClick={() => {
+                      setGalleryFilter(tab.id);
+                      setGalleryKey((prev) => prev + 1);
+                    }}
+                    className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-300 cursor-pointer transform-gpu ${
+                      galleryFilter === tab.id
+                        ? "bg-primary text-primary-foreground shadow-glow scale-105 ring-2 ring-primary/30"
+                        : "bg-muted/80 text-muted-foreground hover:bg-muted hover:text-foreground"
+                    }`}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+
+                <button
+                  onClick={() => setGalleryKey((prev) => prev + 1)}
+                  className="px-4 py-2.5 rounded-full border border-primary/30 text-primary text-xs font-bold hover:bg-primary/10 transition-all duration-300 flex items-center gap-1.5 cursor-pointer"
                 >
-                  <img src="./src/assets/gallery-airport-cabin.jpg" alt="Airport Passenger Waiting Cabin" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 p-5">
-                    <span className="text-xs font-semibold text-accent uppercase tracking-widest">Airport Terminal</span>
-                    <p className="text-white font-display font-bold text-base">Passenger Waiting Cabin</p>
-                  </div>
-                  <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                    <Icon name="expand" className="w-4 h-4 text-white" />
-                  </div>
-                </div>
+                  <Icon name="zap" className="w-3.5 h-3.5 animate-pulse" /> Replay Pop Animation
+                </button>
+              </div>
 
-                {/* 2 */}
-                <div
-                  className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-                  onClick={() => setLightbox({ src: "./src/assets/gallery-gold-cabins-trio.jpg", alt: "Triple Gold Checkpoint Cabins", label: "Gold Checkpoint Cabins Trio", category: "Security Checkpoint" })}
-                >
-                  <img src="./src/assets/gallery-gold-cabins-trio.jpg" alt="Triple Gold Checkpoint Cabins" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 p-5">
-                    <span className="text-xs font-semibold text-accent uppercase tracking-widest">Security Checkpoint</span>
-                    <p className="text-white font-display font-bold text-base">Gold Checkpoint Cabins</p>
-                  </div>
-                  <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                    <Icon name="expand" className="w-4 h-4 text-white" />
-                  </div>
-                </div>
-
-
-
-                {/* 7 */}
-                <div
-                  className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-                  onClick={() => setLightbox({ src: "./src/assets/gallery-bus-shelter.jpg", alt: "Smart Bus Shelter", label: "Smart Bus Shelter", category: "Transit" })}
-                >
-                  <img src="./src/assets/gallery-bus-shelter.jpg" alt="Smart Bus Shelter" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 p-5">
-                    <span className="text-xs font-semibold text-accent uppercase tracking-widest">Transit</span>
-                    <p className="text-white font-display font-bold text-base">Smart Bus Shelter</p>
-                  </div>
-                  <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                    <Icon name="expand" className="w-4 h-4 text-white" />
-                  </div>
-                </div>
-
-                {/* 8 */}
-                <div
-                  className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-                  onClick={() => setLightbox({ src: "./src/assets/gallery-toll-gate.jpg", alt: "Toll Gate & Entry Structure", label: "Toll Gate Entry Structure", category: "Infrastructure" })}
-                >
-                  <img src="./src/assets/gallery-toll-gate.jpg" alt="Toll Gate & Entry Structure" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 p-5">
-                    <span className="text-xs font-semibold text-accent uppercase tracking-widest">Infrastructure</span>
-                    <p className="text-white font-display font-bold text-base">Toll Gate Entry Structure</p>
-                  </div>
-                  <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                    <Icon name="expand" className="w-4 h-4 text-white" />
-                  </div>
-                </div>
-
-                {/* 9 */}
-                <div
-                  className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-                  onClick={() => setLightbox({ src: "./src/assets/gallery-security-gold.jpg", alt: "Premium Gold Security Cabin", label: "Premium Gold Security Cabin", category: "Security" })}
-                >
-                  <img src="./src/assets/gallery-security-gold.jpg" alt="Premium Gold Security Cabin" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 p-5">
-                    <span className="text-xs font-semibold text-accent uppercase tracking-widest">Security</span>
-                    <p className="text-white font-display font-bold text-base">Premium Gold Security Cabin</p>
-                  </div>
-                  <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                    <Icon name="expand" className="w-4 h-4 text-white" />
-                  </div>
-                </div>
-
-                {/* 10 */}
-                {/* 10 */}
-                <div
-                  className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-                  onClick={() => setLightbox({ src: "./src/assets/gallery-security-white.jpg", alt: "First Cabins Guard Booth", label: "First Cabins Guard Booth", category: "Guard Room" })}
-                >
-                  <img src="./src/assets/gallery-security-white.jpg" alt="First Cabins Guard Booth" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 p-5">
-                    <span className="text-xs font-semibold text-accent uppercase tracking-widest">Guard Room</span>
-                    <p className="text-white font-display font-bold text-base">First Cabins Guard Booth</p>
-                  </div>
-                  <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                    <Icon name="expand" className="w-4 h-4 text-white" />
-                  </div>
-                </div>
-
-                {/* 11 */}
-                <div
-                  className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-                  onClick={() => setLightbox({ src: "./src/assets/gallery-container-office-2story.jpg", alt: "2-Story Container Office Complex", label: "2-Story Container Office", category: "Container Office" })}
-                >
-                  <img src="./src/assets/gallery-container-office-2story.jpg" alt="2-Story Container Office Complex" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 p-5">
-                    <span className="text-xs font-semibold text-accent uppercase tracking-widest">Container Office</span>
-                    <p className="text-white font-display font-bold text-base">2-Story Container Office</p>
-                  </div>
-                  <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                    <Icon name="expand" className="w-4 h-4 text-white" />
-                  </div>
-                </div>
-
-                {/* 12 */}
-                <div
-                  className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-                  onClick={() => setLightbox({ src: "./src/assets/gallery-modular-site-construction.jpg", alt: "Modular Complex Site Installation", label: "Modular Site Installation", category: "Modular Building" })}
-                >
-                  <img src="./src/assets/gallery-modular-site-construction.jpg" alt="Modular Complex Site Installation" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 p-5">
-                    <span className="text-xs font-semibold text-accent uppercase tracking-widest">Modular Building</span>
-                    <p className="text-white font-display font-bold text-base">Modular Site Installation</p>
-                  </div>
-                  <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                    <Icon name="expand" className="w-4 h-4 text-white" />
-                  </div>
-                </div>
-
-                {/* 13 - DP World */}
-                <div
-                  className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-                  onClick={() => setLightbox({ src: "./src/assets/gallery-dpworld-blue-booth.jpg", alt: "DP World Blue Security Booth", label: "DP World Security Booth", category: "DP World Checkpoint" })}
-                >
-                  <img src="./src/assets/gallery-dpworld-blue-booth.jpg" alt="DP World Blue Security Booth" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 p-5">
-                    <span className="text-xs font-semibold text-accent uppercase tracking-widest">DP World Checkpoint</span>
-                    <p className="text-white font-display font-bold text-base">DP World Security Booth</p>
-                  </div>
-                  <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                    <Icon name="expand" className="w-4 h-4 text-white" />
-                  </div>
-                </div>
-
-
-
-                {/* 15 - Beige Oval Cabin */}
-                <div
-                  className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-                  onClick={() => setLightbox({ src: "./src/assets/gallery-beige-oval-cabin.jpg", alt: "Beige Oval Executive Cabin", label: "Beige Oval Executive Cabin", category: "Executive Booth" })}
-                >
-                  <img src="./src/assets/gallery-beige-oval-cabin.jpg" alt="Beige Oval Executive Cabin" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 p-5">
-                    <span className="text-xs font-semibold text-accent uppercase tracking-widest">Executive Booth</span>
-                    <p className="text-white font-display font-bold text-base">Beige Oval Executive Cabin</p>
-                  </div>
-                  <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                    <Icon name="expand" className="w-4 h-4 text-white" />
-                  </div>
-                </div>
-
-                {/* 16 - Green VIP Gatehouse */}
-                <div
-                  className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-                  onClick={() => setLightbox({ src: "./src/assets/gallery-green-vip-booth.jpg", alt: "Green Metallic VIP Gatehouse", label: "Green Metallic VIP Gatehouse", category: "VIP Access Gate" })}
-                >
-                  <img src="./src/assets/gallery-green-vip-booth.jpg" alt="Green Metallic VIP Gatehouse" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 p-5">
-                    <span className="text-xs font-semibold text-accent uppercase tracking-widest">VIP Access Gate</span>
-                    <p className="text-white font-display font-bold text-base">Green Metallic VIP Gatehouse</p>
-                  </div>
-                  <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                    <Icon name="expand" className="w-4 h-4 text-white" />
-                  </div>
-                </div>
-
-                {/* 17 - Dark Wood Luxury Cabin */}
-                <div
-                  className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72"
-                  onClick={() => setLightbox({ src: "./src/assets/gallery-darkwood-cabin.jpg", alt: "Dark Wood & Chrome Luxury Cabin", label: "Dark Wood & Chrome Luxury Cabin", category: "Luxury Fit-Out" })}
-                >
-                  <img src="./src/assets/gallery-darkwood-cabin.jpg" alt="Dark Wood & Chrome Luxury Cabin" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 p-5">
-                    <span className="text-xs font-semibold text-accent uppercase tracking-widest">Luxury Fit-Out</span>
-                    <p className="text-white font-display font-bold text-base">Dark Wood Luxury Cabin</p>
-                  </div>
-                  <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
-                    <Icon name="expand" className="w-4 h-4 text-white" />
-                  </div>
-                </div>
+              {/* Grid of Pictures Popping From Blank Space */}
+              <div key={galleryKey} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                {galleryGridItems
+                  .filter((item) => {
+                    if (galleryFilter === "All") return true;
+                    if (galleryFilter === "Security") return item.category.includes("Security") || item.category.includes("Guard") || item.category.includes("Checkpoint");
+                    if (galleryFilter === "Modular") return item.category.includes("Modular") || item.category.includes("Container") || item.category.includes("Standard");
+                    if (galleryFilter === "Transit") return item.category.includes("Transit") || item.category.includes("Infrastructure") || item.category.includes("Airport");
+                    if (galleryFilter === "VIP") return item.category.includes("VIP") || item.category.includes("Executive") || item.category.includes("Luxury");
+                    return true;
+                  })
+                  .map((item, index) => (
+                    <div
+                      key={`${item.id}-${galleryKey}`}
+                      className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72 bg-card transform-gpu transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl border border-border/40 animate-pop-in"
+                      style={{ animationDelay: `${(index % 8) * 110}ms` }}
+                      onClick={() => setLightbox({ src: item.src, alt: item.alt, label: item.label, category: item.category })}
+                    >
+                      <img src={item.src} alt={item.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" loading="lazy" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute bottom-0 left-0 p-6 z-10">
+                        <span className="text-[11px] font-bold text-accent uppercase tracking-widest block mb-1">{item.category}</span>
+                        <p className="text-white font-display font-bold text-lg leading-tight group-hover:text-accent transition-colors duration-300">{item.label}</p>
+                      </div>
+                      <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-90 group-hover:scale-100 border border-white/20 z-10">
+                        <Icon name="expand" className="w-4 h-4 text-white" />
+                      </div>
+                    </div>
+                  ))}
               </div>
             </div>
           </section>
