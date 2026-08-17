@@ -573,15 +573,49 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* WHY CHOOSE US - INTERACTIVE FLOW CHART PIPELINE */}
+      {/* WHY CHOOSE US - FLOW CHART WITH TOP ARROW NAVIGATION */}
       <Section id="why" className="bg-muted/30 relative overflow-hidden">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <SectionLabel>Why Choose Us</SectionLabel>
-            <h2 className="font-display font-bold text-4xl md:text-5xl mb-4">Built on quality. Delivered with speed.</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
-              Click the arrows or any stage to explore our complete engineering and delivery flowchart.
-            </p>
+          {/* SECTION TOP HEADER WITH PROMINENT FLOWCHART ARROW CONTROLS */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-8 border-b border-border/50">
+            <div>
+              <SectionLabel>Why Choose Us</SectionLabel>
+              <h2 className="font-display font-bold text-4xl md:text-5xl mb-3">Built on quality. Delivered with speed.</h2>
+              <p className="text-muted-foreground max-w-xl text-sm md:text-base">
+                Click the arrows to explore our full manufacturing and quality engineering flowchart step-by-step.
+              </p>
+            </div>
+
+            {/* TOP ARROW NAVIGATION CONTROLLER */}
+            <div className="flex items-center gap-3 bg-card p-2 sm:p-2.5 rounded-2xl border border-primary/20 shadow-md self-start md:self-auto">
+              <button
+                onClick={() => setActiveFeatureIndex((prev) => (prev > 0 ? prev - 1 : features.length - 1))}
+                className="w-11 h-11 rounded-xl bg-muted hover:bg-muted/80 text-foreground flex items-center justify-center transition-all duration-300 hover:scale-105 cursor-pointer"
+                title="Previous Stage"
+                aria-label="Previous Stage"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+
+              <div className="px-4 py-1.5 text-center min-w-[140px]">
+                <div className="text-[10px] font-bold uppercase tracking-widest text-primary">
+                  Stage {features[activeFeatureIndex].step} of 08
+                </div>
+                <div className="font-display font-bold text-sm text-foreground truncate max-w-[130px]">
+                  {features[activeFeatureIndex].title}
+                </div>
+              </div>
+
+              <button
+                onClick={() => setActiveFeatureIndex((prev) => (prev < features.length - 1 ? prev + 1 : 0))}
+                className="px-4 py-2.5 rounded-xl bg-primary text-primary-foreground font-bold text-xs flex items-center gap-2 shadow-glow hover:scale-105 transition-all duration-300 cursor-pointer"
+                title="Next Stage"
+                aria-label="Next Stage"
+              >
+                <span>Next</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
           </div>
 
           {/* Interactive Flow Chart Stepper Pipeline (Horizontal Connected Nodes) */}
