@@ -431,9 +431,9 @@ export default function Home() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((p) => (
               <motion.div key={p.name} variants={fadeUp} whileHover={{ y: -8 }} className="group bg-card rounded-3xl overflow-hidden shadow-card hover:shadow-elegant transition-smooth">
-                <div className={`relative h-64 overflow-hidden ${p.name.includes("Standard") ? "bg-[#0b1329] p-2 flex items-center justify-center" : ""}`}>
-                  <img src={p.img} alt={p.name} className={`w-full h-full ${p.name.includes("Standard") ? "object-contain" : "object-cover"} group-hover:scale-105 transition-smooth duration-700`} loading="lazy" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent pointer-events-none" />
+                <div className="relative h-60 overflow-hidden">
+                  <img src={p.img} alt={p.name} className={`w-full h-full object-cover ${p.name.includes("Standard") ? "object-[50%_25%] scale-105" : ""} group-hover:scale-110 transition-smooth duration-700`} loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent" />
                   <div className="absolute top-4 left-4 w-12 h-12 rounded-xl glass flex items-center justify-center">
                     <p.icon className="w-5 h-5 text-primary" />
                   </div>
