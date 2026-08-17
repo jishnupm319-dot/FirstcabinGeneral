@@ -228,6 +228,7 @@ const galleryGridItems = [
   { id: 7, src: galleryContainerOffice2Story, alt: "2-Story Container Office Complex", label: "2-Story Container Office", category: "Container Office" },
   { id: 8, src: galleryModularSiteConstruction, alt: "Modular Complex Site Installation", label: "Modular Site Installation", category: "Modular Building" },
   { id: 9, src: galleryDpworldBlueBooths, alt: "DP World Blue Security Booth", label: "DP World Security Booth", category: "DP World Checkpoint" },
+  { id: 10, src: featuredStandardCabin, alt: "First Cabins Executive Standard Booth", label: "Executive Standard Guard Booth", category: "Standard Cabin" },
   { id: 11, src: galleryBeigeOvalCabin, alt: "Beige Oval Executive Cabin", label: "Beige Oval Executive Cabin", category: "Executive Booth" },
   { id: 12, src: galleryGreenVipBooth, alt: "Green Metallic VIP Gatehouse", label: "Green Metallic VIP Gatehouse", category: "VIP Access Gate" },
   { id: 13, src: galleryDarkwoodCabin, alt: "Dark Wood & Chrome Luxury Cabin", label: "Dark Wood Luxury Cabin", category: "Luxury Fit-Out" },
