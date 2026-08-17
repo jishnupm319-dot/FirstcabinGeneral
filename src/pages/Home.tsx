@@ -29,6 +29,7 @@ import aboutGoldCabinImg from "@/assets/about-gold-cabin.jpg";
 import featuredSecurityDwtc from "@/assets/featured-security-dwtc.jpg";
 import featuredSecurityGold from "@/assets/featured-security-gold.jpg";
 import featuredSecurityWhite from "@/assets/featured-security-white.jpg";
+import featuredStandardCabin from "@/assets/featured-standard-cabin.jpg";
 
 import galleryAirport from "@/assets/gallery-airport-cabin.jpg";
 import galleryBusShelter from "@/assets/gallery-bus-shelter.jpg";
@@ -601,12 +602,12 @@ export default function Home() {
               className="group rounded-3xl overflow-hidden glass-dark border border-white/10 hover:border-accent transition-smooth"
             >
               <div className="h-72 overflow-hidden relative">
-                <img src={featuredSecurityWhite} alt="First Cabins Corporate Access Booth" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-500" />
-                <span className="absolute bottom-3 left-3 bg-secondary/80 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold text-accent">Corporate Entrance</span>
+                <img src={featuredStandardCabin} alt="First Cabins Executive Standard Guard Booth" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-500" />
+                <span className="absolute bottom-3 left-3 bg-secondary/80 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold text-accent">Standard Checkpoint</span>
               </div>
               <div className="p-6">
-                <h3 className="font-display font-bold text-xl text-white mb-2">Corporate Headquarters Checkpoint</h3>
-                <p className="text-xs text-white/70 leading-relaxed">Sleek white cladding with horizontal LED accent grooves, sliding visitor pass window, and automatic barrier control hookups.</p>
+                <h3 className="font-display font-bold text-xl text-white mb-2">Executive Standard Guard Booth</h3>
+                <p className="text-xs text-white/70 leading-relaxed">High-durability silver metallic finish with horizontal louvered cladding, 360° panoramic glazing, and official First Cabins logo plaque.</p>
               </div>
             </motion.div>
           </div>
