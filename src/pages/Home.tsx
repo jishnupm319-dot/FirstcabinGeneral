@@ -273,17 +273,14 @@ export default function Home() {
   const [refLightboxImg, setRefLightboxImg] = useState<{ src: string; title: string } | null>(null);
   const [revealedFeatureCount, setRevealedFeatureCount] = useState(1);
   const [activeFeatureIndex, setActiveFeatureIndex] = useState(0);
-  const [galleryFilter, setGalleryFilter] = useState("All");
   const [galleryRevealedCount, setGalleryRevealedCount] = useState(1);
-  const [isGalleryAutoPlay, setIsGalleryAutoPlay] = useState(true);
 
   useEffect(() => {
-    if (!isGalleryAutoPlay) return;
     const timer = setInterval(() => {
-      setGalleryRevealedCount((prev) => (prev < 13 ? prev + 1 : prev));
-    }, 650);
+      setGalleryRevealedCount((prev) => (prev < 14 ? prev + 1 : prev));
+    }, 450);
     return () => clearInterval(timer);
-  }, [isGalleryAutoPlay]);
+  }, []);
 
   useEffect(() => {
     const handleOpenModal = (e: Event) => {
@@ -775,149 +772,52 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* GALLERY - SEQUENTIAL WHITE BLANK CARD POP SHOWCASE */}
+      {/* GALLERY - AUTOMATIC SEQUENTIAL POP FROM CLEAN WHITE BLANK SPACE */}
       <Section id="gallery">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-10">
+          <div className="text-center mb-16">
             <SectionLabel>Image Gallery</SectionLabel>
-            <h2 className="font-display font-bold text-4xl md:text-5xl">Our constructed projects</h2>
-            <p className="text-muted-foreground mt-4 max-w-xl mx-auto text-sm md:text-base">
-              Each project pops open from a pristine white blank card space one-by-one!
+            <h2 className="font-display font-bold text-4xl md:text-5xl mb-4">Our constructed projects</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              A showcase of our premium modular cabins, shelters and gate structures delivered across the UAE.
             </p>
           </div>
 
-          {/* Interactive Filter Pills & Sequential Pop Controls */}
-          <div className="flex flex-wrap items-center justify-between gap-4 mb-10 bg-muted/50 backdrop-blur p-4 rounded-2xl border border-border">
-            {/* Filter Pills */}
-            <div className="flex flex-wrap gap-2">
-              {[
-                { id: "All", label: "All Projects" },
-                { id: "Security", label: "Security & Checkpoints" },
-                { id: "Modular", label: "Modular Buildings & Offices" },
-                { id: "Transit", label: "Transit & Infrastructure" },
-                { id: "VIP", label: "VIP & Executive" },
-              ].map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => {
-                    setGalleryFilter(tab.id);
-                    setGalleryRevealedCount(1);
-                    setIsGalleryAutoPlay(true);
-                  }}
-                  className={`px-4 py-2 rounded-full text-xs font-bold transition-all duration-300 cursor-pointer transform-gpu ${
-                    galleryFilter === tab.id
-                      ? "bg-primary text-primary-foreground shadow-glow scale-105"
-                      : "bg-background text-muted-foreground hover:bg-muted hover:text-foreground border border-border/50"
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              ))}
-            </div>
-
-            {/* Sequence Action Buttons */}
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => setIsGalleryAutoPlay((prev) => !prev)}
-                className="px-4 py-2 rounded-full bg-primary text-primary-foreground text-xs font-bold shadow-glow hover:scale-105 transition-smooth inline-flex items-center gap-1.5 cursor-pointer"
-              >
-                {isGalleryAutoPlay ? (
-                  <>
-                    <Zap className="w-3.5 h-3.5 fill-current animate-pulse" /> Auto Popping... ({Math.min(galleryRevealedCount, galleryGridItems.length)}/{galleryGridItems.length})
-                  </>
-                ) : (
-                  <>
-                    <Play className="w-3.5 h-3.5 fill-current" /> Auto Play Pop
-                  </>
-                )}
-              </button>
-
-              <button
-                onClick={() => {
-                  setGalleryRevealedCount(1);
-                  setIsGalleryAutoPlay(true);
-                }}
-                className="px-4 py-2 rounded-full border border-border text-xs font-medium hover:border-primary transition-smooth cursor-pointer"
-              >
-                Replay From Blank Cards
-              </button>
-
-              <button
-                onClick={() => {
-                  setGalleryRevealedCount(galleryGridItems.length);
-                  setIsGalleryAutoPlay(false);
-                }}
-                className="px-4 py-2 rounded-full border border-border text-xs font-medium hover:border-primary transition-smooth cursor-pointer"
-              >
-                Pop All
-              </button>
-            </div>
-          </div>
-
-          {/* Grid of Popping Cards (White Blank Space Placeholder -> Popped Image) */}
+          {/* Grid of Popping Cards (Clean White Blank Space -> Popped Image) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {galleryGridItems
-              .filter((item) => {
-                if (galleryFilter === "All") return true;
-                if (galleryFilter === "Security") return item.category.includes("Security") || item.category.includes("Guard") || item.category.includes("Checkpoint");
-                if (galleryFilter === "Modular") return item.category.includes("Modular") || item.category.includes("Container") || item.category.includes("Standard");
-                if (galleryFilter === "Transit") return item.category.includes("Transit") || item.category.includes("Infrastructure") || item.category.includes("Airport");
-                if (galleryFilter === "VIP") return item.category.includes("VIP") || item.category.includes("Executive") || item.category.includes("Luxury");
-                return true;
-              })
-              .map((item, index) => {
-                const isPopped = index < galleryRevealedCount;
+            {galleryGridItems.map((item, index) => {
+              const isPopped = index < galleryRevealedCount;
 
-                if (!isPopped) {
-                  return (
-                    <motion.div
-                      key={`placeholder-${item.id}`}
-                      initial={{ opacity: 0.8, scale: 0.95 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      onClick={() => {
-                        setGalleryRevealedCount(index + 1);
-                      }}
-                      className="relative h-72 rounded-3xl bg-white dark:bg-card/40 border-2 border-dashed border-primary/25 hover:border-primary/60 p-6 flex flex-col items-center justify-center text-center cursor-pointer group transition-all duration-300 shadow-sm hover:shadow-glow"
-                    >
-                      <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-3 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
-                        <Box className="w-5 h-5 text-primary group-hover:text-primary-foreground animate-bounce" />
-                      </div>
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-primary mb-1">
-                        White Blank Card 0{index + 1}
-                      </span>
-                      <p className="text-xs text-muted-foreground font-medium max-w-[180px] leading-relaxed">
-                        Click to Pop Image 0{index + 1}
-                      </p>
-                    </motion.div>
-                  );
-                }
-
+              if (!isPopped) {
                 return (
-                  <motion.div
-                    key={`popped-${item.id}`}
-                    initial={{ opacity: 0, scale: 0.2, y: 50, filter: "blur(12px)" }}
-                    animate={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)" }}
-                    transition={{ type: "spring", stiffness: 300, damping: 20, mass: 0.8 }}
-                    className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72 bg-card transform-gpu will-change-transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl border border-border/40"
-                    onClick={() => setLightbox({ src: item.src, alt: item.alt, label: item.label, category: item.category })}
-                  >
-                    <img src={item.src} alt={item.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" loading="lazy" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div className="absolute top-4 left-4 z-10">
-                      <span className="px-2.5 py-1 rounded-full bg-primary/90 text-primary-foreground text-[10px] font-bold shadow-glow uppercase tracking-wider">
-                        Popped 0{index + 1}
-                      </span>
-                    </div>
-                    <div className="absolute bottom-0 left-0 p-6 z-10">
-                      <span className="text-[11px] font-bold text-accent uppercase tracking-widest block mb-1">{item.category}</span>
-                      <p className="text-white font-display font-bold text-lg leading-tight group-hover:text-accent transition-colors duration-300">{item.label}</p>
-                    </div>
-                    <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-90 group-hover:scale-100 border border-white/20 z-10">
-                      <Maximize2 className="w-4 h-4 text-white" />
-                    </div>
-                  </motion.div>
+                  <div
+                    key={`placeholder-${item.id}`}
+                    className="relative h-72 rounded-3xl bg-white dark:bg-card/50 border border-border/40 shadow-sm"
+                  />
                 );
-              })}
+              }
+
+              return (
+                <motion.div
+                  key={`popped-${item.id}`}
+                  initial={{ opacity: 0, scale: 0.35, y: 30 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  transition={{ type: "spring", stiffness: 350, damping: 24, mass: 0.7 }}
+                  className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72 bg-card transform-gpu will-change-transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl border border-border/40"
+                  onClick={() => setLightbox({ src: item.src, alt: item.alt, label: item.label, category: item.category })}
+                >
+                  <img src={item.src} alt={item.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute bottom-0 left-0 p-6 z-10">
+                    <span className="text-[11px] font-bold text-accent uppercase tracking-widest block mb-1">{item.category}</span>
+                    <p className="text-white font-display font-bold text-lg leading-tight group-hover:text-accent transition-colors duration-300">{item.label}</p>
+                  </div>
+                  <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-90 group-hover:scale-100 border border-white/20 z-10">
+                    <Maximize2 className="w-4 h-4 text-white" />
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </Section>
