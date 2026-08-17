@@ -454,66 +454,16 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* WHY CHOOSE US - INTERACTIVE CLICK-TO-POP REVEAL */}
+      {/* WHY CHOOSE US - INTERACTIVE STEP REVEAL */}
       <Section id="why">
         <div className="container mx-auto px-6">
           <div className="text-center mb-10">
             <SectionLabel>Why Choose Us</SectionLabel>
             <h2 className="font-display font-bold text-4xl md:text-5xl mb-4">Built on quality. Delivered with speed.</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
-              Click any title or card below to pop open our core engineering standards one-by-one!
-            </p>
           </div>
 
-          {/* Interactive Bar */}
-          <div className="flex flex-wrap items-center justify-between gap-4 mb-8 bg-muted/60 backdrop-blur p-4 rounded-2xl border border-border">
-            <div className="flex items-center gap-3">
-              <span className="inline-flex items-center justify-center px-3.5 py-1.5 rounded-full bg-primary text-primary-foreground text-xs font-bold shadow-glow">
-                Feature {activeFeatureIndex + 1} of {features.length} Revealed ({revealedFeatureCount} Unlocked)
-              </span>
-              <span className="text-xs text-muted-foreground hidden md:inline">
-                Click cards or button to trigger pop animation
-              </span>
-            </div>
-
-            <div className="flex items-center gap-2">
-              {revealedFeatureCount < features.length ? (
-                <button
-                  onClick={() => {
-                    const next = Math.min(revealedFeatureCount + 1, features.length);
-                    setRevealedFeatureCount(next);
-                    setActiveFeatureIndex(next - 1);
-                  }}
-                  className="px-5 py-2 rounded-full bg-primary text-primary-foreground text-xs font-bold shadow-glow hover:scale-105 active:scale-95 transition-smooth inline-flex items-center gap-1.5 cursor-pointer"
-                >
-                  <Zap className="w-3.5 h-3.5 fill-current animate-pulse" /> Reveal Next Feature ({revealedFeatureCount + 1}/{features.length})
-                </button>
-              ) : (
-                <button
-                  onClick={() => {
-                    setRevealedFeatureCount(1);
-                    setActiveFeatureIndex(0);
-                  }}
-                  className="px-4 py-2 rounded-full bg-secondary text-secondary-foreground text-xs font-bold hover:bg-primary hover:text-primary-foreground transition-smooth cursor-pointer"
-                >
-                  Replay Pop Sequence
-                </button>
-              )}
-
-              <button
-                onClick={() => {
-                  setRevealedFeatureCount(features.length);
-                  setActiveFeatureIndex(features.length - 1);
-                }}
-                className="px-4 py-2 rounded-full border border-border text-xs font-medium hover:border-primary transition-smooth cursor-pointer"
-              >
-                Reveal All
-              </button>
-            </div>
-          </div>
-
-          {/* Interactive Feature Pills */}
-          <div className="flex flex-wrap gap-2 justify-center mb-10">
+          {/* Interactive Feature Title Pills */}
+          <div className="flex flex-wrap gap-2.5 justify-center mb-10">
             {features.map((f, idx) => {
               const isRevealed = idx < revealedFeatureCount;
               const isActive = idx === activeFeatureIndex;
@@ -524,31 +474,31 @@ export default function Home() {
                     if (!isRevealed) setRevealedFeatureCount(idx + 1);
                     setActiveFeatureIndex(idx);
                   }}
-                  className={`px-4 py-2 rounded-full text-xs font-bold transition-all duration-300 flex items-center gap-2 cursor-pointer ${
+                  className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-300 flex items-center gap-2 cursor-pointer transform-gpu ${
                     isActive
-                      ? "bg-primary text-primary-foreground shadow-glow scale-105"
+                      ? "bg-primary text-primary-foreground shadow-glow scale-105 ring-2 ring-primary/30"
                       : isRevealed
                       ? "bg-primary/10 text-primary hover:bg-primary/20 border border-primary/20"
-                      : "bg-muted text-muted-foreground opacity-60 hover:opacity-100"
+                      : "bg-muted/80 text-muted-foreground opacity-60 hover:opacity-100 hover:scale-102"
                   }`}
                 >
                   <span>{idx + 1}. {f.title}</span>
-                  {isRevealed && <CheckCircle2 className="w-3.5 h-3.5" />}
+                  {isRevealed && <CheckCircle2 className="w-3.5 h-3.5 text-primary" />}
                 </button>
               );
             })}
           </div>
 
-          {/* Grid of Popping Feature Cards */}
+          {/* Grid of Feature Cards (60fps GPU Accelerated Pop Entrance) */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.slice(0, revealedFeatureCount).map((f, idx) => {
               const isActive = idx === activeFeatureIndex;
               return (
                 <motion.div
                   key={f.title}
-                  initial={{ opacity: 0, scale: 0.65, y: 40 }}
+                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ type: "spring", stiffness: 350, damping: 22, delay: (idx % 4) * 0.05 }}
+                  transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
                   onClick={() => {
                     setActiveFeatureIndex(idx);
                     if (idx + 1 === revealedFeatureCount && revealedFeatureCount < features.length) {
@@ -556,28 +506,38 @@ export default function Home() {
                       setActiveFeatureIndex(revealedFeatureCount);
                     }
                   }}
-                  className={`group relative p-8 rounded-3xl cursor-pointer transition-all duration-500 border ${
+                  className={`group relative p-8 rounded-3xl cursor-pointer transform-gpu transition-all duration-300 border flex flex-col justify-between ${
                     isActive
                       ? "bg-card shadow-glow border-primary ring-2 ring-primary/40 -translate-y-2"
-                      : "bg-card shadow-card hover:shadow-elegant hover:-translate-y-2 border-border/50"
+                      : "bg-card shadow-card hover:shadow-elegant hover:-translate-y-1.5 border-border/50"
                   }`}
                 >
-                  <div className="absolute top-4 right-4 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-primary/10 text-primary">
-                    Step {idx + 1}
-                  </div>
-
-                  <div className="w-14 h-14 rounded-2xl gradient-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-smooth shadow-glow">
-                    <f.icon className="w-6 h-6 text-primary-foreground" />
-                  </div>
-                  <h3 className="font-display font-bold text-lg mb-2">{f.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
-
-                  {idx + 1 === revealedFeatureCount && revealedFeatureCount < features.length && (
-                    <div className="mt-4 pt-3 border-t border-border/40 text-xs font-semibold text-primary flex items-center gap-1 group-hover:translate-x-1 transition-smooth">
-                      <span>Click to pop next feature</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
+                  <div>
+                    <div className="flex items-center justify-between mb-5">
+                      <div className="w-14 h-14 rounded-2xl gradient-primary flex items-center justify-center group-hover:scale-110 transition-smooth shadow-glow">
+                        <f.icon className="w-6 h-6 text-primary-foreground" />
+                      </div>
+                      <span className="text-xs font-bold text-muted-foreground/80 bg-muted px-3 py-1 rounded-full border border-border/40">
+                        0{idx + 1}
+                      </span>
                     </div>
-                  )}
+
+                    <h3 className="font-display font-bold text-lg mb-2">{f.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
+                  </div>
+
+                  {/* Clean Arrow Button Icon (No Text) */}
+                  <div className="mt-6 flex justify-end">
+                    <div
+                      className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
+                        idx + 1 < features.length
+                          ? "bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110 group-hover:shadow-glow"
+                          : "bg-muted text-muted-foreground/40"
+                      }`}
+                    >
+                      <ArrowRight className="w-4.5 h-4.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+                    </div>
+                  </div>
                 </motion.div>
               );
             })}
