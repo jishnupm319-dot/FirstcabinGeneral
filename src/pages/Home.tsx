@@ -232,16 +232,16 @@ const galleryGridItems = [
   { id: 13, src: galleryDarkwoodCabin, alt: "Dark Wood & Chrome Luxury Cabin", label: "Dark Wood Luxury Cabin", category: "Luxury Fit-Out" },
 ];
 
-const popInVariant = {
-  hidden: { opacity: 0, scale: 0.85, y: 30 },
+const galleryPopInVariant = {
+  hidden: { opacity: 0, scale: 0.76, y: 50 },
   visible: (i: number) => ({
     opacity: 1,
     scale: 1,
     y: 0,
     transition: {
-      duration: 0.45,
-      delay: (i % 4) * 0.08,
-      ease: [0.215, 0.61, 0.355, 1],
+      duration: 0.8,
+      delay: (i % 4) * 0.12,
+      ease: [0.16, 1, 0.3, 1],
     },
   }),
 };
@@ -672,26 +672,25 @@ export default function Home() {
             <h2 className="font-display font-bold text-4xl md:text-5xl">Our constructed projects</h2>
             <p className="text-muted-foreground mt-4 max-w-xl mx-auto">A showcase of our premium modular cabins, shelters and gate structures delivered across the UAE and region.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {galleryGridItems.map((item, index) => (
               <motion.div
                 key={item.id}
                 custom={index}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "-30px" }}
-                variants={popInVariant}
-                whileHover={{ scale: 1.03, y: -6 }}
-                className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72 bg-card"
+                viewport={{ once: true, amount: 0.15 }}
+                variants={galleryPopInVariant}
+                className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72 bg-card transform-gpu will-change-transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
                 onClick={() => setLightbox({ src: item.src, alt: item.alt, label: item.label, category: item.category })}
               >
-                <img src={item.src} alt={item.alt} className="w-full h-full object-cover group-hover:scale-110 transition-smooth duration-700" loading="lazy" />
-                <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent" />
-                <div className="absolute bottom-0 left-0 p-5">
-                  <span className="text-xs font-semibold text-accent uppercase tracking-widest">{item.category}</span>
-                  <p className="text-white font-display font-bold text-base">{item.label}</p>
+                <img src={item.src} alt={item.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute bottom-0 left-0 p-6 z-10">
+                  <span className="text-[11px] font-bold text-accent uppercase tracking-widest block mb-1">{item.category}</span>
+                  <p className="text-white font-display font-bold text-lg leading-tight group-hover:text-accent transition-colors duration-300">{item.label}</p>
                 </div>
-                <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
+                <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-90 group-hover:scale-100 border border-white/20 z-10">
                   <Maximize2 className="w-4 h-4 text-white" />
                 </div>
               </motion.div>
