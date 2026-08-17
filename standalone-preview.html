@@ -860,22 +860,14 @@
 
               {/* Grid of Popping Cards (Clean White Blank Space -> Popped Image) */}
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {galleryGridItems.map((item, index) => {
-                  const isPopped = index < galleryRevealedCount;
-
-                  if (!isPopped) {
-                    return (
-                      <div
-                        key={`placeholder-${item.id}`}
-                        className="relative h-72 rounded-3xl bg-white dark:bg-card/50 border border-border/40 shadow-sm"
-                      />
-                    );
-                  }
-
-                  return (
+                {galleryGridItems.map((item, index) => (
+                  <div
+                    key={item.id}
+                    className="relative h-72 rounded-3xl bg-white dark:bg-card/50 shadow-sm overflow-hidden border border-border/40"
+                  >
                     <div
-                      key={`popped-${item.id}`}
-                      className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72 bg-card transform-gpu transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl border border-border/40 animate-pop-in"
+                      className="group relative w-full h-full cursor-pointer transform-gpu transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl animate-pop-in"
+                      style={{ animationDelay: `${(index % 8) * 120}ms` }}
                       onClick={() => setLightbox({ src: item.src, alt: item.alt, label: item.label, category: item.category })}
                     >
                       <img src={item.src} alt={item.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" loading="lazy" />
@@ -888,8 +880,8 @@
                         <Icon name="expand" className="w-4 h-4 text-white" />
                       </div>
                     </div>
-                  );
-                })}
+                  </div>
+                ))}
               </div>
             </div>
           </section>

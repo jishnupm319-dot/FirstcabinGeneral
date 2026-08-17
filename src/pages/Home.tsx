@@ -247,21 +247,28 @@ const galleryGridItems = [
   { id: 13, src: galleryDarkwoodCabin, alt: "Dark Wood & Chrome Luxury Cabin", label: "Dark Wood Luxury Cabin", category: "Luxury Fit-Out" },
 ];
 
-const galleryPopInVariant = {
-  hidden: { opacity: 0, scale: 0.15, y: 70, filter: "blur(12px)" },
-  visible: (i: number) => ({
+const galleryContainerVariant = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.16,
+    },
+  },
+};
+
+const galleryCardPopVariant = {
+  hidden: { opacity: 0, scale: 0.25, y: 35 },
+  visible: {
     opacity: 1,
     scale: 1,
     y: 0,
-    filter: "blur(0px)",
     transition: {
       type: "spring",
-      stiffness: 270,
-      damping: 20,
-      mass: 0.8,
-      delay: (i % 8) * 0.11,
+      stiffness: 300,
+      damping: 22,
+      mass: 0.7,
     },
-  }),
+  },
 };
 
 export default function Home() {
@@ -273,14 +280,6 @@ export default function Home() {
   const [refLightboxImg, setRefLightboxImg] = useState<{ src: string; title: string } | null>(null);
   const [revealedFeatureCount, setRevealedFeatureCount] = useState(1);
   const [activeFeatureIndex, setActiveFeatureIndex] = useState(0);
-  const [galleryRevealedCount, setGalleryRevealedCount] = useState(1);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setGalleryRevealedCount((prev) => (prev < 14 ? prev + 1 : prev));
-    }, 450);
-    return () => clearInterval(timer);
-  }, []);
 
   useEffect(() => {
     const handleOpenModal = (e: Event) => {
@@ -784,26 +783,21 @@ export default function Home() {
           </div>
 
           {/* Grid of Popping Cards (Clean White Blank Space -> Popped Image) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {galleryGridItems.map((item, index) => {
-              const isPopped = index < galleryRevealedCount;
-
-              if (!isPopped) {
-                return (
-                  <div
-                    key={`placeholder-${item.id}`}
-                    className="relative h-72 rounded-3xl bg-white dark:bg-card/50 border border-border/40 shadow-sm"
-                  />
-                );
-              }
-
-              return (
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            variants={galleryContainerVariant}
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          >
+            {galleryGridItems.map((item) => (
+              <div
+                key={item.id}
+                className="relative h-72 rounded-3xl bg-white dark:bg-card/50 shadow-sm overflow-hidden border border-border/40"
+              >
                 <motion.div
-                  key={`popped-${item.id}`}
-                  initial={{ opacity: 0, scale: 0.35, y: 30 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ type: "spring", stiffness: 350, damping: 24, mass: 0.7 }}
-                  className="group relative overflow-hidden rounded-3xl shadow-elegant cursor-pointer h-72 bg-card transform-gpu will-change-transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl border border-border/40"
+                  variants={galleryCardPopVariant}
+                  className="group relative w-full h-full cursor-pointer transform-gpu will-change-transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
                   onClick={() => setLightbox({ src: item.src, alt: item.alt, label: item.label, category: item.category })}
                 >
                   <img src={item.src} alt={item.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" loading="lazy" />
@@ -816,9 +810,9 @@ export default function Home() {
                     <Maximize2 className="w-4 h-4 text-white" />
                   </div>
                 </motion.div>
-              );
-            })}
-          </div>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </Section>
 
