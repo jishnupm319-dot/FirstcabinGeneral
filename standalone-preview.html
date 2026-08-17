@@ -382,14 +382,86 @@
       ];
 
       const features = [
-        { icon: "award", title: "Premium Materials", desc: "High-grade steel frames, insulated sandwich panels, corrosion-resistant coatings." },
-        { icon: "wind", title: "Weather Resistant", desc: "Engineered for UAE heat, dust storms and coastal humidity." },
-        { icon: "snowflake", title: "Heat Insulated", desc: "50–75mm PU / rockwool panels keeping interiors 15°C cooler." },
-        { icon: "zap", title: "Fast Manufacturing", desc: "Standard units delivered in 7–14 days, ready to install." },
-        { icon: "settings", title: "Custom Sizes", desc: "Any dimension, layout, colour and interior specification." },
-        { icon: "dollar-sign", title: "Affordable Pricing", desc: "Factory-direct pricing with transparent, itemised quotes." },
-        { icon: "hard-hat", title: "Professional Team", desc: "Experienced engineers, welders, electricians and installers." },
-        { icon: "clock", title: "Dedicated Support", desc: "Expert guidance for orders, service and custom requests." },
+        {
+          step: "01",
+          icon: "award",
+          title: "Premium Materials",
+          tagline: "Heavy-gauge steel & fire-retardant panels",
+          desc: "Built with hot-dip galvanized structural steel frames, electrostatic anti-corrosion coating, and fire-rated polyurethane sandwich panels engineered for multi-decade durability.",
+          spec: "Hot-Dip Galvanized Structural Steel & Class-A Fire Panels",
+          metric: "100% Structural Grade",
+          highlights: ["Corrosion-resistant epoxy primer", "Class-A fire rated PU core", "Heavy duty sub-floor chassis"],
+        },
+        {
+          step: "02",
+          icon: "wind",
+          title: "Weather Resistant",
+          tagline: "Certified for extreme Arabian Gulf climate",
+          desc: "Specifically engineered to withstand extreme Arabian Gulf climate conditions, including temperatures exceeding 55°C, high coastal humidity, and desert sandstorms.",
+          spec: "55°C Heat & Wind-Load Certified",
+          metric: "55°C Climate Tested",
+          highlights: ["UV-stabilized exterior coating", "Hermetic dust sealing gaskets", "High wind-load structural anchor points"],
+        },
+        {
+          step: "03",
+          icon: "snowflake",
+          title: "Heat Insulated",
+          tagline: "50-75mm high-density thermal barrier",
+          desc: "High-density polyurethane / rockwool insulation cores keep internal cabin temperatures up to 15°C cooler, drastically reducing HVAC power consumption.",
+          spec: "50–75mm High Density PU / Rockwool",
+          metric: "15°C Cooler Interior",
+          highlights: ["40%+ HVAC power savings", "Double-glazed reflective glass", "Zero thermal bridging framework"],
+        },
+        {
+          step: "04",
+          icon: "zap",
+          title: "Fast Manufacturing",
+          tagline: "7–14 days turnkey delivery from Dubai facility",
+          desc: "Rapid precision manufacturing in our state-of-the-art Dubai facility ensures standard units are completed, wired, and ready for deployment within 7 to 14 days.",
+          spec: "7–14 Working Days Turnaround",
+          metric: "Rapid Turnaround",
+          highlights: ["Streamlined in-house fabrication", "Pre-installed MEP & lighting", "Pre-commissioned quality testing"],
+        },
+        {
+          step: "05",
+          icon: "settings",
+          title: "Custom Sizes",
+          tagline: "Any dimension & architectural layout",
+          desc: "Every unit is 100% customisable to your exact requirements — bespoke dimensions, internal partitions, luxury washrooms, customized branding colors, and glazing configurations.",
+          spec: "Bespoke CAD / 3D Layout Customization",
+          metric: "100% Tailored Specs",
+          highlights: ["Custom floor plan CAD drawings", "Tailored exterior paint finishes", "Custom counters, desks & shelving"],
+        },
+        {
+          step: "06",
+          icon: "dollar-sign",
+          title: "Affordable Pricing",
+          tagline: "Direct factory pricing across UAE & GCC",
+          desc: "Direct manufacturer pricing with zero middleman markups. We provide comprehensive, itemised quotes ensuring maximum value and budget efficiency.",
+          spec: "Transparent Itemised Quotes with Zero Markups",
+          metric: "Direct Factory Value",
+          highlights: ["Transparent price breakdown", "Volume order discounts", "No hidden logistics fees"],
+        },
+        {
+          step: "07",
+          icon: "hard-hat",
+          title: "Professional Team",
+          tagline: "Experienced structural engineers & technicians",
+          desc: "Our in-house team of structural engineers, certified welders, licensed electricians, and crane logistics specialists guarantee flawless delivery and turnkey installation.",
+          spec: "In-House Certified Engineering & Crane Crew",
+          metric: "15+ Years UAE Experience",
+          highlights: ["Certified electrical & MEP technicians", "Full on-site crane offloading", "Civil defence compliance standard"],
+        },
+        {
+          step: "08",
+          icon: "clock",
+          title: "Dedicated Support",
+          tagline: "24/7 client service & warranty protection",
+          desc: "We stand behind every cabin with standard 12–36 month structural warranties, dedicated technical after-sales assistance, and rapid response maintenance across all 7 emirates.",
+          spec: "12–36 Month Warranty & Maintenance Service",
+          metric: "24/7 Direct Support",
+          highlights: ["Prompt UAE-wide maintenance", "Spare parts & repair assistance", "Dedicated project account manager"],
+        },
       ];
 
       const serviceProcess = [
@@ -669,85 +741,199 @@
             </div>
           </section>
 
-          {/* WHY CHOOSE US - INTERACTIVE STEP REVEAL */}
-          <section id="why" className="py-24 md:py-32 relative">
+          {/* WHY CHOOSE US - INTERACTIVE FLOW CHART PIPELINE */}
+          <section id="why" className="py-24 md:py-32 bg-muted/30 relative overflow-hidden">
             <div className="container mx-auto px-6">
-              <div className="text-center mb-10">
+              <div className="text-center mb-12">
                 <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-widest mb-4">Why Choose Us</span>
                 <h2 className="font-display font-bold text-4xl md:text-5xl mb-4">Built on quality. Delivered with speed.</h2>
+                <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
+                  Click the arrows or any stage to explore our complete engineering and delivery flowchart.
+                </p>
               </div>
 
-              {/* Interactive Feature Title Pills */}
-              <div className="flex flex-wrap gap-2.5 justify-center mb-10">
+              {/* Interactive Flow Chart Stepper Pipeline (Horizontal Connected Nodes) */}
+              <div className="mb-10 overflow-x-auto pb-4 pt-2 scrollbar-none">
+                <div className="flex items-center min-w-[760px] max-w-5xl mx-auto px-4 justify-between relative">
+                  {/* Connecting background progress track line */}
+                  <div className="absolute top-1/2 left-8 right-8 h-1 bg-border -translate-y-1/2 z-0"></div>
+                  <div
+                    className="absolute top-1/2 left-8 h-1 bg-primary -translate-y-1/2 transition-all duration-500 z-0 shadow-glow"
+                    style={{ width: `${(activeFeatureIndex / (features.length - 1)) * 100}%` }}
+                  ></div>
+
+                  {features.map((f, idx) => {
+                    const isActive = idx === activeFeatureIndex;
+                    const isPassed = idx < activeFeatureIndex;
+
+                    return (
+                      <div key={f.title} className="relative z-10 flex flex-col items-center">
+                        <button
+                          onClick={() => setActiveFeatureIndex(idx)}
+                          className={`w-12 h-12 rounded-2xl flex items-center justify-center font-display font-bold text-sm transition-all duration-300 transform-gpu cursor-pointer shadow-md ${
+                            isActive
+                              ? "bg-primary text-primary-foreground scale-125 ring-4 ring-primary/30 shadow-glow"
+                              : isPassed
+                              ? "bg-primary text-primary-foreground scale-100 hover:scale-110"
+                              : "bg-card text-muted-foreground border-2 border-border hover:border-primary/50 hover:text-foreground"
+                          }`}
+                          title={`Stage 0${idx + 1}: ${f.title}`}
+                        >
+                          {isPassed ? <Icon name="check-circle-2" className="w-5 h-5 text-primary-foreground" /> : <span>0{idx + 1}</span>}
+                        </button>
+                        <span
+                          onClick={() => setActiveFeatureIndex(idx)}
+                          className={`mt-2 text-[11px] font-bold text-center whitespace-nowrap cursor-pointer transition-colors max-w-[90px] truncate ${
+                            isActive ? "text-primary scale-105" : "text-muted-foreground hover:text-foreground"
+                          }`}
+                        >
+                          {f.title}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Active Flow Chart Spotlight Showcase Card (Animated on Arrow Click) */}
+              <div className="max-w-4xl mx-auto mb-12">
+                <div
+                  key={activeFeatureIndex}
+                  className="bg-card rounded-3xl p-6 sm:p-10 shadow-elegant border border-primary/20 relative overflow-hidden animate-fadeIn"
+                >
+                  {/* Stage Header & Navigation Arrows */}
+                  <div className="flex flex-wrap items-center justify-between gap-4 mb-6 border-b border-border/50 pb-5">
+                    <div className="flex items-center gap-3">
+                      <span className="px-3.5 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider border border-primary/20">
+                        Flowchart Stage {features[activeFeatureIndex].step} of 08
+                      </span>
+                      <span className="px-3 py-1 rounded-full bg-accent/15 text-accent text-xs font-semibold">
+                        {features[activeFeatureIndex].metric}
+                      </span>
+                    </div>
+
+                    {/* Forward / Backward Arrow Controls */}
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => setActiveFeatureIndex((prev) => (prev > 0 ? prev - 1 : features.length - 1))}
+                        className="p-2.5 rounded-full bg-muted/80 hover:bg-muted text-foreground border border-border transition-smooth hover:scale-105 cursor-pointer"
+                        title="Previous Stage"
+                        aria-label="Previous Stage"
+                      >
+                        <Icon name="chevron-left" className="w-5 h-5" />
+                      </button>
+
+                      <button
+                        onClick={() => setActiveFeatureIndex((prev) => (prev < features.length - 1 ? prev + 1 : 0))}
+                        className="px-4 py-2.5 rounded-full bg-primary text-primary-foreground text-xs font-bold shadow-glow hover:scale-105 transition-smooth flex items-center gap-2 cursor-pointer"
+                        title="Next Stage"
+                        aria-label="Next Stage"
+                      >
+                        <span>Next Stage</span>
+                        <Icon name="arrow-right" className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Detail Content */}
+                  <div className="grid md:grid-cols-12 gap-8 items-center">
+                    <div className="md:col-span-8 space-y-4">
+                      <div className="flex items-center gap-4">
+                        <div className="w-16 h-16 rounded-2xl gradient-primary flex items-center justify-center text-primary-foreground shadow-glow shrink-0">
+                          <Icon name={features[activeFeatureIndex].icon} className="w-8 h-8" />
+                        </div>
+                        <div>
+                          <h3 className="font-display font-bold text-2xl sm:text-3xl text-foreground">
+                            {features[activeFeatureIndex].title}
+                          </h3>
+                          <p className="text-sm font-semibold text-primary">
+                            {features[activeFeatureIndex].tagline}
+                          </p>
+                        </div>
+                      </div>
+
+                      <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+                        {features[activeFeatureIndex].desc}
+                      </p>
+
+                      {/* Key Highlights */}
+                      <div className="pt-2">
+                        <div className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">
+                          Key Specifications & Highlights:
+                        </div>
+                        <div className="grid sm:grid-cols-2 gap-2">
+                          {features[activeFeatureIndex].highlights.map((h, i) => (
+                            <div key={i} className="flex items-center gap-2 text-xs font-medium text-foreground bg-muted/50 p-2.5 rounded-xl border border-border/40">
+                              <Icon name="check-circle-2" className="w-4 h-4 text-primary shrink-0" />
+                              <span>{h}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Flowchart Next Step Callout Box */}
+                    <div className="md:col-span-4 bg-muted/40 p-5 rounded-2xl border border-border/60 flex flex-col justify-between h-full space-y-4">
+                      <div>
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground block mb-1">
+                          Technical Specification
+                        </span>
+                        <div className="font-display font-bold text-sm text-foreground mb-3">
+                          {features[activeFeatureIndex].spec}
+                        </div>
+                        <div className="text-xs text-muted-foreground leading-relaxed">
+                          Step {activeFeatureIndex + 1} in our comprehensive modular cabin engineering & manufacturing pipeline.
+                        </div>
+                      </div>
+
+                      <button
+                        onClick={() => setActiveFeatureIndex((prev) => (prev < features.length - 1 ? prev + 1 : 0))}
+                        className="w-full py-3 rounded-xl bg-primary/10 hover:bg-primary text-primary hover:text-primary-foreground text-xs font-bold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer group"
+                      >
+                        <span>
+                          {activeFeatureIndex < features.length - 1
+                            ? `Flow to Step 0${activeFeatureIndex + 2} (${features[activeFeatureIndex + 1].title})`
+                            : "Restart Flowchart from Step 01"}
+                        </span>
+                        <Icon name="arrow-right" className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Connected Flow Chart Grid (All 8 Connected Nodes with Arrows) */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {features.map((f, idx) => {
-                  const isRevealed = idx < revealedFeatureCount;
-                  const isActive = idx === activeFeatureIndex;
-                  return (
-                    <button
-                      key={f.title}
-                      onClick={() => {
-                        if (!isRevealed) setRevealedFeatureCount(idx + 1);
-                        setActiveFeatureIndex(idx);
-                      }}
-                      className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-300 flex items-center gap-2 cursor-pointer transform-gpu ${
-                        isActive
-                          ? "bg-primary text-primary-foreground shadow-glow scale-105 ring-2 ring-primary/30"
-                          : isRevealed
-                          ? "bg-primary/10 text-primary hover:bg-primary/20 border border-primary/20"
-                          : "bg-muted/80 text-muted-foreground opacity-60 hover:opacity-100 hover:scale-102"
-                      }`}
-                    >
-                      <span>{idx + 1}. {f.title}</span>
-                      {isRevealed && <Icon name="check-circle-2" className="w-3.5 h-3.5 text-primary" />}
-                    </button>
-                  );
-                })}
-              </div>
-
-              {/* Grid of Feature Cards (60fps GPU Accelerated Pop Entrance) */}
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {features.slice(0, revealedFeatureCount).map((f, idx) => {
                   const isActive = idx === activeFeatureIndex;
                   return (
                     <div
                       key={f.title}
-                      onClick={() => {
-                        setActiveFeatureIndex(idx);
-                        if (idx + 1 === revealedFeatureCount && revealedFeatureCount < features.length) {
-                          setRevealedFeatureCount(revealedFeatureCount + 1);
-                          setActiveFeatureIndex(revealedFeatureCount);
-                        }
-                      }}
-                      className={`group relative p-8 rounded-3xl cursor-pointer transform-gpu transition-all duration-300 border flex flex-col justify-between ${
+                      onClick={() => setActiveFeatureIndex(idx)}
+                      className={`group relative p-5 rounded-2xl cursor-pointer transform-gpu transition-all duration-300 border flex flex-col justify-between ${
                         isActive
-                          ? "bg-card shadow-glow border-primary ring-2 ring-primary/40 -translate-y-2"
-                          : "bg-card shadow-card hover:shadow-elegant hover:-translate-y-1.5 border-border/50"
+                          ? "bg-card shadow-glow border-primary ring-2 ring-primary/40 -translate-y-1"
+                          : "bg-card/80 shadow-sm hover:shadow-md hover:border-primary/40 hover:-translate-y-0.5 border-border/60"
                       }`}
                     >
                       <div>
-                        <div className="flex items-center justify-between mb-5">
-                          <div className="w-14 h-14 rounded-2xl gradient-primary flex items-center justify-center group-hover:scale-110 transition-smooth shadow-glow">
-                            <Icon name={f.icon} className="w-6 h-6 text-primary-foreground" />
+                        <div className="flex items-center justify-between mb-3">
+                          <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-smooth ${isActive ? "gradient-primary text-primary-foreground shadow-glow" : "bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground"}`}>
+                            <Icon name={f.icon} className="w-5 h-5" />
                           </div>
-                          <span className="text-xs font-bold text-muted-foreground/80 bg-muted px-3 py-1 rounded-full border border-border/40">
-                            0{idx + 1}
+                          <span className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${isActive ? "bg-primary text-primary-foreground border-primary" : "bg-muted text-muted-foreground border-border/50"}`}>
+                            Step {f.step}
                           </span>
                         </div>
-
-                        <h3 className="font-display font-bold text-lg mb-2">{f.title}</h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
+                        <h4 className="font-display font-bold text-base mb-1 text-foreground">{f.title}</h4>
+                        <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed">{f.desc}</p>
                       </div>
 
-                      {/* Clean Arrow Button Icon (No Text) */}
-                      <div className="mt-6 flex justify-end">
-                        <div
-                          className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
-                            idx + 1 < features.length
-                              ? "bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110 group-hover:shadow-glow"
-                              : "bg-muted text-muted-foreground/40"
-                          }`}
-                        >
-                          <Icon name="arrow-right" className="w-4.5 h-4.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+                      <div className="mt-4 pt-3 border-t border-border/40 flex items-center justify-between text-xs">
+                        <span className="text-[10px] font-bold text-primary">{f.metric}</span>
+                        <div className="flex items-center gap-1 text-primary font-bold group-hover:translate-x-1 transition-transform">
+                          <span className="text-[11px]">View Step</span>
+                          <Icon name="arrow-right" className="w-3.5 h-3.5" />
                         </div>
                       </div>
                     </div>
