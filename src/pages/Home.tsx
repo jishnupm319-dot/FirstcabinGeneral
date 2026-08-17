@@ -561,14 +561,14 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6 items-stretch">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="group rounded-3xl overflow-hidden glass-dark border border-white/10 hover:border-accent transition-smooth"
+              className="group rounded-3xl overflow-hidden glass-dark border border-white/10 hover:border-accent transition-smooth flex flex-col justify-between"
             >
-              <div className="h-72 overflow-hidden relative">
+              <div className="h-[360px] md:h-[400px] overflow-hidden relative">
                 <img src={galleryDpworldBlueBooths} alt="DP World Custom Security Booth" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-500" />
                 <span className="absolute bottom-3 left-3 bg-secondary/80 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold text-accent">DP World Checkpoint</span>
               </div>
@@ -583,9 +583,9 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="group rounded-3xl overflow-hidden glass-dark border border-white/10 hover:border-accent transition-smooth"
+              className="group rounded-3xl overflow-hidden glass-dark border border-white/10 hover:border-accent transition-smooth flex flex-col justify-between"
             >
-              <div className="h-72 overflow-hidden relative">
+              <div className="h-[360px] md:h-[400px] overflow-hidden relative">
                 <img src={featuredSecurityGold} alt="VIP Gold Security Guard Cabin" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-500" />
                 <span className="absolute bottom-3 left-3 bg-secondary/80 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold text-accent">VIP Checkpoint</span>
               </div>
@@ -600,11 +600,11 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="group rounded-3xl overflow-hidden glass-dark border border-white/10 hover:border-accent transition-smooth"
+              className="group rounded-3xl overflow-hidden glass-dark border border-white/10 hover:border-accent transition-smooth flex flex-col justify-between"
             >
-              <div className="h-80 md:h-[340px] overflow-hidden relative bg-slate-950/90 flex items-center justify-center p-2.5 rounded-t-3xl border-b border-white/10">
-                <img src={featuredStandardCabin} alt="First Cabins Standard Cabin" className="w-full h-full object-contain group-hover:scale-105 transition-smooth duration-500" />
-                <span className="absolute bottom-3 left-3 bg-secondary/90 backdrop-blur-md px-3.5 py-1 rounded-full text-xs font-semibold text-accent border border-white/10 z-10">Standard Cabin</span>
+              <div className="h-[360px] md:h-[400px] overflow-hidden relative">
+                <img src={featuredStandardCabin} alt="First Cabins Standard Cabin" className="w-full h-full object-cover object-[50%_40%] group-hover:scale-105 transition-smooth duration-500" />
+                <span className="absolute bottom-3 left-3 bg-secondary/80 backdrop-blur px-3.5 py-1 rounded-full text-xs font-semibold text-accent border border-white/10">Standard Cabin</span>
               </div>
               <div className="p-6">
                 <h3 className="font-display font-bold text-xl text-white mb-2">Standard Cabin</h3>
