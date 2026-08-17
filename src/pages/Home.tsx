@@ -115,6 +115,19 @@ const fadeUp: any = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
 };
 
+const aronaZoomInVariant: any = {
+  hidden: { opacity: 0, scale: 0.3 },
+  visible: (i: number) => ({
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.65,
+      delay: (i % 3) * 0.15,
+      ease: [0.215, 0.61, 0.355, 1],
+    },
+  }),
+};
+
 const stagger: any = {
   visible: { transition: { staggerChildren: 0.1 } },
 };
@@ -442,23 +455,33 @@ export default function Home() {
             <h2 className="font-display font-bold text-4xl md:text-5xl mb-4">Engineered for every application</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">Twelve core product lines, endlessly customisable to your project brief.</p>
           </div>
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {products.map((p) => (
-              <motion.div key={p.name} variants={fadeUp} whileHover={{ y: -8 }} className="group bg-card rounded-3xl overflow-hidden shadow-card hover:shadow-elegant transition-smooth">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {products.map((p, idx) => (
+              <motion.div
+                key={p.name}
+                custom={idx}
+                variants={aronaZoomInVariant}
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="group bg-card rounded-3xl overflow-hidden shadow-card hover:shadow-elegant transition-all duration-500 border border-border/40 hover:border-primary/50 cursor-pointer"
+                onClick={() => setLightbox({ src: p.img, alt: p.name, label: p.name, category: "Product Range" })}
+              >
                 <div className="relative h-60 overflow-hidden">
-                  <img src={p.img} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-700" loading="lazy" />
+                  <img src={p.img} alt={p.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent" />
                   <div className="absolute top-4 left-4 w-12 h-12 rounded-xl glass flex items-center justify-center">
                     <p.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/40 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-90 group-hover:scale-100 border border-white/20">
+                    <Maximize2 className="w-4 h-4 text-white" />
                   </div>
                 </div>
                 <div className="p-6">
                   <h3 className="font-display font-bold text-xl mb-2">{p.name}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">{p.desc}</p>
                   <div className="flex gap-2">
-                    <button onClick={() => { setQuoteProduct(p.name); setSelectedRefModel(null); setQuoteSent(false); }} className="flex-1 text-center py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:shadow-glow transition-smooth">Get Quote</button>
-                    <button className="px-4 py-2.5 rounded-full border border-border text-sm font-medium hover:border-primary hover:text-primary transition-smooth inline-flex items-center gap-1">
-                      <Download className="w-4 h-4" />
+                    <button onClick={(e) => { e.stopPropagation(); setQuoteProduct(p.name); setSelectedRefModel(null); setQuoteSent(false); }} className="flex-1 text-center py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:shadow-glow transition-smooth cursor-pointer">Get Quote</button>
+                    <button onClick={(e) => { e.stopPropagation(); setLightbox({ src: p.img, alt: p.name, label: p.name, category: "Product Range" }); }} className="px-4 py-2.5 rounded-full border border-border text-sm font-medium hover:border-primary hover:text-primary transition-smooth inline-flex items-center gap-1 cursor-pointer">
+                      <Maximize2 className="w-4 h-4" />
                     </button>
                   </div>
                 </div>
