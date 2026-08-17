@@ -428,14 +428,28 @@
       ];
 
       const [activeFaq, setActiveFaq] = useState(null);
-      const [lightbox, setLightbox] = useState(null); // { src, alt }
+      const [lightbox, setLightbox] = useState(null); // { src, alt, label, category }
 
-      // Close lightbox on Escape key
+      // Close / Navigate lightbox with Keyboard
       useEffect(() => {
-        const onKey = (e) => { if (e.key === 'Escape') setLightbox(null); };
+        const onKey = (e) => {
+          if (e.key === 'Escape') setLightbox(null);
+          if (lightbox) {
+            const idx = galleryGridItems.findIndex((g) => g.src === lightbox.src);
+            if (idx !== -1) {
+              if (e.key === 'ArrowLeft') {
+                const prevIdx = (idx - 1 + galleryGridItems.length) % galleryGridItems.length;
+                setLightbox(galleryGridItems[prevIdx]);
+              } else if (e.key === 'ArrowRight') {
+                const nextIdx = (idx + 1) % galleryGridItems.length;
+                setLightbox(galleryGridItems[nextIdx]);
+              }
+            }
+          }
+        };
         window.addEventListener('keydown', onKey);
         return () => window.removeEventListener('keydown', onKey);
-      }, []);
+      }, [lightbox]);
 
       // Lock body scroll when lightbox is open
       useEffect(() => {
@@ -445,34 +459,72 @@
 
       return (
         <div>
-          {/* LIGHTBOX MODAL */}
+          {/* FULL-SCREEN IMAGE LIGHTBOX MODAL WITH ULTRA-SMOOTH SPRING POP ANIMATION */}
           {lightbox && (
             <div
-              className="fixed inset-0 z-[9999] flex items-center justify-center"
-              style={{ background: 'rgba(0,0,0,0.92)', animation: 'fadeIn 0.2s ease' }}
+              className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-8"
+              style={{ background: 'rgba(0,0,0,0.95)', backdropFilter: 'blur(20px)', animation: 'fadeIn 0.25s ease' }}
               onClick={() => setLightbox(null)}
             >
+              {/* Close Button */}
               <button
                 onClick={() => setLightbox(null)}
-                className="absolute top-5 right-5 w-11 h-11 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-smooth z-10"
+                className="absolute top-6 right-6 w-11 h-11 rounded-full flex items-center justify-center text-white bg-white/10 hover:bg-white/20 border border-white/20 transition-smooth z-30 cursor-pointer shadow-lg"
                 aria-label="Close"
               >
-                <Icon name="x" className="w-7 h-7" />
+                <Icon name="x" className="w-6 h-6" />
               </button>
+
+              {/* Left Nav Button */}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  const idx = galleryGridItems.findIndex((g) => g.src === lightbox.src);
+                  if (idx !== -1) {
+                    const prevIdx = (idx - 1 + galleryGridItems.length) % galleryGridItems.length;
+                    setLightbox(galleryGridItems[prevIdx]);
+                  }
+                }}
+                className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-white/25 text-white backdrop-blur border border-white/20 transition-all duration-300 hover:scale-110 z-20 cursor-pointer"
+                title="Previous Photo"
+              >
+                <Icon name="chevron-left" className="w-6 h-6" />
+              </button>
+
+              {/* Right Nav Button */}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  const idx = galleryGridItems.findIndex((g) => g.src === lightbox.src);
+                  if (idx !== -1) {
+                    const nextIdx = (idx + 1) % galleryGridItems.length;
+                    setLightbox(galleryGridItems[nextIdx]);
+                  }
+                }}
+                className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-white/25 text-white backdrop-blur border border-white/20 transition-all duration-300 hover:scale-110 z-20 cursor-pointer"
+                title="Next Photo"
+              >
+                <Icon name="chevron-right" className="w-6 h-6" />
+              </button>
+
+              {/* Modal Image Card with Smooth Spring Pop */}
               <div
-                className="relative max-w-[92vw] max-h-[90vh] rounded-2xl overflow-hidden shadow-2xl"
+                className="relative max-w-5xl max-h-[85vh] flex flex-col items-center z-10 animate-modal-pop"
                 onClick={(e) => e.stopPropagation()}
               >
-                <img
-                  src={lightbox.src}
-                  alt={lightbox.alt}
-                  className="max-w-[92vw] max-h-[88vh] object-contain"
-                  style={{ display: 'block' }}
-                />
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-black/40 backdrop-blur">
+                  <img
+                    src={lightbox.src}
+                    alt={lightbox.alt}
+                    className="max-w-full max-h-[72vh] object-contain rounded-3xl"
+                  />
+                </div>
                 {lightbox.label && (
-                  <div className="absolute bottom-0 left-0 right-0 px-6 py-4" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)' }}>
-                    <p className="text-white font-display font-bold text-lg">{lightbox.label}</p>
-                    {lightbox.category && <p className="text-accent text-xs uppercase tracking-widest mt-0.5">{lightbox.category}</p>}
+                  <div className="mt-4 text-center">
+                    <span className="inline-block px-3.5 py-1 rounded-full bg-primary text-primary-foreground text-xs font-bold uppercase tracking-widest mb-1.5 shadow-glow">
+                      {lightbox.category}
+                    </span>
+                    <p className="text-white font-display font-bold text-xl md:text-2xl drop-shadow">{lightbox.label}</p>
                   </div>
                 )}
               </div>

@@ -1,11 +1,11 @@
-import { motion, useInView } from "framer-motion";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Shield, Home as HomeIcon, Briefcase, Users, Building2, Warehouse, Box, GraduationCap,
   Stethoscope, Wrench, Truck, Hammer, Settings, Zap, Wind, Star, CheckCircle2, MapPin,
   ArrowRight, Download, Phone, Play, Award, Clock, Factory, HardHat, Snowflake, DollarSign,
-  ChevronDown, Quote, Maximize2, X, Bus, Ticket, Send,
+  ChevronDown, ChevronLeft, ChevronRight, Quote, Maximize2, X, Bus, Ticket, Send,
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -298,6 +298,20 @@ export default function Home() {
         setLightbox(null);
         setQuoteProduct(null);
         setRefLightboxImg(null);
+      }
+      if (lightbox) {
+        const idx = galleryGridItems.findIndex((g) => g.src === lightbox.src);
+        if (idx !== -1) {
+          if (e.key === "ArrowLeft") {
+            const prevIdx = (idx - 1 + galleryGridItems.length) % galleryGridItems.length;
+            const item = galleryGridItems[prevIdx];
+            setLightbox({ src: item.src, alt: item.alt, label: item.label, category: item.category });
+          } else if (e.key === "ArrowRight") {
+            const nextIdx = (idx + 1) % galleryGridItems.length;
+            const item = galleryGridItems[nextIdx];
+            setLightbox({ src: item.src, alt: item.alt, label: item.label, category: item.category });
+          }
+        }
       }
     };
     if (lightbox || quoteProduct || refLightboxImg) {
@@ -969,38 +983,96 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* LIGHTBOX MODAL */}
-      {lightbox && (
-        <div
-          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 animate-fadeIn"
-          onClick={() => setLightbox(null)}
-        >
-          <button
-            className="absolute top-6 right-6 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 rounded-full p-3 transition-smooth"
+      {/* FULL-SCREEN IMAGE LIGHTBOX MODAL WITH ULTRA-SMOOTH SPRING POP ANIMATION */}
+      <AnimatePresence>
+        {lightbox && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 sm:p-8 select-none"
             onClick={() => setLightbox(null)}
-            aria-label="Close"
           >
-            <X className="w-6 h-6" />
-          </button>
+            {/* Close Button */}
+            <motion.button
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              className="absolute top-6 right-6 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 rounded-full p-3 transition-smooth z-30 cursor-pointer shadow-lg border border-white/20"
+              onClick={() => setLightbox(null)}
+              aria-label="Close"
+            >
+              <X className="w-6 h-6" />
+            </motion.button>
 
-          <div
-            className="max-w-5xl max-h-[85vh] relative flex flex-col items-center"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img
-              src={lightbox.src}
-              alt={lightbox.alt}
-              className="max-w-full max-h-[75vh] object-contain rounded-2xl shadow-2xl border border-white/10"
-            />
-            <div className="mt-4 text-center">
-              <span className="inline-block px-3 py-1 rounded-full bg-accent/20 text-accent text-xs font-semibold uppercase tracking-widest mb-1">
-                {lightbox.category}
-              </span>
-              <p className="text-white font-display font-bold text-xl">{lightbox.label}</p>
-            </div>
-          </div>
-        </div>
-      )}
+            {/* Left Nav Button */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                const idx = galleryGridItems.findIndex((g) => g.src === lightbox.src);
+                if (idx !== -1) {
+                  const prevIdx = (idx - 1 + galleryGridItems.length) % galleryGridItems.length;
+                  const prevItem = galleryGridItems[prevIdx];
+                  setLightbox({ src: prevItem.src, alt: prevItem.alt, label: prevItem.label, category: prevItem.category });
+                }
+              }}
+              className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-white/25 text-white backdrop-blur border border-white/20 transition-all duration-300 hover:scale-110 z-20 cursor-pointer"
+              title="Previous Photo"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+
+            {/* Right Nav Button */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                const idx = galleryGridItems.findIndex((g) => g.src === lightbox.src);
+                if (idx !== -1) {
+                  const nextIdx = (idx + 1) % galleryGridItems.length;
+                  const nextItem = galleryGridItems[nextIdx];
+                  setLightbox({ src: nextItem.src, alt: nextItem.alt, label: nextItem.label, category: nextItem.category });
+                }
+              }}
+              className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-white/25 text-white backdrop-blur border border-white/20 transition-all duration-300 hover:scale-110 z-20 cursor-pointer"
+              title="Next Photo"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+
+            {/* Modal Image Card with Smooth Spring Pop & Zoom */}
+            <motion.div
+              key={lightbox.src}
+              initial={{ opacity: 0, scale: 0.7, y: 30 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.8, y: 20 }}
+              transition={{ type: "spring", stiffness: 350, damping: 26, mass: 0.6 }}
+              className="max-w-5xl max-h-[85vh] relative flex flex-col items-center z-10"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-black/40 backdrop-blur">
+                <img
+                  src={lightbox.src}
+                  alt={lightbox.alt}
+                  className="max-w-full max-h-[72vh] object-contain rounded-3xl"
+                />
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.15, duration: 0.3 }}
+                className="mt-4 text-center"
+              >
+                <span className="inline-block px-3.5 py-1 rounded-full bg-primary/80 text-primary-foreground text-xs font-bold uppercase tracking-widest mb-1.5 shadow-glow">
+                  {lightbox.category}
+                </span>
+                <p className="text-white font-display font-bold text-xl md:text-2xl drop-shadow">{lightbox.label}</p>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* QUOTE REQUEST MODAL WITH SECURITY CABIN REFERENCE GALLERY */}
       {quoteProduct && (
