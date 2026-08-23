@@ -51,6 +51,10 @@ import galleryBlueYellowBooth from "@/assets/gallery-blue-yellow-booth.jpg";
 import galleryHospitalWaitingStationFront from "@/assets/gallery-hospital-waiting-station-front.jpg";
 import galleryHospitalTransitSunset from "@/assets/gallery-hospital-transit-sunset.jpg";
 import galleryUniversityHospitalSharjah from "@/assets/gallery-university-hospital-sharjah.jpg";
+import galleryBusShelterLargeEvening from "@/assets/gallery-bus-shelter-large-evening.jpg";
+import galleryBusShelterCampusFront from "@/assets/gallery-bus-shelter-campus-front.jpg";
+import galleryBusShelterCornerView from "@/assets/gallery-bus-shelter-corner-view.jpg";
+import galleryBusShelterAlfarabiGrand from "@/assets/gallery-bus-shelter-alfarabi-grand.jpg";
 
 import secRefTrailer from "@/assets/security-ref-trailer.jpg";
 import secRefNightDark from "@/assets/security-ref-night-dark.jpg";
@@ -258,6 +262,10 @@ const galleryGridItems = [
   { id: 16, src: galleryUniversityHospitalSharjah, alt: "University Hospital Sharjah Modular Transit Station", label: "University Hospital Sharjah Station", category: "Healthcare & Transit" },
   { id: 17, src: galleryHospitalTransitSunset, alt: "Sharjah University Campus Transit Shelter at Sunset", label: "Campus Transit Shelter Sunset", category: "Campus Infrastructure" },
   { id: 18, src: galleryHospitalWaitingStationFront, alt: "Climate-Controlled Passenger Waiting Station", label: "Climate-Controlled Passenger Station", category: "Transit Station" },
+  { id: 19, src: galleryBusShelterLargeEvening, alt: "Large Air-Conditioned Passenger Bus Shelter", label: "Executive Transit Bus Shelter", category: "Bus Shelters" },
+  { id: 20, src: galleryBusShelterCampusFront, alt: "Smart Campus Passenger Bus Shelter", label: "Smart Campus Bus Shelter", category: "Bus Shelters" },
+  { id: 21, src: galleryBusShelterCornerView, alt: "Corner View Glazed Bus Shelter", label: "Panoramic Glazed Bus Shelter", category: "Bus Shelters" },
+  { id: 22, src: galleryBusShelterAlfarabiGrand, alt: "Al-Farabi Grand Transit Bus Station", label: "Grand Campus Bus Station", category: "Bus Shelters" },
 ];
 
 const galleryContainerVariant = {
