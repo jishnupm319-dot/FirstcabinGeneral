@@ -165,9 +165,9 @@ const Counter = ({ end, suffix = "" }: { end: number; suffix?: string }) => {
 };
 
 const products = [
-  { icon: Shield, name: "Security Cabins", desc: "Compact guard booths built for heavy-duty security in extreme UAE climates.", img: galleryDpworldBlueBooths },
   { icon: HomeIcon, name: "Standard Cabins", desc: "Cost-effective, versatile modular standard cabins for site offices, guard posts & utility use.", img: productStandardCabin },
   { icon: Settings, name: "Customized Cabins", desc: "Any size, layout or finish — custom engineered around your exact project specifications.", img: productCustomizedCabin },
+  { icon: Shield, name: "Security Cabins", desc: "Compact guard booths built for heavy-duty security in extreme UAE climates.", img: galleryDpworldBlueBooths },
   { icon: Bus, name: "Bus Stations", desc: "Modern smart bus shelters and passenger transit stations with climate control.", img: galleryBusShelter },
   { icon: Warehouse, name: "Container Office", desc: "20ft & 40ft converted container offices with premium insulated interiors.", img: galleryContainerOffice2Story },
   { icon: Ticket, name: "Toll Gates", desc: "Custom entry toll gates and highway checkpoint canopy structures.", img: galleryMountainTollGate },
