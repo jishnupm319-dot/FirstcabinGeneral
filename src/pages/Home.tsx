@@ -173,14 +173,14 @@ const products = [
 ];
 
 const features = [
+  { icon: HardHat, title: "Professional Team", desc: "Experienced engineers, welders, electricians and installers." },
+  { icon: DollarSign, title: "Affordable Pricing", desc: "Factory-direct pricing with transparent, itemised quotes." },
+  { icon: Zap, title: "Fast Manufacturing", desc: "Standard units delivered in 7–14 days, ready to install." },
   { icon: Award, title: "Premium Materials", desc: "High-grade steel frames, insulated sandwich panels, corrosion-resistant coatings." },
   { icon: Wind, title: "Weather Resistant", desc: "Engineered for UAE heat, dust storms and coastal humidity." },
   { icon: Snowflake, title: "Heat Insulated", desc: "50–75mm PU / rockwool panels keeping interiors 15°C cooler." },
-  { icon: Zap, title: "Fast Manufacturing", desc: "Standard units delivered in 7–14 days, ready to install." },
-  { icon: Settings, title: "Custom Sizes", desc: "Any dimension, layout, colour and interior specification." },
-  { icon: DollarSign, title: "Affordable Pricing", desc: "Factory-direct pricing with transparent, itemised quotes." },
-  { icon: HardHat, title: "Professional Team", desc: "Experienced engineers, welders, electricians and installers." },
   { icon: Clock, title: "Dedicated Support", desc: "Expert guidance for orders, service and custom requests." },
+  { icon: Settings, title: "Custom Sizes", desc: "Any dimension, layout, colour and interior specification." },
 ];
 
 const services = [
