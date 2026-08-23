@@ -871,7 +871,7 @@ export default function Home() {
             <h2 className="font-display font-bold text-4xl md:text-5xl">Trusted by leading organizations</h2>
             <p className="text-muted-foreground mt-4 max-w-xl mx-auto">We proudly serve government, municipal, aviation, and infrastructure leaders across the GCC.</p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 md:gap-8 items-center justify-items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8 items-center justify-items-center">
             {[
               { img: clientKuwaitGovt, name: "Kuwait Government" },
               { img: clientDubaiCustoms, name: "Dubai Customs" },
@@ -892,8 +892,16 @@ export default function Home() {
               { img: clientDutco, name: "Dutco Construction Co. LLC" },
               { img: clientDubaiMetro, name: "Dubai Metro" },
             ].map((c, i) => (
-              <div key={i} className="p-4 bg-white rounded-2xl shadow-card border border-border/40 w-full h-28 flex items-center justify-center hover:scale-105 transition-smooth">
-                <img src={c.img} alt={c.name} className="max-h-20 max-w-full object-contain" />
+              <div
+                key={i}
+                className="group p-5 sm:p-6 bg-white dark:bg-white rounded-3xl shadow-card hover:shadow-elegant border border-border/40 w-full h-36 sm:h-40 md:h-44 flex items-center justify-center hover:scale-105 hover:border-primary/50 transition-all duration-300"
+                title={c.name}
+              >
+                <img
+                  src={c.img}
+                  alt={c.name}
+                  className="max-h-24 sm:max-h-28 md:max-h-32 max-w-[88%] w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                />
               </div>
             ))}
           </div>
