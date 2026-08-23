@@ -109,6 +109,9 @@ import clientAbuDhabiPolice from "@/assets/client-abu-dhabi-police.jpg";
 import clientDpWorld from "@/assets/client-dp-world.jpg";
 import clientSharjahMunicipality from "@/assets/client-sharjah-municipality.jpg";
 import clientDubaiMunicipality from "@/assets/client-dubai-municipality.jpg";
+import clientInnovo from "@/assets/client-innovo.jpg";
+import clientDutco from "@/assets/client-dutco.jpg";
+import clientDubaiMetro from "@/assets/client-dubai-metro.jpg";
 
 const fadeUp: any = {
   hidden: { opacity: 0, y: 40 },
@@ -868,7 +871,7 @@ export default function Home() {
             <h2 className="font-display font-bold text-4xl md:text-5xl">Trusted by leading organizations</h2>
             <p className="text-muted-foreground mt-4 max-w-xl mx-auto">We proudly serve government, municipal, aviation, and infrastructure leaders across the GCC.</p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 md:gap-8 items-center justify-items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 md:gap-8 items-center justify-items-center">
             {[
               { img: clientKuwaitGovt, name: "Kuwait Government" },
               { img: clientDubaiCustoms, name: "Dubai Customs" },
@@ -885,6 +888,9 @@ export default function Home() {
               { img: clientDpWorld, name: "DP World" },
               { img: clientSharjahMunicipality, name: "Sharjah Municipality" },
               { img: clientDubaiMunicipality, name: "Dubai Municipality" },
+              { img: clientInnovo, name: "Innovo" },
+              { img: clientDutco, name: "Dutco Construction Co. LLC" },
+              { img: clientDubaiMetro, name: "Dubai Metro" },
             ].map((c, i) => (
               <div key={i} className="p-4 bg-white rounded-2xl shadow-card border border-border/40 w-full h-28 flex items-center justify-center hover:scale-105 transition-smooth">
                 <img src={c.img} alt={c.name} className="max-h-20 max-w-full object-contain" />
