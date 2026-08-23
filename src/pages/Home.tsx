@@ -755,12 +755,12 @@ export default function Home() {
               className="group rounded-3xl overflow-hidden glass-dark border border-white/10 hover:border-accent transition-smooth"
             >
               <div className="h-72 overflow-hidden relative">
-                <img src={featuredSecurityWhite} alt="First Cabins Corporate Access Booth" className="w-full h-full object-cover group-hover:scale-105 transition-smooth duration-500" />
-                <span className="absolute bottom-3 left-3 bg-secondary/80 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold text-accent">Corporate Entrance</span>
+                <img src={featuredStandardCabin} alt="Standard Curved Security Guard Cabin" className="w-full h-full object-cover object-[center_30%] group-hover:scale-105 transition-smooth duration-500" />
+                <span className="absolute bottom-3 left-3 bg-secondary/80 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold text-accent">Standard Model</span>
               </div>
               <div className="p-6">
-                <h3 className="font-display font-bold text-xl text-white mb-2">Corporate Headquarters Checkpoint</h3>
-                <p className="text-xs text-white/70 leading-relaxed">Sleek white cladding with horizontal LED accent grooves, sliding visitor pass window, and automatic barrier control hookups.</p>
+                <h3 className="font-display font-bold text-xl text-white mb-2">Standard Curved Security Cabin</h3>
+                <p className="text-xs text-white/70 leading-relaxed">Silver modular insulated panels, polished horizontal stainless steel banding, 180° panoramic curved dark glazing, and turnkey electrical hookups.</p>
               </div>
             </motion.div>
           </div>
