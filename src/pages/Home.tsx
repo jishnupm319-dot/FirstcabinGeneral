@@ -279,6 +279,33 @@ export default function Home() {
   const [quoteLoading, setQuoteLoading] = useState(false);
   const [refLightboxImg, setRefLightboxImg] = useState<{ src: string; title: string } | null>(null);
   const [activeFeatureIndex, setActiveFeatureIndex] = useState<number | null>(null);
+  const [featureIndex, setFeatureIndex] = useState(0);
+  const [itemsPerView, setItemsPerView] = useState(3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setItemsPerView(1);
+      } else if (window.innerWidth < 1024) {
+        setItemsPerView(2);
+      } else {
+        setItemsPerView(3);
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const maxFeatureIndex = Math.max(0, features.length - itemsPerView);
+
+  const prevFeature = () => {
+    setFeatureIndex((prev) => (prev > 0 ? prev - 1 : maxFeatureIndex));
+  };
+
+  const nextFeature = () => {
+    setFeatureIndex((prev) => (prev < maxFeatureIndex ? prev + 1 : 0));
+  };
 
   useEffect(() => {
     const handleOpenModal = (e: Event) => {
@@ -500,39 +527,87 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* WHY CHOOSE US */}
-      <Section id="why">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
+      {/* WHY CHOOSE US - SLIDER WITH REFERENCE IMAGE ARROWS & DOTS */}
+      <Section id="why" className="relative overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16">
             <SectionLabel>Why Choose Us</SectionLabel>
             <h2 className="font-display font-bold text-4xl md:text-5xl mb-4">Built on quality. Delivered with speed.</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base">
               Every portable cabin and prefab structure is engineered to withstand the UAE climate while delivering unmatched comfort and longevity.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((f, idx) => (
-              <motion.div
-                key={f.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.08 }}
-                onClick={() => setActiveFeatureIndex(idx === activeFeatureIndex ? null : idx)}
-                className={`group p-8 rounded-3xl bg-card shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1.5 border cursor-pointer ${
-                  activeFeatureIndex === idx
-                    ? "border-primary ring-2 ring-primary/40 shadow-glow -translate-y-1.5"
-                    : "border-border/50 hover:border-primary/40"
-                }`}
+          {/* CAROUSEL SLIDER WRAPPER */}
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-12 md:px-16">
+            {/* Left Chevron Arrow Button (Matching Reference Image) */}
+            <button
+              onClick={prevFeature}
+              aria-label="Previous features"
+              className="absolute left-0 sm:left-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-background/90 dark:bg-card/90 backdrop-blur-md border border-border shadow-lg flex items-center justify-center text-foreground hover:text-primary hover:scale-110 hover:border-primary/50 transition-all duration-300 cursor-pointer group"
+            >
+              <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8 stroke-[3] text-foreground group-hover:text-primary transition-colors" />
+            </button>
+
+            {/* Right Chevron Arrow Button (Matching Reference Image) */}
+            <button
+              onClick={nextFeature}
+              aria-label="Next features"
+              className="absolute right-0 sm:right-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-background/90 dark:bg-card/90 backdrop-blur-md border border-border shadow-lg flex items-center justify-center text-foreground hover:text-primary hover:scale-110 hover:border-primary/50 transition-all duration-300 cursor-pointer group"
+            >
+              <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8 stroke-[3] text-foreground group-hover:text-primary transition-colors" />
+            </button>
+
+            {/* Slider Track Viewport */}
+            <div className="overflow-hidden py-4">
+              <div
+                className="flex transition-transform duration-500 ease-out"
+                style={{
+                  transform: `translateX(-${featureIndex * (100 / itemsPerView)}%)`,
+                }}
               >
-                <div className="w-14 h-14 rounded-2xl gradient-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-smooth shadow-glow">
-                  <f.icon className="w-6 h-6 text-primary-foreground" />
-                </div>
-                <h3 className="font-display font-bold text-xl mb-2">{f.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
-              </motion.div>
-            ))}
+                {features.map((f, idx) => (
+                  <div
+                    key={f.title}
+                    className="shrink-0 px-3 md:px-4"
+                    style={{ width: `${100 / itemsPerView}%` }}
+                  >
+                    <div
+                      onClick={() => setActiveFeatureIndex(idx === activeFeatureIndex ? null : idx)}
+                      className={`group h-full p-8 rounded-3xl bg-card shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1.5 border cursor-pointer flex flex-col justify-between select-none ${
+                        activeFeatureIndex === idx
+                          ? "border-primary ring-2 ring-primary/40 shadow-glow -translate-y-1.5"
+                          : "border-border/50 hover:border-primary/40"
+                      }`}
+                    >
+                      <div>
+                        <div className="w-14 h-14 rounded-2xl gradient-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-smooth shadow-glow">
+                          <f.icon className="w-6 h-6 text-primary-foreground" />
+                        </div>
+                        <h3 className="font-display font-bold text-xl mb-2">{f.title}</h3>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Bottom Pagination Dots (Matching Reference Image) */}
+            <div className="flex items-center justify-center gap-2 mt-8">
+              {Array.from({ length: maxFeatureIndex + 1 }).map((_, dotIdx) => (
+                <button
+                  key={dotIdx}
+                  onClick={() => setFeatureIndex(dotIdx)}
+                  aria-label={`Go to slide ${dotIdx + 1}`}
+                  className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                    featureIndex === dotIdx
+                      ? "w-8 bg-primary shadow-glow"
+                      : "w-2.5 bg-muted-foreground/30 hover:bg-muted-foreground/60"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </Section>
