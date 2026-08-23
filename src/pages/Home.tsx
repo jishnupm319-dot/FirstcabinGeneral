@@ -5,7 +5,7 @@ import {
   Shield, Home as HomeIcon, Briefcase, Users, Building2, Warehouse, Box, GraduationCap,
   Stethoscope, Wrench, Truck, Hammer, Settings, Zap, Wind, Star, CheckCircle2, MapPin,
   ArrowRight, Download, Phone, Play, Award, Clock, Factory, HardHat, Snowflake, DollarSign,
-  ChevronDown, ChevronLeft, ChevronRight, Quote, Maximize2, X, Bus, Ticket, Send,
+  ChevronDown, ChevronLeft, ChevronRight, Quote, Maximize2, X, Bus, Ticket, Send, Target, Eye, Sparkles,
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -904,6 +904,127 @@ export default function Home() {
                 />
               </div>
             ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* COMPANY HISTORY & CORPORATE HERITAGE SECTION */}
+      <Section id="history" className="bg-card/40 relative overflow-hidden border-t border-border/40">
+        <div className="blob w-96 h-96 bg-primary/10 top-10 left-10" />
+        <div className="blob w-96 h-96 bg-accent/15 bottom-10 right-10" />
+        <div className="container mx-auto px-6 relative z-10">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-widest mb-4">
+              Company History & Heritage
+            </span>
+            <h2 className="font-display font-bold text-4xl md:text-5xl mb-4">
+              Two Decades of Manufacturing Leadership
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">
+              Built on a foundation of uncompromised quality, innovation, and long-term customer partnerships across the UAE and GCC.
+            </p>
+          </div>
+
+          {/* Main 2003 Heritage Hero Banner */}
+          <div className="bg-gradient-to-br from-card via-card/95 to-primary/5 rounded-3xl p-8 md:p-12 shadow-elegant border border-primary/20 mb-12 relative overflow-hidden">
+            <div className="absolute top-0 right-0 -mt-8 -mr-8 w-48 h-48 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
+            
+            <div className="grid lg:grid-cols-12 gap-8 md:gap-12 items-center">
+              {/* Left Column: 2003 Badge & Story */}
+              <div className="lg:col-span-7 space-y-6">
+                <div className="flex flex-wrap items-center gap-3">
+                  <div className="px-5 py-2 rounded-2xl gradient-primary text-primary-foreground font-display font-black text-2xl md:text-3xl shadow-glow inline-flex items-center gap-2">
+                    <span>2003</span>
+                  </div>
+                  <span className="px-4 py-1.5 rounded-full bg-accent/15 text-accent text-xs font-bold uppercase tracking-wider">
+                    20+ Years of Industry Leadership
+                  </span>
+                </div>
+
+                <h3 className="font-display font-bold text-2xl md:text-3xl text-foreground">
+                  Our Commitment to Growth & Innovation
+                </h3>
+
+                <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                  In our commitment to growth and expansion within the industry, First Cabin General Trading is consistently seeking innovative ways to promote both our products and services. Our design team, comprised of skilled and experienced professionals, utilize effective strategies to communicate your vision through our designs in order to offer customers an opportunity to promote their business.
+                </p>
+
+                <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                  The primary objectives of our marketing initiatives at First Cabins is to enhance awareness across all product lines in order provide comprehensive product information to our customer, increase sales volume, and cultivate new business partnerships. The success of our products is fundamentally supported by the valuable contributions of our partners and vendors.
+                </p>
+
+                {/* Key Stats Bar */}
+                <div className="grid grid-cols-3 gap-4 pt-4 border-t border-border/50">
+                  <div>
+                    <div className="font-display font-bold text-2xl md:text-3xl text-primary">20+</div>
+                    <div className="text-xs text-muted-foreground font-medium">Years Active</div>
+                  </div>
+                  <div>
+                    <div className="font-display font-bold text-2xl md:text-3xl text-primary">8,000+</div>
+                    <div className="text-xs text-muted-foreground font-medium">Units Delivered</div>
+                  </div>
+                  <div>
+                    <div className="font-display font-bold text-2xl md:text-3xl text-primary">100%</div>
+                    <div className="text-xs text-muted-foreground font-medium">UAE Engineered</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column: Visual Image Card */}
+              <div className="lg:col-span-5 relative">
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-primary/20 group">
+                  <img
+                    src={aboutGoldCabinImg}
+                    alt="First Cabin General Trading Facility & Executive Cabin"
+                    className="w-full h-80 md:h-96 object-cover group-hover:scale-105 transition-smooth duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <span className="text-xs font-bold uppercase tracking-widest text-accent block mb-1">Company Overview</span>
+                    <h4 className="font-display font-bold text-lg leading-tight mb-2">First Cabin General Trading LLC</h4>
+                    <p className="text-xs text-white/80 leading-relaxed">
+                      First Chance Cabins offers spacious, refined and world class designs to cabins. We provide the customer with the highest quality products with consistency and care.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Mission & Vision Grid */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* OUR MISSION CARD */}
+            <div className="p-8 md:p-10 rounded-3xl bg-card shadow-card hover:shadow-elegant border border-border/60 hover:border-primary/50 transition-all duration-300 relative overflow-hidden group">
+              <div className="w-14 h-14 rounded-2xl gradient-primary flex items-center justify-center mb-6 shadow-glow group-hover:scale-110 transition-smooth">
+                <Target className="w-7 h-7 text-primary-foreground" />
+              </div>
+              <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-3">
+                Our Purpose
+              </div>
+              <h3 className="font-display font-bold text-2xl md:text-3xl text-foreground mb-4">
+                OUR MISSION
+              </h3>
+              <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                Our mission is to enhance our customers' business by providing the very highest quality products and services possible. Our customer support strategy is based upon total, no compromise customer satisfaction and we continually strive to offer a complete package of up to date value added solutions to meet our customers' needs. We value above all our long term customer relations and partnerships.
+              </p>
+            </div>
+
+            {/* OUR VISION CARD */}
+            <div className="p-8 md:p-10 rounded-3xl bg-card shadow-card hover:shadow-elegant border border-border/60 hover:border-primary/50 transition-all duration-300 relative overflow-hidden group">
+              <div className="w-14 h-14 rounded-2xl gradient-accent flex items-center justify-center mb-6 shadow-glow group-hover:scale-110 transition-smooth">
+                <Eye className="w-7 h-7 text-accent-foreground" />
+              </div>
+              <div className="inline-block px-3 py-1 rounded-full bg-accent/15 text-accent text-xs font-bold uppercase tracking-wider mb-3">
+                Our Future
+              </div>
+              <h3 className="font-display font-bold text-2xl md:text-3xl text-foreground mb-4">
+                OUR VISION
+              </h3>
+              <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                Our company philosophy has always focused on customer satisfaction with uncompromising integrity. First Cabin General Trading carries products and services with the finest value and quality in the market. To meet our customers’ expectations, we ensure that our sales people and customer service representative enthusiasm and respond with extra efforts in addressing our customers’ needs. Our people are trained to be open and honest with you. We are always looking for new and better ways to improve our business relationships. With our continued success and hard work, our vision has become reality!
+              </p>
+            </div>
           </div>
         </div>
       </Section>
