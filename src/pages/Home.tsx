@@ -280,6 +280,7 @@ export default function Home() {
   const [refLightboxImg, setRefLightboxImg] = useState<{ src: string; title: string } | null>(null);
   const [activeFeatureIndex, setActiveFeatureIndex] = useState<number | null>(null);
   const [featureIndex, setFeatureIndex] = useState(0);
+  const [processIndex, setProcessIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(3);
 
   useEffect(() => {
@@ -298,6 +299,7 @@ export default function Home() {
   }, []);
 
   const maxFeatureIndex = Math.max(0, features.length - itemsPerView);
+  const maxProcessIndex = Math.max(0, processSteps.length - itemsPerView);
 
   const prevFeature = () => {
     setFeatureIndex((prev) => (prev > 0 ? prev - 1 : maxFeatureIndex));
@@ -305,6 +307,14 @@ export default function Home() {
 
   const nextFeature = () => {
     setFeatureIndex((prev) => (prev < maxFeatureIndex ? prev + 1 : 0));
+  };
+
+  const prevProcess = () => {
+    setProcessIndex((prev) => (prev > 0 ? prev - 1 : maxProcessIndex));
+  };
+
+  const nextProcess = () => {
+    setProcessIndex((prev) => (prev < maxProcessIndex ? prev + 1 : 0));
   };
 
   useEffect(() => {
@@ -884,31 +894,83 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* QUALITY PROCESS */}
-      <Section id="process" className="bg-muted/40">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
+      {/* QUALITY PROCESS - SLIDER WITH REFERENCE IMAGE ARROWS & DOTS */}
+      <Section id="process" className="bg-muted/40 relative overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16">
             <SectionLabel>Quality Process</SectionLabel>
-            <h2 className="font-display font-bold text-4xl md:text-5xl">Six steps to handover</h2>
+            <h2 className="font-display font-bold text-4xl md:text-5xl mb-4">Six steps to handover</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base">
+              A streamlined, quality-controlled end-to-end process ensuring flawless delivery from initial CAD drawings to on-site crane installation.
+            </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {processSteps.map((s, i) => (
-              <motion.div
-                key={s.n}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="relative p-8 rounded-3xl bg-card shadow-card border border-border/50 hover:border-primary transition-smooth"
+
+          {/* CAROUSEL SLIDER WRAPPER */}
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-12 md:px-16">
+            {/* Left Chevron Arrow Button (Matching Reference Image) */}
+            <button
+              onClick={prevProcess}
+              aria-label="Previous process steps"
+              className="absolute left-0 sm:left-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-background/90 dark:bg-card/90 backdrop-blur-md border border-border shadow-lg flex items-center justify-center text-foreground hover:text-primary hover:scale-110 hover:border-primary/50 transition-all duration-300 cursor-pointer group"
+            >
+              <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8 stroke-[3] text-foreground group-hover:text-primary transition-colors" />
+            </button>
+
+            {/* Right Chevron Arrow Button (Matching Reference Image) */}
+            <button
+              onClick={nextProcess}
+              aria-label="Next process steps"
+              className="absolute right-0 sm:right-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-background/90 dark:bg-card/90 backdrop-blur-md border border-border shadow-lg flex items-center justify-center text-foreground hover:text-primary hover:scale-110 hover:border-primary/50 transition-all duration-300 cursor-pointer group"
+            >
+              <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8 stroke-[3] text-foreground group-hover:text-primary transition-colors" />
+            </button>
+
+            {/* Slider Track Viewport */}
+            <div className="overflow-hidden py-4">
+              <div
+                className="flex transition-transform duration-500 ease-out"
+                style={{
+                  transform: `translateX(-${processIndex * (100 / itemsPerView)}%)`,
+                }}
               >
-                <div className="text-6xl font-display font-bold text-primary/10 absolute top-4 right-6">{s.n}</div>
-                <div className="w-12 h-12 rounded-xl gradient-accent flex items-center justify-center mb-4 shadow-glow">
-                  <CheckCircle2 className="w-6 h-6 text-accent-foreground" />
-                </div>
-                <h3 className="font-display font-bold text-xl mb-2">{s.title}</h3>
-                <p className="text-sm text-muted-foreground">{s.desc}</p>
-              </motion.div>
-            ))}
+                {processSteps.map((s) => (
+                  <div
+                    key={s.n}
+                    className="shrink-0 px-3 md:px-4"
+                    style={{ width: `${100 / itemsPerView}%` }}
+                  >
+                    <div className="group relative h-full p-8 rounded-3xl bg-card shadow-card hover:shadow-elegant border border-border/50 hover:border-primary transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between select-none">
+                      <div>
+                        <div className="text-6xl font-display font-bold text-primary/10 absolute top-4 right-6 group-hover:text-primary/20 transition-colors">
+                          {s.n}
+                        </div>
+                        <div className="w-12 h-12 rounded-xl gradient-accent flex items-center justify-center mb-6 shadow-glow group-hover:scale-110 transition-smooth">
+                          <CheckCircle2 className="w-6 h-6 text-accent-foreground" />
+                        </div>
+                        <h3 className="font-display font-bold text-xl mb-2">{s.title}</h3>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Bottom Pagination Dots (Matching Reference Image) */}
+            <div className="flex items-center justify-center gap-2 mt-8">
+              {Array.from({ length: maxProcessIndex + 1 }).map((_, dotIdx) => (
+                <button
+                  key={dotIdx}
+                  onClick={() => setProcessIndex(dotIdx)}
+                  aria-label={`Go to slide ${dotIdx + 1}`}
+                  className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                    processIndex === dotIdx
+                      ? "w-8 bg-primary shadow-glow"
+                      : "w-2.5 bg-muted-foreground/30 hover:bg-muted-foreground/60"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </Section>
