@@ -46,6 +46,11 @@ import galleryDpworldBlueBooths from "@/assets/gallery-dpworld-blue-booth.jpg";
 import galleryBeigeOvalCabin from "@/assets/gallery-beige-oval-cabin.jpg";
 import galleryGreenVipBooth from "@/assets/gallery-green-vip-booth.jpg";
 import galleryDarkwoodCabin from "@/assets/gallery-darkwood-cabin.jpg";
+import gallerySilverCurvedPalm from "@/assets/gallery-silver-curved-palm.jpg";
+import galleryBlueYellowBooth from "@/assets/gallery-blue-yellow-booth.jpg";
+import galleryHospitalWaitingStationFront from "@/assets/gallery-hospital-waiting-station-front.jpg";
+import galleryHospitalTransitSunset from "@/assets/gallery-hospital-transit-sunset.jpg";
+import galleryUniversityHospitalSharjah from "@/assets/gallery-university-hospital-sharjah.jpg";
 
 import secRefTrailer from "@/assets/security-ref-trailer.jpg";
 import secRefNightDark from "@/assets/security-ref-night-dark.jpg";
@@ -248,6 +253,11 @@ const galleryGridItems = [
   { id: 11, src: galleryBeigeOvalCabin, alt: "Beige Oval Executive Cabin", label: "Beige Oval Executive Cabin", category: "Executive Booth" },
   { id: 12, src: galleryGreenVipBooth, alt: "Green Metallic VIP Gatehouse", label: "Green Metallic VIP Gatehouse", category: "VIP Access Gate" },
   { id: 13, src: galleryDarkwoodCabin, alt: "Dark Wood & Chrome Luxury Cabin", label: "Dark Wood Luxury Cabin", category: "Luxury Fit-Out" },
+  { id: 14, src: gallerySilverCurvedPalm, alt: "Silver Curved Checkpoint Cabin with Palm Backdrop", label: "Silver Curved Checkpoint Cabin", category: "VIP Checkpoint" },
+  { id: 15, src: galleryBlueYellowBooth, alt: "Custom Blue & Yellow Port Security Booth", label: "Custom Branded Security Booth", category: "Port & Industrial" },
+  { id: 16, src: galleryUniversityHospitalSharjah, alt: "University Hospital Sharjah Modular Transit Station", label: "University Hospital Sharjah Station", category: "Healthcare & Transit" },
+  { id: 17, src: galleryHospitalTransitSunset, alt: "Sharjah University Campus Transit Shelter at Sunset", label: "Campus Transit Shelter Sunset", category: "Campus Infrastructure" },
+  { id: 18, src: galleryHospitalWaitingStationFront, alt: "Climate-Controlled Passenger Waiting Station", label: "Climate-Controlled Passenger Station", category: "Transit Station" },
 ];
 
 const galleryContainerVariant = {
